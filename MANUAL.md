@@ -57,6 +57,18 @@ The above default values are sensible and hence usually enough.
   Constant used to truncate predictions.
   A value of 0 (starting default) indicates truncation at root (i.e. global) range, which is a sensible default during tree-building.
   However, the training process includes choosing a potentially different constant for each leaf, with the option of global truncation as well.
+- `num_nodes: int`
+  Number of nodes (>= 1) in the fitted TRUST tree.
+- `num_leaves: int`
+  Number of terminal nodes (>= 1) in the fitted tree.
+- `tree_depth: int`
+  Depth of the fitted tree.
+- `num_coefs_total: int`
+  Total number of estimated coefficients in the fitted tree. This is the sum of all linear model estimated coefficients (including intercept) across leaves.
+- `df_X_train_original_withID: pandas dataframe of shape (n, p+1)`
+  Same as df_X_train_original but with a leading column included that reports the ID number of the node in which each training sample landed.
+- `leaf_Y_hat_all: ndarray of shape (n, )`
+  Predicted response value for each training sample instance.
 
 
 
