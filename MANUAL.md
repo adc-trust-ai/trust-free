@@ -346,6 +346,7 @@ The above default values are sensible and hence usually enough.
     Number of decimal places to round the printed results to.
 
 - `plot_tree(filename=None, indiv=False)`
+
   Plots the fitted tree. If tree depth is 0, the user is prompted to use the print_model method instead.
     ### Parameters:
   - `filename: str, default=None`
