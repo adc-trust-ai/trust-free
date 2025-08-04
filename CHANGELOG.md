@@ -1,4 +1,4 @@
-## 1.0.0 (2025-08-04)
+## 1.0.0 (2025-08-05)
 - Changed: Swapped alibi package by PyALE, which is fully open source. PyALE provides confidence intervals and a separate treatment for discrete features.
 
 ## 0.9.3 (2025-07-30)
