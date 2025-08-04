@@ -236,6 +236,7 @@ The above default values are sensible and hence usually enough.
 
 - `varImpPerm(X_test,y_test,LT,R=10,B=0,U=0,plot=True,filename=None,
                         alpha=0.05,rnd=2,random_state=123)`
+
   Calculates the variable importance of each variable in the model using Breiman's permutation scheme, with optional debiasing and uncertainty quantification.
   ### Parameters:
   - `X_test: array-like of shape (n, p)`
@@ -283,6 +284,7 @@ The above default values are sensible and hence usually enough.
 
 - `varImp(X_test,y_test,LT,corAnalysis=False,plot=True,ALE_plot="auto",
              filename=None,rnd=2,random_state=123)`
+
   Calculates the variable importance of each variable in the model using the Ghost variable method (Delicado and Pena, 2023).
   This method, unlike Breiman's permutation scheme, accounts for feature correlation, and tends to be faster.
   It does not need a debiasing or uncertainty quantification step, because by construction it is unbiased and reported scores are statistically significant.
@@ -325,6 +327,7 @@ The above default values are sensible and hence usually enough.
     Ensures results are reproducible.
 
 - `varImpMarg(X_train,Y_train, plot=True, rnd=2)`
+
   Calculates the variable importance of each variable in the model based on correlation.
   If tree depth is 0, a measure of linear correlation is used (Pearson), while a non-linear one - though still monotonic -  is used otherwise (Kendall).
   ### Parameters:
