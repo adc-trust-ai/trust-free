@@ -112,6 +112,7 @@ The above default values are sensible and hence usually enough.
   - `enc_table: bool, default=True`
     
     Whether or not an encoding table for categorical variables should be printed too.
+    This is useful to interpret the estimated linear model coefficients corresponding to categorical variables.
   - `rnd: int, default=2`
     
     Number of decimal places to round numbers to in the printed output.
@@ -178,3 +179,178 @@ The above default values are sensible and hence usually enough.
     1 means select informative messages are also printed, including overall training time.
     2 means fold-level training time is included too.
     3 means includes further fold-level information, especially in the case of Pro CV.
+
+- `predict(X, tree=None, OOD_info=False, B=50, verbose=False, truncation=True, gamma=0.1)`
+
+  Uses the trained model to output predictions.
+  ### Parameters:
+  - `X: array-like of shape (n, p)`
+    
+    Training or, more commonly testing, feature samples.
+  - `tree: object, default=None`
+    
+    The trained instance of the TRUST class for which you wish to print its model. Only internal use requires deviation from the default value.
+  - `OOD_info: bool, default=False`
+
+    Whether to conduct an on-the-fly Out-Of-Distribution detection for the samples whose prediction is requested. Can be slow.
+  - `B: int, default=50`
+
+    Number of boostrap replicates used for OOD detection.
+    A larger number increases assessment precision but also computation time.
+  - `verbose: bool, default=False`
+
+    Whether or not a list with the indices of instances with at least 1 missing value should be printed.
+  - `truncation: bool, default=True`
+
+    Whether or not predictions should be truncated with the chosen truncation constant.
+
+- `explain(x_original,pred=None,actual=None,enc_table=True,plot=True,filename=None,rnd=2)`
+
+  Provides a comprehensive explanation of the prediction of a requested instance.
+  ### Parameters:
+  - `x_original: array-like of shape (1, p)`
+
+    Instance (in original form, i.e. without any encoding or scaling) for which a prediction explanation is requested.
+  - `pred: int or float, default=None`
+
+    The prediction for which you request an explanation.
+    If none is povided (default) it will be computed on the fly. You may save compute time by providing it yourself.
+  - `actual: int or float, default=None`
+
+    The actual target value that corresponds to the requested instance, if known.
+  - `enc_table: bool, default=True`
+    
+    Whether or not an encoding table for categorical variables should be printed.
+    This is useful to interpret the estimated linear model coefficients corresponding to categorical variables.
+  - `plot: bool, default=True`
+
+    Whether a root-to-leaf plot should be included in the report too.
+  - `filename: str, default=None`
+
+    The file name (without any extension) that you wish to use to save the root-to-leaf and waterfall plots.
+    If none is provided (default), suitable names with today's date will be used.
+    Plots are always saved in the user's current working directory.
+  - `rnd: int, default=2`
+
+    Number of decimal places to round the printed results to.
+
+- `varImpPerm(X_test,y_test,LT,R=10,B=0,U=0,plot=True,filename=None,
+                        alpha=0.05,rnd=2,random_state=123)`
+  Calculates the variable importance of each variable in the model using Breiman's permutation scheme, with optional debiasing and uncertainty quantification.
+  ### Parameters:
+  - `X_test: array-like of shape (n, p)`
+    
+    Test feature samples.
+  - `y_test: array-like of shape (n, ) or (n, 1)`
+    
+    Test response values.
+  - `LT: object`
+
+    The trained instance of the TRUST class for which you wish to get variable importance scores.
+  - `R: int, default=10`
+
+    Number of times permutations are repeated.
+    A larger number increases assessment precision but also computation time.
+  - `B: int, default=0`
+
+    Number of boostrap repetitions used in the debiasing step.
+    The default of 0 means no debiasing is performed.
+    A larger number increases assessment precision but also computation time.
+  - `U: int, default=0`
+
+    Number of boostrap repetitions used in the uncertainty quantification step.
+    The default of 0 means no uncertainty quantification is performed.
+    A larger number increases assessment precision but also computation time.
+
+  - `plot: bool, default=True`
+
+    Whether a plot, besides a table, with the feature importance scores should be included.
+
+  - `filename: str, default=None`
+
+    The file name (without any extension) that you wish to use to save the variable importance plot.
+    If none is provided (default), suitable names with today's date will be used.
+    Plots are always saved in the user's current working directory.
+  - `alpha: int or float, default=0.05`
+
+    Significance level that should be used in the uncertainty quantification step.
+  - `rnd: int, default=2`
+
+    Number of decimal places to round the printed results to.
+  - `random_state: int, default=123`
+  
+    Ensures results are reproducible.
+
+- `varImp(X_test,y_test,LT,corAnalysis=False,plot=True,ALE_plot="auto",
+             filename=None,rnd=2,random_state=123)`
+  Calculates the variable importance of each variable in the model using the Ghost variable method (Delicado and Pena, 2023).
+  This method, unlike Breiman's permutation scheme, accounts for feature correlation, and tends to be faster.
+  It does not need a debiasing or uncertainty quantification step, because by construction it is unbiased and reported scores are statistically significant.
+  ### Parameters:
+  - `X_test: array-like of shape (n, p)`
+    
+    Test feature samples.
+  - `y_test: array-like of shape (n, ) or (n, 1)`
+    
+    Test response values.
+  - `LT: object`
+
+    The trained instance of the TRUST class for which you wish to get variable importance scores.
+  - `corAnalysis: bool, default=True`
+
+    Whether a complementary correlation analysis should be included.
+
+  - `plot: bool, default=True`
+
+    Whether a plot, besides a table, with the feature importance scores should be included.
+
+  - `ALE_plot: list, default="auto"`
+    List containing the feature indices for which an Accumulated Local Effects (ALE) plot is requested.
+    By default all features in the dataset are included, unless there are 25 or more, in which case only the most important 24 are included.
+    Plots are arranged in a grid of at most 4 columns.  
+
+  - `filename: str, default=None`
+
+    The file name (without any extension) that you wish to use to save the variable importance and ALE plots.
+    If none is provided (default), suitable names with today's date will be used.
+    Plots are always saved in the user's current working directory.
+  - `alpha: int or float, default=0.05`
+
+    Significance level that should be used in the uncertainty quantification step.
+  - `rnd: int, default=2`
+
+    Number of decimal places to round the printed results to.
+  - `random_state: int, default=123`
+  
+    Ensures results are reproducible.
+
+- `varImpMarg(X_train,Y_train, plot=True, rnd=2)`
+  Calculates the variable importance of each variable in the model based on correlation.
+  If tree depth is 0, a measure of linear correlation is used (Pearson), while a non-linear one - though still monotonic -  is used otherwise (Kendall).
+  ### Parameters:
+  - `X_train: array-like of shape (n, p)`
+    
+    Training feature samples.
+  - `Y_train: array-like of shape (n, ) or (n, 1)`
+
+    Training response values.
+  - `plot: bool, default=True`
+
+    Whether a plot, besides a table, with the feature importance scores (correlations) should be included.
+
+  - `rnd: int, default=2`
+
+    Number of decimal places to round the printed results to.
+
+- `plot_tree(filename=None, indiv=False)`
+  Plots the fitted tree. If tree depth is 0, the user is prompted to use the print_model method instead.
+    ### Parameters:
+  - `filename: str, default=None`
+
+    The file name (without any extension) that you wish to use to save the tree plot.
+    If none is provided (default), suitable names with today's date will be used.
+    Plots are always saved in the user's current working directory.
+  - `indiv: bool, default=False`
+
+    Whether a tree plot for an individual observation (root-to-leaf path) should be displayed.
+    Only for internal use.
