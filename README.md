@@ -6,6 +6,6 @@
 [![Python](https://img.shields.io/pypi/pyversions/trust-free.svg)](https://pypi.org/project/trust-free/)
 ![OS](https://img.shields.io/badge/OS-macOS%20ARM64-blue)
 
-(⚠️ Currently, trust-free is only tested and supported on macOS ARM64 (e.g. M1/M2/M3/M4 chips). Compatibility for other platforms (Intel macOS, Linux and Windows) is planned in future releases.)
+⚠️ Currently, trust-free is only tested and supported on macOS ARM64 (e.g. M1/M2/M3/M4 chips). Compatibility for other platforms (Intel macOS, Linux and Windows) is planned in future releases.
 
 An interpretable regression model in Python with Random-Forest-level accuracy
