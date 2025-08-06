@@ -1,17 +1,16 @@
 # trust-free
 
-<p align="right">
-  <a href="https://adc-trust-ai.github.io/trust">
-    <img src="assets/TRUST_logo_500x500.png" alt="TRUST logo" width="150"/>
-  </a>
-</p>
-
-
 [![PyPI version](https://img.shields.io/pypi/v/trust-free.svg)](https://pypi.org/project/trust-free/)
 [![Downloads](https://static.pepy.tech/badge/trust-free)](https://pepy.tech/project/trust-free)
 [![License](https://img.shields.io/badge/license-Proprietary-lightgrey.svg)](LICENSE.txt)
 [![Python](https://img.shields.io/pypi/pyversions/trust-free.svg)](https://pypi.org/project/trust-free/)
 ![OS](https://img.shields.io/badge/OS-macOS%20ARM64-blue)
+
+<p align="right">
+  <a href="https://adc-trust-ai.github.io/trust">
+    <img src="assets/TRUST_logo_500x500.png" alt="TRUST logo" height="256"/>
+  </a>
+</p>
 
 ⚠️ Currently, trust-free is only tested and supported on macOS ARM64 (e.g. M1/M2/M3/M4 chips). Compatibility for other platforms (Intel macOS, Linux and Windows) is planned in future releases.
 
