@@ -8,7 +8,7 @@
 
 ⚠️ Currently, trust-free is only tested and supported on macOS ARM64 (e.g. M1/M2/M3/M4 chips). Compatibility for other platforms (Intel macOS, Linux and Windows) is planned in future releases.
 
-TRUST (Transparent, Robust and Ultra-Sparse Trees) is an interpretable regression model in Python with Random-Forest-level accuracy. This is a free version -- a pro version is planned in the future.
+TRUST (Transparent, Robust and Ultra-Sparse Trees) is an interpretable regression model in Python with Random-Forest-level accuracy. This is a free version — a pro version is planned in the future.
 
 ## Overview
 TRUST [1] is a new-generation algorithm based on (sparse) **Linear Model Trees** (LMT). It was developed during my Ph.D. in Statistics at the University of Wisconsin-Madison, a department founded by the celebrated statistician George Box ("all models are wrong but some are useful").
