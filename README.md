@@ -21,9 +21,9 @@ Compared to other LMT algorithms, such as M5 [2], the TRUST algorithm delivers a
 
 [1] Dorador, A. (2025). "TRUST: Transparent, Robust and Ultra-Sparse Trees". [Link to arXiv preprint](https://arxiv.org/abs/2506.15791).
 
-[2] Quinlan, J.R. (1992). "Learning with Continuous Classes". Proceedings of Australian Joint Conference on Artificial Intelligence, Hobart 16-18 November 1992, 343-348
+[2] Quinlan, J.R. (1992). "Learning with Continuous Classes". Proceedings of Australian Joint Conference on Artificial Intelligence, Hobart 16-18 November 1992, 343-348.
 
-[3] Breiman, L. (2001). "Random Forests". Machine Learning, 45, 5-32
+[3] Breiman, L. (2001). "Random Forests". Machine Learning, 45, 5-32.
 
 Currently designed only for regression tasks. Future releases will also tackle other tasks e.g. classification.
 
