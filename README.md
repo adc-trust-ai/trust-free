@@ -63,7 +63,7 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 print("Predictions:", y_pred[:5])
 print("True y values:", y_test[:5])
-print("test R^2:", r2_score(y_test, y_pred))
+print("test R\u00B2:", r2_score(y_test, y_pred))
 # Obtain prediction explanation for first observation
 model.explain(X_test[0,:], y_pred[0], actual=y_test[0]) 
 # Obtain (conditional) variable importance by Ghost method (Delicado and Pena, 2023)
