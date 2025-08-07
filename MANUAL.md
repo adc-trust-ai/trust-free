@@ -162,8 +162,8 @@ The above default values are sensible and hence usually enough.
     The default is to decide (at no extra compute cost!) by CV whether to truncate globally or not. It is, hence, strongly recommended to keep the default "auto" value.
   - `gamma: int or float, default="auto"`
     
-    Threshold in the interval [0,1] that dictates when predictions are averaged with their respective leaf mean response, depending on a calculated F-statistic p-value.
-    The default is to let this be decided by CV at no extra compute cost. Keeping this default is thus advised.
+    Threshold in the interval [0,1] that dictates when predictions are averaged with their respective leaf mean response, depending on a calculated F-statistic p-value. A value of 1 means no averaging is ever performed.
+    The default is to let this be set either 0.1 or 1 by CV at no extra compute cost. Keeping this default is thus advised.
   - `TS: bool, default=False`
     
     Whether or not the time series mode should be enabled. Time series forecasting with a TRUST regressor is currently an experimental feature.
