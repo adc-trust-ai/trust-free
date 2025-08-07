@@ -6,7 +6,7 @@
 [![Python](https://img.shields.io/pypi/pyversions/trust-free.svg)](https://pypi.org/project/trust-free/)
 ![OS](https://img.shields.io/badge/OS-macOS%20ARM64-blue)
 
-> ⚠️ **Note:** Currently, `trust-free` is only tested and supported on macOS ARM64 (e.g. M1/M2/M3/M4 chips). Compatibility for other platforms (Intel macOS, Linux, Windows) is planned for future releases.
+> ⚠️ **Note:** Currently, `trust-free` is only tested and supported on macOS ARM64 (e.g. M1/M2/M3/M4 chips). Compatibility for other platforms (Intel macOS, Linux, Windows) is planned for future releases. Free version is limited to datasets of at most 5,000 rows and 20 columns. Currently designed only for regression tasks. Future releases will also tackle other tasks e.g. classification.
 
 **trust-free** is a Python package for fitting interpretable regression models using Transparent, Robust, and Ultra-Sparse Trees (TRUST) — a new generation of Linear Model Trees (LMTs) with state-of-the-art accuracy and intuitive explanations. This is a free version — a pro version is planned in the future.
 
@@ -25,14 +25,25 @@ Compared to other LMT algorithms, such as M5 [2], the TRUST algorithm delivers a
 
 [3] Breiman, L. (2001). "Random Forests". Machine Learning, 45, 5-32.
 
-Currently designed only for regression tasks. Future releases will also tackle other tasks e.g. classification.
 
-The free version is slower and is limited to datasets of at most 5,000 rows and 20 columns. It does not include premium functionality like:
+## Features in Free Version
+
+- Regression tasks (including a currently experimental 'time series mode')
+- Transparent predictions with linear model explanations
+- Robust sparsity for better interpretability
+- Compact models with random-forest-level accuracy
+- Multiple variable importance methods (Ghost, Permutation, ALE plots, SHAP values)
+- Visual tree structure and explanations
+
+## Additional Features in Pro Version (planned)
+
 - Large Language Model (LLM) integration for enhanced explanations
 - Signed (+/-) variable importance plots
 - Interaction ALE plots
 - Prediction confidence intervals
 - Out-Of-Distribution detection
+- Faster training
+
 
 ## Installation
 
