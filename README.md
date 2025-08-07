@@ -6,32 +6,40 @@
 [![Python](https://img.shields.io/pypi/pyversions/trust-free.svg)](https://pypi.org/project/trust-free/)
 ![OS](https://img.shields.io/badge/OS-macOS%20ARM64-blue)
 
-> ⚠️ **Note:** Currently, `trust-free` is only tested and supported on macOS ARM64 (e.g. M1/M2/M3/M4 chips). Compatibility for other platforms (Intel macOS, Linux, Windows) is planned for future releases. Free version is limited to datasets of at most 5,000 rows and 20 columns. Currently designed only for regression tasks. Future releases will also tackle other tasks e.g. classification.
 
-**trust-free** is a Python package for fitting interpretable regression models using Transparent, Robust, and Ultra-Sparse Trees (TRUST) — a new generation of Linear Model Trees (LMTs) with state-of-the-art accuracy and intuitive explanations. This is a free version — a pro version is planned in the future.
+**trust-free** is a Python package for fitting interpretable regression models using Transparent, Robust, and Ultra-Sparse Trees (TRUST) — a new generation of Linear Model Trees (LMTs) with state-of-the-art accuracy and intuitive explanations. Currently supports standard regression and experimental time-series regression tasks. Future releases will also tackle other tasks such as classification. This is a free version, limited to datasets of at most 5,000 rows and 20 columns — a pro version is under development. 
 
 ## Overview
-TRUST [1] is a new-generation algorithm based on (sparse) **Linear Model Trees** (LMT). It was developed during my Ph.D. in Statistics at the University of Wisconsin-Madison, a department founded by the celebrated statistician George Box ("all models are wrong but some are useful").
+TRUST [1] is a next-generation algorithm based on (sparse) **Linear Model Trees** (LMTs). It was developed during my Ph.D. in Statistics at the University of Wisconsin-Madison.
 
-LMT combine the strengths of two popular interpretable machine learning models: Decision Trees (non-parametric) and Linear Models (parametric). Like a standard Decision Tree, they partition data based on simple decision rules. However, the key difference lies in how they evaluate these splits and model the data. Instead of using a simple constant (like the average) to evaluate the goodness of a split, LMT fit a Linear Model to the data within each node.
+LMTs combine the strengths of two popular interpretable machine learning models: Decision Trees (non-parametric) and Linear Models (parametric). Like a standard Decision Tree, they partition data based on simple decision rules. However, the key difference lies in how they evaluate these splits and model the data. Instead of using a simple constant (like the average) to evaluate the goodness of a split, LMTs fit a Linear Model to the data within each node.
 
-This approach means that the final predictions in the leaves are made by a Linear Model rather than a simple constant approximation. This gives Linear Model Trees both the predictive and explicative power of a linear model, while also retaining the ability of a tree-based algorithm to handle complex, non-linear relationships in the data. This way, LMT can approximate well any Lp function in Lp norm, i.e. can learn almost any function. Importantly, the resulting fitted model is usually compact and hence easier to interpret.
+This approach means that the final predictions in the leaves are made by a Linear Model rather than a simple constant approximation. This gives Linear Model Trees both the predictive and explicative power of a linear model, while also retaining the ability of a tree-based algorithm to handle complex, non-linear relationships in the data. This way, LMTs can approximate well any Lp function in Lp norm, i.e. can learn almost any function. Importantly, the resulting fitted model is usually compact, making it easier to interpret.
 
-Compared to other LMT algorithms, such as M5 [2], the TRUST algorithm delivers a new level of interpretability through enhanced sparsity and a host of specialized methods. To the best of our knowledge, it is also the most accurate LMT algorithm currently available. These two aspects — its advanced interpretability and state-of-the-art accuracy — establish TRUST as the leading LMT algorithm today, having an overall accuracy comparable to the well-known blackbox model Random Forest [3] — while remaining fully interpretable.
+Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched interpretability and accuracy, approaching that of black-box models like Random Forests [3] — while remaining fully transparent.
 
-[1] Dorador, A. (2025). "TRUST: Transparent, Robust and Ultra-Sparse Trees". [Link to arXiv preprint](https://arxiv.org/abs/2506.15791).
+### References
 
-[2] Quinlan, J.R. (1992). "Learning with Continuous Classes". Proceedings of Australian Joint Conference on Artificial Intelligence, Hobart 16-18 November 1992, 343-348.
+[1] Dorador, A. (2025). *TRUST: Transparent, Robust and Ultra-Sparse Trees*. [arXiv:2506.15791](https://arxiv.org/abs/2506.15791).
 
-[3] Breiman, L. (2001). "Random Forests". Machine Learning, 45, 5-32.
+[2] Quinlan, J.R. (1992). *Learning with Continuous Classes*. Australian Joint Conference on AI, 343–348.  
 
+[3] Breiman, L. (2001). *Random Forests*. Machine Learning, 45(1), 5–32.
+
+
+## Summary of Key Advantages
+
+- 🧠 Combines the flexibility of trees and the power of linear models
+- ⚡ Outperforms existing LMTs in accuracy, sparsity and overall interpretability
+- 🔍 Full explanation of each prediction
+- 🪶 Compact models that are easy to understand and visualize
 
 ## Features in Free Version
 
 - Regression tasks (including a currently experimental 'time series mode')
 - Transparent predictions with linear model explanations
 - Robust sparsity for better interpretability
-- Compact models with random-forest-level accuracy
+- Compact models with accuracy comparable to Random Forests
 - Multiple variable importance methods (Ghost, Permutation, ALE plots, SHAP values)
 - Visual tree structure and explanations
 
@@ -52,6 +60,9 @@ You can install this package using pip:
 ```bash
 pip install trust-free
 ```
+> 📦 **Note:** The package name on PyPI is `trust-free`, but the module you import in Python is `trust`.
+
+> ⚠️ Currently, `trust-free` includes a precompiled binary and is only tested and supported on macOS 11+ on ARM64 (e.g. M1/M2/M3/M4 chips). Compatibility for other platforms (Intel macOS, Linux, Windows) is planned for future releases.
 
 ## Usage
 
