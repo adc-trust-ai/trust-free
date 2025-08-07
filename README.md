@@ -10,7 +10,7 @@
 **trust-free** is a Python package for fitting interpretable regression models using Transparent, Robust, and Ultra-Sparse Trees (TRUST) — a new generation of Linear Model Trees (LMTs) with state-of-the-art accuracy and intuitive explanations. Currently supports standard regression and experimental time-series regression tasks. Future releases will also tackle other tasks such as classification. This is a free version, limited to datasets of at most 5,000 rows and 20 columns — a pro version is under development. 
 
 ## Overview
-TRUST [1] is a next-generation algorithm based on (sparse) **Linear Model Trees** (LMTs). It was developed during my Ph.D. in Statistics at the University of Wisconsin-Madison.
+TRUST [1] is a next-generation algorithm based on (sparse) **Linear Model Trees** (LMTs), which I developed as part of my Ph.D. in Statistics at the University of Wisconsin-Madison.
 
 LMTs combine the strengths of two popular interpretable machine learning models: Decision Trees (non-parametric) and Linear Models (parametric). Like a standard Decision Tree, they partition data based on simple decision rules. However, the key difference lies in how they evaluate these splits and model the data. Instead of using a simple constant (like the average) to evaluate the goodness of a split, LMTs fit a Linear Model to the data within each node.
 
