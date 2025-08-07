@@ -192,10 +192,10 @@ The above default values are sensible and hence usually enough.
     The trained instance of the TRUST class for which you wish to print its model. Only internal use requires deviation from the default value.
   - `OOD_info: bool, default=False`
 
-    Whether to conduct an on-the-fly Out-Of-Distribution detection for the samples whose prediction is requested. Can be slow.
+    Internal parameter in free version. In pro version: whether to conduct an on-the-fly Out-Of-Distribution detection for the samples whose prediction is requested. Can be slow.
   - `B: int, default=50`
 
-    Number of boostrap replicates used for OOD detection.
+    Number of boostrap replicates used for OOD detection (pro version).
     A larger number increases assessment precision but also computation time.
   - `verbose: bool, default=False`
 
