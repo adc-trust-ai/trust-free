@@ -43,14 +43,14 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
 - Multiple variable importance methods (Ghost, Permutation, ALE plots, SHAP values)
 - Visual tree structure and explanations
 
-## Additional Features in Pro Version (planned)
+## Additional Features in Pro Version
 
-- Large Language Model (LLM) integration for enhanced explanations
-- Signed (+/-) variable importance plots
-- Interaction ALE plots
-- Prediction confidence intervals
-- Out-Of-Distribution detection
-- Faster training
+- Large Language Model (LLM) integration for enhanced explanations *[ready]*
+- Signed (+/-) variable importance plots *[ready]*
+- Out-Of-Distribution detection *[ready]*
+- Prediction confidence intervals *[planned]*
+- Interaction ALE plots *[planned]*
+- Faster training *[planned]*
 
 
 ## Installation
