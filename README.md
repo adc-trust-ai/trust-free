@@ -48,8 +48,8 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
 - Large Language Model (LLM) integration for enhanced explanations *[ready]*
 - Signed (+/-) variable importance plots *[ready]*
 - Out-Of-Distribution detection *[ready]*
-- Prediction confidence intervals *[planned]*
 - Interaction ALE plots *[planned]*
+- Prediction confidence intervals *[planned]*
 - Faster training *[planned]*
 
 
