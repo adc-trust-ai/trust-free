@@ -6,9 +6,9 @@
 [![Python](https://img.shields.io/pypi/pyversions/trust-free.svg)](https://pypi.org/project/trust-free/)
 ![OS](https://img.shields.io/badge/OS-macOS%20ARM64-blue)
 
-⚠️ Currently, trust-free is only tested and supported on macOS ARM64 (e.g. M1/M2/M3/M4 chips). Compatibility for other platforms (Intel macOS, Linux and Windows) is planned in future releases.
+> ⚠️ **Note:** Currently, `trust-free` is only tested and supported on macOS ARM64 (e.g. M1/M2/M3/M4 chips). Compatibility for other platforms (Intel macOS, Linux, Windows) is planned for future releases.
 
-TRUST (Transparent, Robust and Ultra-Sparse Trees) is an interpretable regression model in Python with Random-Forest-level accuracy. This is a free version — a pro version is planned in the future.
+**trust-free** is a Python package for fitting interpretable regression models using Transparent, Robust, and Ultra-Sparse Trees (TRUST) — a new generation of Linear Model Trees (LMTs) with state-of-the-art accuracy and intuitive explanations. This is a free version — a pro version is planned in the future.
 
 ## Overview
 TRUST [1] is a new-generation algorithm based on (sparse) **Linear Model Trees** (LMT). It was developed during my Ph.D. in Statistics at the University of Wisconsin-Madison, a department founded by the celebrated statistician George Box ("all models are wrong but some are useful").
@@ -51,8 +51,10 @@ from trust import TRUST # note the import name is trust, not trust-free
 from sklearn.datasets import make_regression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_squared_error
+```
 
-# Example 1: Generate synthetic sparse regression data
+### 🧪 Example 1: Sparse Synthetic Regression (n=5000, p=20)
+```python
 X, y, coefs = make_regression(n_samples=5000, n_features=20, n_informative=10, coef=True, noise=0.1, random_state=123)
 print(coefs)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123)
@@ -68,8 +70,10 @@ print("test R\u00B2:", r2_score(y_test, y_pred))
 model.explain(X_test[0,:], y_pred[0], actual=y_test[0]) 
 # Obtain (conditional) variable importance by Ghost method (Delicado and Pena, 2023)
 model.varImp(X_test, y_test, model, corAnalysis=True)
+```
 
-# Example 2: the famous diabetes dataset (n=442, p=10)
+### 🩺 Example 2: Diabetes Dataset (n=442, p=10)
+```python
 import pandas as pd
 from sklearn import datasets
 
