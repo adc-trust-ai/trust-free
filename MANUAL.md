@@ -180,7 +180,7 @@ The above default values are sensible and hence usually enough.
     2 means fold-level training time is included too.
     3 means includes further fold-level information, especially in the case of Pro CV.
 
-- `predict(X, tree=None, OOD_info=False, B=50, verbose=False, truncation=True, gamma=0.1)`
+- `predict(X, tree=None, OOD_info=False, B=50, verbose=False, truncation=True)`
 
   Uses the trained model to output predictions.
   ### Parameters:
