@@ -5,7 +5,7 @@
 - `min_samples_split: int, default=6`
   
   Stopping condition 1.
-  The minimum number of samples required to split an internal node. The minimum valid number of samples in each node is 6. A lower value implies a higher training time.
+  The minimum number of samples required to split an internal node. The default minimum valid number of samples in each node is 6. A lower value implies a higher training time.
   Important: if min_samples_split < 2 \* p+3, then min_samples_split is set to 2 \* p+3, where p is the number of columns in your dataset.
   This is done to avoid an artificial perfect fit that would (likely) generalize poorly.
 
