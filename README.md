@@ -95,3 +95,17 @@ RLT_Diabetes.explain(Diabetes_X.iloc[0,:], y_pred_TRUST[0], actual=Diabetes_y.to
 RLT_Diabetes.varImp(Diabetes_X, Diabetes_y, RLT_Diabetes, corAnalysis=True) #Ghost method
 RLT_Diabetes.varImpPerm(Diabetes_X, Diabetes_y, RLT_Diabetes) #Permutation method
 ```
+
+## License
+
+This software is provided under a Proprietary - Permissive Binary Only license. See `LICENSE.txt` for details.
+
+## More Information
+
+For more details, documentation, and information about the full upcoming pro (paid) version of the TRUST algorithm, please visit our official website:
+
+https://adc-trust-ai.github.io/trust/
+
+Further details can be found in our preprint on arxiv:
+
+https://www.arxiv.org/abs/2506.15791
