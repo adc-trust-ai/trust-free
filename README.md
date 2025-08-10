@@ -36,12 +36,13 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
 
 ## Features in Free Version
 
-- Regression tasks (including a currently experimental 'time series mode')
-- Transparent predictions with linear model explanations
-- Robust sparsity for better interpretability
-- Compact models with accuracy comparable to Random Forests
+- Solves regression tasks (including a currently experimental 'time series mode')
+- Interpretable models with accuracy comparable to Random Forests
+- Visual tree structure and automatically-generated comprehensive explanations on demand
 - Multiple variable importance methods (Ghost, Permutation, ALE plots, SHAP values)
-- Visual tree structure and explanations
+- Automatic missing value handling that learns from missingness itself
+- Ability to efficiently use continuous and categorical predictor variables
+  
 
 ## Additional Features in Pro Version
 
@@ -50,6 +51,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
 - Out-Of-Distribution detection *[ready]*
 - Interaction ALE plots *[planned]*
 - Prediction confidence intervals *[planned]*
+- Further sparsity *[planned]*
 - Faster training *[planned]*
 
 
