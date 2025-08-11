@@ -38,7 +38,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
 
 - Solves regression tasks (including a currently experimental 'time series mode')
 - Interpretable models with accuracy comparable to Random Forests
-- Visual tree structure and automatically-generated comprehensive explanations on demand
+- Visual tree structure and comprehensive, automatically-generated explanations on demand
 - Multiple variable importance methods (Ghost, Permutation, ALE plots, SHAP values)
 - Automatic missing value handling that learns from missingness itself
 - Ability to efficiently use continuous and categorical predictor variables
