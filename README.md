@@ -55,7 +55,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
 - Faster training *[planned]*
 
 
-## What's new in version 1.0.0
+## What's new in version 1.0.0 (1.0.1 simply fixed an issue displaying the OS badge)
 
 1. Swapped alibi package by PyALE, which is fully open source. PyALE provides confidence intervals and a separate treatment for discrete features.
 2. Improved handling of bounded target variables.
