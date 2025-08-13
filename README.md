@@ -46,6 +46,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
 
 ## Additional Features in Pro Version
 
+- No dataset size limits *[ready]*
 - Large Language Model (LLM) integration for enhanced explanations *[ready]*
 - Signed (+/-) variable importance plots *[ready]*
 - Out-Of-Distribution detection *[ready]*
