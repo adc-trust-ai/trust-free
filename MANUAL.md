@@ -345,7 +345,7 @@ The above default values are sensible and hence usually enough.
 
     Number of decimal places to round the printed results to.
 
-- `plot_tree(filename=None, indiv=False)`
+- `plot_tree(filename=None, indiv=False, Jupyter=False)`
 
   Plots the fitted tree. If tree depth is 0, the user is prompted to use the print_model method instead.
     ### Parameters:
@@ -358,3 +358,8 @@ The above default values are sensible and hence usually enough.
 
     Whether a tree plot for an individual observation (root-to-leaf path) should be displayed.
     Only for internal use.
+
+  - `Jupyter: bool, default=False`
+
+    Whether or not the model is being deployed in a Jupyter notebook and hence tree plots should be displayed in-line.
+    Otherwise, tree plots will be displayed in a dedicated IDE pane if available.
