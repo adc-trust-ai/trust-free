@@ -11,9 +11,10 @@
 ## 1.0.0 - 1.0.1 (2025-08-11)
 - Changed:
   1. Swapped alibi package by PyALE, which is fully open source. PyALE provides confidence intervals and a separate treatment for discrete features.
-  2. Improved handling of bounded target variables.
-  3. Multiple formatting improvements.
-  4. Version 1.0.1 simply fixed an issue displaying the OS badge.
+  2. Improved the automatic discrete feature detection mechanism in PyALE.
+  3. Improved handling of bounded target variables.
+  4. Multiple formatting improvements.
+  5. Version 1.0.1 simply fixed an issue displaying the OS badge.
 
 ## 0.9.3 (2025-07-30)
 - Added:
