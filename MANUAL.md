@@ -204,7 +204,7 @@ The above default values are sensible and hence usually enough.
 
     Whether or not predictions should be truncated with the chosen truncation constant.
 
-- `explain(x_original,pred=None,actual=None,enc_table=True,plot=True,filename=None,rnd=2)`
+- `explain(x_original,pred=None,actual=None,enc_table=True,plot=True,filename=None,rnd=2,Jupyter=False)`
 
   Provides a comprehensive explanation of the prediction of a requested instance.
   ### Parameters:
@@ -233,6 +233,10 @@ The above default values are sensible and hence usually enough.
   - `rnd: int, default=2`
 
     Number of decimal places to round the printed results to.
+  - `Jupyter: bool, default=False`
+
+    Whether or not the model is being deployed in a Jupyter notebook and hence the root-to-leaf plot should be displayed in-line.
+    Otherwise, the root-to-leaf plot will be displayed in a dedicated IDE pane if available.  
 
 - `varImpPerm(X_test,y_test,LT,R=10,B=0,U=0,plot=True,filename=None,
                         alpha=0.05,rnd=2,random_state=123)`
