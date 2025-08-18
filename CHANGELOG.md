@@ -1,4 +1,4 @@
-## 1.1.1 (2025-08-18)
+## 1.1.1 (2025-08-19)
 - Added:
   1. Automatic handling of de facto numeric columns, i.e. of object type but that can be coerced to float.
   2. Automatic handling in ALE plots of cases with many categorical levels.
