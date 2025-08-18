@@ -56,11 +56,16 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
 - Faster training *[planned]*
 
 
-## What's new in version 1.0.0 (1.0.1 simply fixed an issue displaying the OS badge)
+## What's new in version 1.1.1
 
-1. Swapped alibi package by PyALE, which is fully open source. PyALE provides confidence intervals and a separate treatment for discrete features.
-2. Improved handling of bounded target variables.
-3. Multiple formatting improvements.
+- Added:
+  1. Automatic handling of de facto numeric columns, i.e. of object type but that can be coerced to float.
+  2. Automatic handling in ALE plots of cases with many categorical levels.
+  3. Automatic display of tree plot in embedded Plots pane or inline in a Jupyter notebook.
+- Changed:
+  1. Fixed bug in a print statement.
+  2. Minor formatting improvements.
+  3. Clarified some aspects in README.md, e.g. python 3.11 support.
 
 Check CHANGELOG.md to see all past release notes.
 
