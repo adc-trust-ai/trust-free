@@ -73,7 +73,7 @@ pip install trust-free
 ```
 > 📦 **Note:** The package name on PyPI is `trust-free`, but the module you import in Python is `trust`.
 
-> ⚠️ Currently, `trust-free` includes a precompiled binary and is only tested and supported for Python 3.11 on macOS 11+ on ARM64 (e.g. M1/M2/M3/M4 chips). Compatibility for other platforms (Intel macOS, Linux, Windows) is planned for future releases.
+> ⚠️ Currently, `trust-free` includes a precompiled binary and is only tested and supported for Python 3.11 on macOS 11+ with ARM64 architecture (e.g. M1/M2/M3/M4 chips). Compatibility for other platforms (Intel macOS, Linux, Windows) is planned for future releases.
 
 ## Usage
 
