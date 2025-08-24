@@ -37,7 +37,16 @@ pip install trust-free
 conda install -c conda-forge graphviz
 ```
 
-## 6. Optional: verify your installation
+## 6. Optional: install additional packages used in tutorial
+
+The life satisfaction tutorial requires a few extra packages:
+
+```bash
+pip install eurostat
+conda install openpyxl lxml
+```
+
+## 7. Optional: verify your installation
 
 You can check that the correct versions are installed with:
 
@@ -64,6 +73,9 @@ which - as at August 24, 2025 - would show (among other installed dependencies):
 | pydot              | 4.0.1   |
 | trust-free         | 1.1.1   |
 | graphviz           | 13.1.2  |
+| eurostat           | 1.1.1   |
+| openpyxl           | 3.1.5   |
+| lxml               | 6.0.1   |
 
 
 ### Rule of thumb:
