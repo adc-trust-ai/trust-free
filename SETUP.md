@@ -1,6 +1,6 @@
 # Setting Up a Virtual Environment for `trust-free`
 
-Follow these steps to create a reproducible Python environment that can run the `trust-free` package.
+Follow these steps to create a reproducible Python environment that can download, install and run the `trust-free` package.
 
 ## 1. Create and activate a new environment
 You can replace `environ` with any name you like. In your bash/terminal, run:
