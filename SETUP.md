@@ -72,7 +72,7 @@ Use `conda` for packages that include compiled binaries or system dependencies (
 
 Use `pip` for pure Python packages or when a package is not available on conda (e.g., category-encoders, pyale, pydot, trust-free).
 
-So, generally, the rule of thumb is: try `conda` first, then `pip` only if the package isn’t available on conda (especially on conda-forge).
+So, generally, the rule of thumb is: try `conda` first, then `pip` only if the package isn’t available on conda (especially on conda-forge) or you know there's a newer version not present on conda.
 
 A few reasons:
 
