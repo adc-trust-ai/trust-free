@@ -2,7 +2,7 @@
 
 Follow these steps to create a reproducible Python environment that can run the `trust-free` package.
 
-### 1. Create and activate a new environment
+## 1. Create and activate a new environment
 You can replace `environ` with any name you like. In your bash/terminal, run:
 
 ```bash
@@ -11,13 +11,13 @@ conda activate environ
 ```
 The above should install python 3.11.13 (the latest python 3.11 version available).
 
-2. Install core dependencies via Conda
+## 2. Install core dependencies via Conda
 
 ```bash
 conda install numpy=1.26.4 "joblib>=1.4.2" "matplotlib>=3.9.2" "pandas>=2.3.1" "scikit-learn>=1.7.0" "scipy>=1.16.0" "shap>=0.47.2" "statsmodels>=0.14.4" jupyter ipykernel
 ```
 
-3. Install additional packages via pip
+## 3. Install additional packages via pip
 
 Some packages (or some of their latest versions) are not available on Conda-forge, so you need to pip-install them separately:
 
@@ -25,13 +25,19 @@ Some packages (or some of their latest versions) are not available on Conda-forg
 pip install "category-encoders>=2.8.1" "pyale>=1.2.0" "pydot>=4.0.1"
 ```
 
-4. Install Graphviz (for tree visualization)
+## 4. Install trust-free itself
+
+```bash
+pip install trust-free
+```
+
+## 5. Install Graphviz (for tree visualization)
 
 ```bash
 conda install -c conda-forge graphviz
 ```
 
-5. Optional: verify your installation
+## 6. Optional: verify your installation
 
 You can check that the correct versions are installed with:
 
@@ -56,4 +62,18 @@ which - as at August 24, 2025 - would show (among other installed dependencies):
 | category-encoders  | 2.8.1   |
 | pyale              | 1.2.0   |
 | pydot              | 4.0.1   |
+| trust-free         | 1.1.1   |
 | graphviz           | 13.1.2  |
+
+
+### Rule of thumb:
+
+Use `conda` for packages that include compiled binaries or system dependencies (e.g., numpy, pandas, scipy, graphviz).
+
+Use `pip` for pure Python packages or when a package is not available on conda (e.g., category-encoders, pyale, pydot, trust-free).
+
+⚠️ Warning: Avoid using `pip` to reinstall a package already installed by `conda` (e.g., numpy or pandas). This can break the environment and may require deleting and recreating it.
+
+### Check how a package was installed:
+
+Run `conda list` inside the environment. Packages installed via `conda` will show the conda channel in the last column (e.g., conda-forge), while `pip`-installed packages will usually show pypi or nothing in that column.
