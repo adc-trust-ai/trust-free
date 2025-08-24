@@ -72,8 +72,20 @@ Use `conda` for packages that include compiled binaries or system dependencies (
 
 Use `pip` for pure Python packages or when a package is not available on conda (e.g., category-encoders, pyale, pydot, trust-free).
 
+So, generally, the rule of thumb is: try `conda` first, then `pip` only if the package isn’t available on conda (especially on conda-forge).
+
+A few reasons:
+
+- Binary compatibility: Conda packages often include precompiled binaries and handle system libraries, which avoids the common “DLL/symbol not found” or compilation errors that pip can trigger.
+
+- Environment stability: Installing via pip over a conda package (or mixing versions too aggressively) can break your environment, especially for packages like numpy, pandas, scipy, or anything C/C++-based.
+
+- Dependency resolution: Conda will automatically resolve dependencies between installed packages, which pip may not do as safely in a mixed environment.
+
 ⚠️ Warning: Avoid using `pip` to reinstall a package already installed by `conda` (e.g., numpy or pandas). This can break the environment and may require deleting and recreating it.
 
 ### Check how a package was installed:
 
 Run `conda list` inside the environment. Packages installed via `conda` will show the conda channel in the last column (e.g., conda-forge), while `pip`-installed packages will usually show pypi or nothing in that column.
+
+
