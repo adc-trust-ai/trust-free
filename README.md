@@ -11,7 +11,7 @@
 
 The package currently supports standard regression and experimental time-series regression tasks. Future releases will also tackle other tasks such as classification.
 
-Note: trust-free is, as its name suggests, a free version, limited to datasets of at most 5,000 rows (instances) and 20 columns (features) — a pro version is under development. 
+Note: trust-free is, as its name suggests, a free version, limited to datasets of at most 5,000 rows (instances) and 20 columns (features) — a 'pro' version is under development. 
 
 ## Overview
 TRUST [1] is a next-generation algorithm based on (sparse) **Linear Model Trees** (LMTs), which I developed as part of my Ph.D. in Statistics at the [University of Wisconsin-Madison](https://www.wisc.edu/). **trust-free** is the official Python implementation of the algorithm.
