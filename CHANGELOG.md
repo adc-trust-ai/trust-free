@@ -1,3 +1,11 @@
+## 1.1.2 (2025-08-25)
+- Added:
+  1. Version attribute
+- Changed:
+  1. Fixed small typos in 2 package names listed as dependencies.
+  2. Updated documentation
+  3. Use newer (compatible) versions for some dependencies
+
 ## 1.1.1 (2025-08-19)
 - Added:
   1. Automatic handling of de facto numeric columns, i.e. of object type but that can be coerced to float.
