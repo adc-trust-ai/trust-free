@@ -84,6 +84,8 @@ pip install trust-free
 
 > ⚠️ Currently, `trust-free` includes a precompiled binary and is only tested and supported for Python 3.11 on macOS 11+ with ARM64 architecture (e.g. M1/M2/M3/M4 chips). Compatibility for other platforms (Intel macOS, Linux, Windows) is planned for future releases.
 
+For a fully reproducible development environment with all dependencies, see SETUP.md.
+
 ## Usage
 
 Here are two basic examples of how to use the TRUST algorithm:
@@ -140,14 +142,14 @@ RLT_Diabetes.varImpPerm(Diabetes_X, Diabetes_y, RLT_Diabetes) #Permutation metho
 
 ## License
 
-This software is provided under a Proprietary - Permissive Binary Only license. See `LICENSE.txt` for details.
+This software is provided under a Proprietary - Permissive Binary Only license. See LICENSE.txt for details.
 
 ## More Information
 
-For more details, documentation, and information about the full upcoming pro (paid) version of the TRUST algorithm, please visit our official website:
+For more details, documentation, and information about the full upcoming 'pro' version of the TRUST algorithm, please visit our official website:
 
 https://adc-trust-ai.github.io/trust/
 
-Further details can be found in our preprint on arxiv:
+Further details about the TRUST algorithm can be found in our preprint on arXiv:
 
 https://www.arxiv.org/abs/2506.15791
