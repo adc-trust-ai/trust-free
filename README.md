@@ -55,6 +55,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
 - Signed (+/-) variable importance plots *[ready]*
 - Out-Of-Distribution detection *[ready]*
 - Interaction ALE plots *[planned]*
+- Automatic model mismatch detection *[planned]*
 - Prediction confidence intervals *[planned]*
 - Further sparsity *[planned]*
 - Faster training *[planned]*
