@@ -56,21 +56,20 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
 - Out-Of-Distribution detection *[ready]*
 - Interaction ALE plots *[planned]*
 - Automatic model mismatch detection *[planned]*
+- Smart feature selection and engineering *[planned]*
 - Prediction confidence intervals *[planned]*
 - Further sparsity *[planned]*
 - Faster training *[planned]*
 
 
-## What's new in version 1.1.1
+## What's new in version 1.1.2
 
 - Added:
-  1. Automatic handling of de facto numeric columns, i.e. of object type but that can be coerced to float.
-  2. Automatic handling in ALE plots of cases with many categorical levels.
-  3. Automatic display of tree plot in embedded Plots pane or inline in a Jupyter notebook.
+  1. Version attribute.
 - Changed:
-  1. Fixed bug in a print statement.
-  2. Minor formatting improvements.
-  3. Clarified some aspects in README.md, e.g. python 3.11 support.
+  1. Fixed small typos in 2 package names listed as dependencies.
+  2. Updated documentation.
+  3. Use newer (compatible) versions for some dependencies.
 
 Check CHANGELOG.md to see all past release notes.
 
