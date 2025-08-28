@@ -1,3 +1,9 @@
+## 1.1.3 (2025-08-??)
+- Added:
+  1. Automatic reporting and removal of duplicate columns
+- Changed:
+  1. Fixed bug in print_model() in absence of significant features
+
 ## 1.1.2 (2025-08-25)
 - Added:
   1. Version attribute.
