@@ -1,7 +1,7 @@
 ## 1.1.3 (2025-09-??)
 - Added:
   1. Automatic reporting and removal of duplicate columns.
-  2. Standard Lasso fallback if all Relaxed Lasso coefficients are zero due to excessive penalty.
+  2. Fallback to Standard Lasso if all Relaxed Lasso coefficients are zero due to excessive penalty.
 - Changed:
   1. Fixed bug in print_model() in absence of significant features.
 
