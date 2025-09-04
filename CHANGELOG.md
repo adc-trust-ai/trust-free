@@ -4,6 +4,7 @@
   2. Fallback to Standard Lasso if all Relaxed Lasso coefficients are zero due to excessive penalty.
 - Changed:
   1. Fixed bug in print_model() in absence of significant features.
+  2. Threshold for 'large' lowered from 0.6 to 0.55, and threshold for 'intermediate' increased from 0.4 to 0.45
 
 ## 1.1.2 (2025-08-25)
 - Added:
