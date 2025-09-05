@@ -101,6 +101,17 @@ from sklearn.metrics import r2_score, mean_squared_error
 ```python
 X, y, coefs = make_regression(n_samples=5000, n_features=20, n_informative=10, coef=True, noise=0.1, random_state=123)
 print(coefs)
+# x2 = 80.9
+# x3 = 91.4
+# x7 = 64.1
+# x8 = 44.6
+# x10 = 96.2
+# x12 = 90.5
+# x14 = 45.3
+# x17 = 39.8
+# x18 = 90.6
+# x19 = 33.2
+
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123)
 # Instantiate and fit your model
 model = TRUST()
@@ -114,13 +125,13 @@ print("test R\u00B2:", r2_score(y_test, y_pred))
 
 ```python
 # Obtain (conditional) variable importance by Ghost method (Delicado and Pena, 2023)
-model.varImp(X_test, y_test, model, corAnalysis=True)
+model.varImp(X_test, y_test, model, corAnalysis=True, filename="Synthetic")
 ```
 ![varImp](assets/varImpScores_plot_Synthetic.png)
 
 ```python
 # Obtain prediction explanation for first observation
-model.explain(X_test[0,:], y_pred[0], actual=y_test[0]) 
+model.explain(X_test[0,:], y_pred[0], actual=y_test[0], filename="Synthetic") 
 ```
 ![Explain1](assets/trust-free_explain1.png)
 
@@ -142,15 +153,31 @@ Diabetes_y = Diabetes.iloc[:,-1]
 RLT_Diabetes = TRUST(max_depth=1)
 RLT_Diabetes.fit(Diabetes_X,Diabetes_y)
 y_pred_TRUST = RLT_Diabetes.predict(Diabetes_X)
+```
+```python
 # Tree plotting requires Graphviz to be installed in your system path
 # You can use e.g. Homebrew: brew install graphviz or Conda: conda install -c conda-forge graphviz
 RLT_Diabetes.plot_tree("Diabetes") #will save "tree_plot_Diabetes.png" in your working directory
-# Obtain prediction explanation for first observation
-RLT_Diabetes.explain(Diabetes_X.iloc[0,:], y_pred_TRUST[0], actual=Diabetes_y.to_list()[0])
-# Obtain variable importance with 2 different methods: Ghost and permutation
-RLT_Diabetes.varImp(Diabetes_X, Diabetes_y, RLT_Diabetes, corAnalysis=True) #Ghost method
-RLT_Diabetes.varImpPerm(Diabetes_X, Diabetes_y, RLT_Diabetes) #Permutation method
 ```
+![tree](assets/tree_plot_Diabetes.png)
+
+```python
+# Obtain variable importance with 2 different methods: Ghost and permutation
+RLT_Diabetes.varImp(Diabetes_X, Diabetes_y, RLT_Diabetes, corAnalysis=True, filename="Diabetes") #Ghost method
+RLT_Diabetes.varImpPerm(Diabetes_X, Diabetes_y, RLT_Diabetes, filename="Diabetes") #Permutation method
+```
+![varImp2](assets/varImpScores_plot_Diabetes.png)
+
+![varImp3](assets/varImpPermScores_plot_Diabetes.png)
+
+```python
+# Obtain prediction explanation for first observation
+RLT_Diabetes.explain(Diabetes_X.iloc[1,:], y_pred_TRUST[1], actual=Diabetes_y.to_list()[1],filename="Diabetes")
+```
+![Explain3](assets/trust-free_explain3.png)
+
+![Explain4](assets/trust-free_explain4.png)
+
 
 ## License
 
