@@ -110,11 +110,23 @@ y_pred = model.predict(X_test)
 print("Predictions:", y_pred[:5])
 print("True y values:", y_test[:5])
 print("test R\u00B2:", r2_score(y_test, y_pred))
-# Obtain prediction explanation for first observation
-model.explain(X_test[0,:], y_pred[0], actual=y_test[0]) 
+```
+
+```python
 # Obtain (conditional) variable importance by Ghost method (Delicado and Pena, 2023)
 model.varImp(X_test, y_test, model, corAnalysis=True)
 ```
+![varImp](assets/varImpScores_plot_Synthetic.png)
+
+```python
+# Obtain prediction explanation for first observation
+model.explain(X_test[0,:], y_pred[0], actual=y_test[0]) 
+```
+![Explain1](assets/trust-free_explain1.png)
+
+![Explain2](assets/trust-free_explain2.png)
+
+
 
 ### 🩺 Example 2: Diabetes Dataset (n=442, p=10)
 ```python
