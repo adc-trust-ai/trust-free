@@ -30,6 +30,16 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
 
 [3] Breiman, L. (2001). *Random Forests*. Machine Learning, 45(1), 5–32.
 
+### Recognition
+
+* **Featured:**
+    * [University of Wisconsin - Madison Department of Statistics website](https://stat.wisc.edu/2025/05/08/department-of-statistics-celebrates-spring-2025-graduates/) (May 2025)
+    * [Data Science Weekly (Issue 616)](https://datascienceweekly.substack.com/p/data-science-weekly-issue-616)
+
+* **Upcoming Talks & Workshops:**
+    * [PRICAI 2025](https://www.pricai.org/2025/index.php) (Nov 2025)
+    * [BarcelonaTech](https://eio.upc.edu/en/seminar) (Dec 2025)
+    
 
 ## Summary of Key Advantages
 
