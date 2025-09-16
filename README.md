@@ -189,7 +189,7 @@ RLT_Diabetes.explain(Diabetes_X.iloc[1,:], y_pred_TRUST[1], actual=Diabetes_y.to
 ![Explain4](assets/trust-free_explain4.png)
 
 ### More Examples on Kaggle Datasets
-- [Medical Insurance Charges (1.77M views, 342K downloads)](https://www.kaggle.com/code/albertdorador/get-0-89-test-r2-with-an-interpretable-trust-tree)
+- [Medical Insurance Charges (1.8M views, 350K downloads)](https://www.kaggle.com/code/albertdorador/get-0-89-test-r2-with-an-interpretable-trust-tree)
 - [Life Satisfaction in the EU (own contribution)](https://www.kaggle.com/code/albertdorador/interpretable-ml-on-life-satisfaction-in-the-eu)
 
 
