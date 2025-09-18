@@ -5,6 +5,7 @@
 - Changed:
   1. Fixed bug in print_model() in absence of significant features.
   2. Threshold for 'large' lowered from 0.6 to 0.55, and threshold for 'intermediate' increased from 0.4 to 0.45
+  3. More efficient retrieval of encoded values: before it was O(n) now it's O(1). Should speedup prediction noticeably.
 
 ## 1.1.2 (2025-08-25)
 - Added:
