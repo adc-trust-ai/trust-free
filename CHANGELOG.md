@@ -1,4 +1,4 @@
-## 1.1.3 (2025-09-??)
+## 1.2.0 (2025-09-??)
 - Added:
   1. Automatic reporting and removal of duplicate columns.
   2. Fallback to (TRUST-flavored) standard Lasso in leaf if all Relaxed Lasso coefficients are zero due to excessive penalty.
