@@ -2,10 +2,18 @@
 - Added:
   1. Automatic reporting and removal of duplicate columns.
   2. Fallback to (TRUST-flavored) standard Lasso in leaf if all Relaxed Lasso coefficients are zero due to excessive penalty.
+  3. Automatic check for missing target values and corresponding removal of rows in training dataset.
+  4. Method show_leaf_coefficients(leaves = "all", rnd = 2) to print coefficient summary tables for the selected leaves.
 - Changed:
   1. Fixed bug in print_model() in absence of significant features.
   2. Threshold for 'large' lowered from 0.6 to 0.55, and threshold for 'intermediate' increased from 0.4 to 0.45.
   3. More efficient retrieval of encoded values: before it was O(n) now it's O(1). Should speedup prediction noticeably.
+  4. Internal method _fill_NAs now takes the feature matrix X instead of the complete dataset as input.
+  5. df_X_train_original_withID for the all-complete df_Leaf_X_train_original_Y_Yhat.
+  6. Slightly faster prediction for depth-0 trees.
+- Removed:
+  1. Redundant attributes (dataset_noNAs, dataset, df_X_train_original, df_Y_train_original, df_train_original).
+  2. Redundant LT parameter in importance scoring functions.
 
 ## 1.1.2 (2025-08-25)
 - Added:
