@@ -8,7 +8,7 @@
 - Changed:
   1. Fixed bug in print_model() in absence of significant features.
   2. Threshold for 'large' lowered from 0.6 to 0.55, and threshold for 'intermediate' increased from 0.4 to 0.45.
-  3. More efficient retrieval of encoded values: before it was O(n) now it's O(1). Should speedup prediction noticeably.
+  3. More efficient retrieval of encoded values: before it was O(n) now it's O(1). Should speedup prediction (and even fitting) noticeably.
   4. Internal method _fill_NAs now takes the feature matrix X instead of the complete dataset as input.
   5. df_X_train_original_withID for the all-complete df_Leaf_X_train_original_Y_Yhat.
   6. Slightly faster prediction for depth-0 trees.
