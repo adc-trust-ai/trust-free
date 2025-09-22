@@ -72,7 +72,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
 - Faster training *[planned]*
 
 
-## What's new in version 1.2.0
+## What's new in version 2.0.0
 
 - Added:
   1. Automatic reporting and removal of duplicate columns.
@@ -89,7 +89,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
   6. Slightly faster prediction for depth-0 trees.
 - Removed:
   1. Redundant attributes (dataset_noNAs, dataset, df_X_train_original, df_Y_train_original, df_train_original).
-  2. Redundant LT parameter in importance scoring functions.
+  2. Redundant LT parameter in importance scoring functions. This **breaks backward compatibility**, so it may require **adapting existing pipelines** accordingly for some users.
 
 Check CHANGELOG.md to see all past release notes.
 
