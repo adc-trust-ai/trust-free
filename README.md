@@ -79,7 +79,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
   2. Fallback to (TRUST-flavored) standard Lasso in leaf if all Relaxed Lasso coefficients are zero due to excessive penalty.
   3. Automatic check for missing target values and corresponding removal of rows in training dataset.
   4. Method show_leaf_coefficients(leaves = "all", rnd = 2) to print coefficient summary tables for the selected leaves.
-  5. Explicit node id
+  5. Explicit node id, also in tree plot (leaves only).
 - Changed:
   1. Fixed bug in print_model() in absence of significant features.
   2. Threshold for 'large' lowered from 0.6 to 0.55, and threshold for 'intermediate' increased from 0.4 to 0.45.
