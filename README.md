@@ -56,6 +56,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
 - Multiple variable importance methods (Ghost, Permutation, ALE plots, SHAP values)
 - Automatic missing value handling that learns from missingness itself
 - Ability to efficiently use continuous and categorical predictor variables
+- Prediction confidence intervals *[planned]*
   
 
 ## Additional Features in Pro Version
@@ -67,12 +68,11 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
 - Interaction ALE plots *[planned]*
 - Automatic model mismatch detection *[planned]*
 - Smart feature selection and engineering *[planned]*
-- Prediction confidence intervals *[planned]*
 - Further sparsity *[planned]*
 - Faster training *[planned]*
 
 
-## What's new in version 1.1.2
+## What's new in version 1.2.0
 
 - Added:
   1. Version attribute.
@@ -135,7 +135,7 @@ print("test R\u00B2:", r2_score(y_test, y_pred))
 
 ```python
 # Obtain (conditional) variable importance by Ghost method (Delicado and Pena, 2023)
-model.varImp(X_test, y_test, model, corAnalysis=True, filename="Synthetic")
+model.varImp(X_test, y_test, corAnalysis=True, filename="Synthetic")
 ```
 ![varImp](assets/varImpScores_plot_Synthetic.png)
 
@@ -173,8 +173,8 @@ RLT_Diabetes.plot_tree("Diabetes") #will save "tree_plot_Diabetes.png" in your w
 
 ```python
 # Obtain variable importance with 2 different methods: Ghost and permutation
-RLT_Diabetes.varImp(Diabetes_X, Diabetes_y, RLT_Diabetes, corAnalysis=True, filename="Diabetes") #Ghost method
-RLT_Diabetes.varImpPerm(Diabetes_X, Diabetes_y, RLT_Diabetes, filename="Diabetes") #Permutation method
+RLT_Diabetes.varImp(Diabetes_X, Diabetes_y, corAnalysis=True, filename="Diabetes") #Ghost method
+RLT_Diabetes.varImpPerm(Diabetes_X, Diabetes_y, filename="Diabetes") #Permutation method
 ```
 ![varImp2](assets/varImpScores_plot_Diabetes.png)
 
