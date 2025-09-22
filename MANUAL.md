@@ -34,26 +34,15 @@
 The above default values are sensible and hence usually enough.
 
 ## Attributes:
-- `df_X_train_original: pandas dataframe of shape (n, p), default=None`
-  
-  Original matrix of training features X.
-- `df_Y_train_original: pandas dataframe of shape (n, 1), default=None`
-  
-  Original array of training responses Y.
-- `YLB_root: ndarray of shape (n, ), default=None`
+
+- `YLB_root: float, default=None`
   
   Stores the calculated response lower bound at the root of the tree.
   It's computed as a small multiple below the minimum response in training, depending on respnse standard deviation.
-- `YUB_root: ndarray of shape (n, ), default=None`
+- `YUB_root: float, default=None`
   
   Stores the calculated response upper bound at the root of the tree.
   It's computed as a small multiple above the maximum response in training, depending on respnse standard deviation.
-- `df_train_original: pandas dataframe of shape (n, p+1), default=None`
-  
-  The horizontal concatenation of df_X_train_original and df_Y_train_original.
-- `dataset: ndarray of shape (n, p+1), default=None`
-  
-  The numpy array version of df_train_original that stores target-encoded categorical variables (if any)
 - `colnamesX: ndarray of shape (p, ), default=None`
   
   Column names of the original matrix of training features X.
@@ -69,30 +58,26 @@ The above default values are sensible and hence usually enough.
 - `summary: dict, default={}`
   
   Stores node information.
-- `trunc: int or float, default=0`
+- `trunc: int or float, default=3`
   
   Constant used to truncate predictions.
-  A value of 0 (starting default) indicates truncation at root (i.e. global) range, which is a sensible default during tree-building.
+  A value of 3 (starting default) indicates truncation at slightly more than range, which is a sensible default during tree-building.
   However, the training process includes choosing a potentially different constant for each leaf, with the option of global truncation as well.
 - `num_nodes: int`
   
   Number of nodes (>= 1) in the fitted TRUST tree.
-- `num_leaves: int`
-  
-  Number of terminal nodes (>= 1) in the fitted tree.
 - `tree_depth: int`
   
   Depth of the fitted tree.
 - `num_coefs_total: int`
   
   Total number of estimated coefficients in the fitted tree. This is the sum of all linear model estimated coefficients (including intercept) across leaves.
-- `df_X_train_original_withID: pandas dataframe of shape (n, p+1)`
+- `df_Leaf_X_train_original_Y_Yhat: pandas dataframe of shape (n, p+2)`
   
-  Same as df_X_train_original but with a leading column included that reports the ID number of the node in which each training sample landed.
-- `leaf_Y_hat_all: ndarray of shape (n, )`
-  
-  Predicted response value for each training sample instance.
+  Training dataset with a leading column included that reports the ID number of the node in which each training sample landed, and a last column of predicted response values.
+- `leafIDs: list`
 
+  List of leaf id's. The total number of leaves can, then, be easily found by taking the length of this list.
 
 
 ## Methods:
@@ -235,7 +220,7 @@ The above default values are sensible and hence usually enough.
     Number of decimal places to round the printed results to.
 
 
-- `varImpPerm(X_test,y_test,LT,R=10,B=0,U=0,plot=True,filename=None,
+- `varImpPerm(X_test,y_test,R=10,B=0,U=0,plot=True,filename=None,
                         alpha=0.05,rnd=2,random_state=123)`
 
   Calculates the variable importance of each variable in the model using Breiman's permutation scheme, with optional debiasing and uncertainty quantification.
@@ -246,9 +231,6 @@ The above default values are sensible and hence usually enough.
   - `y_test: array-like of shape (n, ) or (n, 1)`
     
     Test response values.
-  - `LT: object`
-
-    The trained instance of the TRUST class for which you wish to get variable importance scores.
   - `R: int, default=10`
 
     Number of times permutations are repeated.
@@ -283,7 +265,7 @@ The above default values are sensible and hence usually enough.
   
     Ensures results are reproducible.
 
-- `varImp(X_test,y_test,LT,corAnalysis=False,plot=True,ALE_plot="auto",
+- `varImp(X_test,y_test,corAnalysis=False,plot=True,ALE_plot="auto",
              filename=None,rnd=2,random_state=123)`
 
   Calculates the variable importance of each variable in the model using the Ghost variable method (Delicado and Pena, 2023).
@@ -296,9 +278,6 @@ The above default values are sensible and hence usually enough.
   - `y_test: array-like of shape (n, ) or (n, 1)`
     
     Test response values.
-  - `LT: object`
-
-    The trained instance of the TRUST class for which you wish to get variable importance scores.
   - `corAnalysis: bool, default=True`
 
     Whether a complementary correlation analysis should be included.
