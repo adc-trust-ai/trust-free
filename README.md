@@ -72,7 +72,8 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
 - Faster training *[planned]*
 
 
-## What's new in version 2.0.0? TL;DR: faster training and prediction, more robustness, less memory consumption
+## What's new in version 2.0.0?
+### TL;DR: Faster training and predictions, enhanced robustness, and reduced memory usage.
 
 - Added:
   1. Automatic reporting and removal of duplicate columns.
