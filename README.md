@@ -7,20 +7,20 @@
 ![OS](https://img.shields.io/badge/OS-macOS%20ARM64-blue)
 
 
-**trust-free** is a Python package for fitting interpretable regression models using Transparent, Robust, and Ultra-Sparse Trees (TRUST) — a new generation of Linear Model Trees (LMTs) with state-of-the-art accuracy and intuitive explanations. It is based on my peer-reviewed paper [1], **accepted at the 22nd Pacific Rim International Conference on Artificial Intelligence (PRICAI 2025)**.
+**trust-free** is a Python package for fitting interpretable regression models using Transparent, Robust, and Ultra-Sparse Trees (TRUST™) — a new generation of Linear Model Trees (LMTs) with state-of-the-art accuracy and intuitive explanations. It is based on my peer-reviewed paper [1], **accepted at the 22nd Pacific Rim International Conference on Artificial Intelligence (PRICAI 2025)**.
 
 The package currently supports standard regression and experimental time-series regression tasks. Future releases will also tackle other tasks such as classification.
 
 Note: trust-free is, as its name suggests, a free version, limited to datasets of at most 5,000 rows (instances) and 20 columns (features) — a 'pro' version is under development. 
 
 ## Overview
-TRUST [1] is a next-generation algorithm based on (sparse) **Linear Model Trees** (LMTs), which I developed as part of my Ph.D. in Statistics at the [University of Wisconsin-Madison](https://www.wisc.edu/). **trust-free** is the official Python implementation of the algorithm.
+TRUST™ [1] is a next-generation algorithm based on (sparse) **Linear Model Trees** (LMTs), which I developed as part of my Ph.D. in Statistics at the [University of Wisconsin-Madison](https://www.wisc.edu/). **trust-free** is the official Python implementation of the algorithm.
 
 LMTs combine the strengths of two popular interpretable machine learning models: Decision Trees (non-parametric) and Linear Models (parametric). Like a standard Decision Tree, they partition data based on simple decision rules. However, the key difference lies in how they evaluate these splits and model the data. Instead of using a simple constant (like the average) to evaluate the goodness of a split, LMTs fit a Linear Model to the data within each node.
 
 This approach means that the final predictions in the leaves are made by a Linear Model rather than a simple constant approximation. This gives Linear Model Trees both the predictive and explicative power of a linear model, while also retaining the ability of a tree-based algorithm to handle complex, non-linear relationships in the data. This way, LMTs can approximate well any Lp function in Lp norm, i.e. can learn almost any function. Importantly, the resulting fitted model is usually compact, making it easier to interpret.
 
-Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched interpretability while approaching the accuracy of black-box models like Random Forests [3] — a combination that is rare in machine learning.
+Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched interpretability while approaching the accuracy of black-box models like Random Forests [3] — a combination that is rare in machine learning.
 
 ### References
 
@@ -77,7 +77,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
 
 - Added:
   1. Automatic reporting and removal of duplicate columns.
-  2. Fallback to (TRUST-flavored) standard Lasso in leaf if all Relaxed Lasso coefficients are zero due to excessive penalty.
+  2. Fallback to (TRUST™-flavored) standard Lasso in leaf if all Relaxed Lasso coefficients are zero due to excessive penalty.
   3. Automatic check for missing target values and corresponding removal of rows in training dataset.
   4. Method show_leaf_coefficients(leaves = "all", rnd = 2) to print coefficient summary tables for the selected leaves.
   5. Explicit node id, also in tree plot (leaves only).
@@ -110,7 +110,7 @@ For a fully reproducible development environment with all dependencies, see SETU
 
 ## Usage
 
-Here are two basic examples of how to use the TRUST algorithm:
+Here are two basic examples of how to use the TRUST™ algorithm:
 
 ```python
 from trust import TRUST # note the import name is trust, not trust-free
@@ -211,10 +211,10 @@ This software is provided under a Proprietary - Permissive Binary Only license. 
 
 ## More Information
 
-For more details, documentation, and information about the full upcoming 'pro' version of the TRUST algorithm, please visit our official website:
+For more details, documentation, and information about the full upcoming 'pro' version of the TRUST™ algorithm, please visit our official website:
 
 https://adc-trust-ai.github.io/trust/
 
-Further details about the TRUST algorithm can be found in our preprint on arXiv:
+Further details about the TRUST™ algorithm can be found in our preprint on arXiv:
 
 https://www.arxiv.org/abs/2506.15791
