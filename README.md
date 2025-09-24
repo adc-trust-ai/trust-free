@@ -218,3 +218,5 @@ https://adc-trust-ai.github.io/trust/
 Further details about the TRUST™ algorithm can be found in our preprint on arXiv:
 
 https://www.arxiv.org/abs/2506.15791
+
+Copyright (c) 2025 Albert Dorador Chalar. All rights reserved. TRUST™ is a trademark of Albert Dorador Chalar.
