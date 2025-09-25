@@ -165,16 +165,13 @@ The above default values are sensible and hence usually enough.
     2 means fold-level training time is included too.
     3 means includes further fold-level information, especially in the case of Pro CV.
 
-- `predict(X, tree=None, OOD_info=False, B=50, verbose=False, truncation=True)`
+- `predict(X, OOD_info=False, B=50, verbose=False, truncation=True)`
 
   Uses the trained model to output predictions.
   ### Parameters:
   - `X: array-like of shape (n, p)`
     
     Training or, more commonly testing, feature samples.
-  - `tree: object, default=None`
-    
-    The trained instance of the TRUST class for which you wish to print its model. Only internal use requires deviation from the default value.
   - `OOD_info: bool, default=False`
 
     Internal parameter in free version. In pro version: whether to conduct an on-the-fly Out-Of-Distribution detection for the samples whose prediction is requested. Can be slow.
