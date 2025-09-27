@@ -12,8 +12,9 @@
   4. More efficient retrieval of encoded values: before it was O(n) now it's O(1). Should speedup prediction (and even fitting) noticeably.
   5. Internal method _fill_NAs now takes the feature matrix X instead of the complete dataset as input.
   6. df_X_train_original_withID for the all-complete df_Leaf_X_train_original_Y_Yhat.
-  7. Slightly faster prediction for depth-0 trees.
-  8. Formatting improvements (e.g. progress bar in cross-validation step).
+  7. Faster variable importance calculation (both permutation and Ghost method).
+  8. Slightly faster prediction for depth-0 trees.
+  9. Formatting improvements (e.g. progress bar in cross-validation step).
 - Removed:
   1. Redundant attributes (dataset_noNAs, dataset, df_X_train_original, df_Y_train_original, df_train_original).
   2. Redundant LT parameter in importance scoring functions.
