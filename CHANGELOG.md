@@ -1,13 +1,14 @@
-## 2.0.0 (2025-09-??)
+## 2.0.0 (2025-10-??)
 - Added:
-  1. Automatic reporting and removal of duplicate columns.
-  2. Fallback to (TRUST-flavored) standard Lasso in leaf if all Relaxed Lasso coefficients are zero due to excessive penalty.
-  3. Automatic check for missing target values and corresponding removal of rows in training dataset.
-  4. Method show_leaf_coefficients(leaves = "all", rnd = 2) to print coefficient summary tables for the selected leaves.
-  5. Explicit node id, also in tree plot (leaves only).
+  1. **New compare() method** to allow head-to-head prediction comparisons.
+  2. Automatic reporting and removal of duplicate columns.
+  3. Fallback to (TRUST-flavored) standard Lasso in leaf if all Relaxed Lasso coefficients are zero due to excessive penalty.
+  4. Automatic check for missing target values and corresponding removal of rows in training dataset.
+  5. Method show_leaf_coefficients(leaves = "all", rnd = 2) to print coefficient summary tables for the selected leaves.
+  6. Explicit node id, also in tree plot (leaves only).
 - Changed:
-  1. Fixed bug in print_model() in absence of significant features.
-  2. Revamped the explain() method to be even more user friendly.
+  1. **Revamped explain() method** to be even more powerful *and* user friendly.
+  2. Fixed bug in print_model() in absence of significant features.
   3. Threshold for 'large' lowered from 0.6 to 0.55, and threshold for 'intermediate' increased from 0.4 to 0.45.
   4. More efficient retrieval of encoded values: before it was O(n) now it's O(1). Should speedup prediction (and even fitting) noticeably.
   5. Internal method _fill_NAs now takes the feature matrix X instead of the complete dataset as input.
