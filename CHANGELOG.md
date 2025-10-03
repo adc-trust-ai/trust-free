@@ -3,7 +3,7 @@
   1. **New compare() method** to allow head-to-head prediction comparisons.
   2. Automatic reporting and removal of duplicate columns.
   3. Automatic check for missing target values and corresponding removal of rows in training dataset.
-  4. Automatic check for highly imbalanced categorical variables and default to standard scaling in those cases.
+  4. Automatic check for highly imbalanced categorical variables and switch from robust to standard scaling in those cases.
   5. Fallback to (TRUST-flavored) standard Lasso in leaf if all Relaxed Lasso coefficients are zero due to excessive penalty.
   6. Method show_leaf_coefficients(leaves = "all", rnd = 2) to print coefficient summary tables for the selected leaves.
   7. Explicit node id, also in tree plot (leaves only).
