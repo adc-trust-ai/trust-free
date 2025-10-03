@@ -2,10 +2,11 @@
 - Added:
   1. **New compare() method** to allow head-to-head prediction comparisons.
   2. Automatic reporting and removal of duplicate columns.
-  3. Fallback to (TRUST-flavored) standard Lasso in leaf if all Relaxed Lasso coefficients are zero due to excessive penalty.
-  4. Automatic check for missing target values and corresponding removal of rows in training dataset.
-  5. Method show_leaf_coefficients(leaves = "all", rnd = 2) to print coefficient summary tables for the selected leaves.
-  6. Explicit node id, also in tree plot (leaves only).
+  3. Automatic check for missing target values and corresponding removal of rows in training dataset.
+  4. Automatic check for highly imbalanced categorical variables and default to standard scaling in those cases.
+  5. Fallback to (TRUST-flavored) standard Lasso in leaf if all Relaxed Lasso coefficients are zero due to excessive penalty.
+  6. Method show_leaf_coefficients(leaves = "all", rnd = 2) to print coefficient summary tables for the selected leaves.
+  7. Explicit node id, also in tree plot (leaves only).
 - Changed:
   1. **Revamped explain() method** to be even more powerful *and* user friendly.
   2. Fixed bug in print_model() in absence of significant features.
