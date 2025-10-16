@@ -169,7 +169,7 @@ model.explain(X_test[0,:], y_pred[0], actual=y_test[0], filename="Synthetic")
 ```
 ![Explain1](assets/trust-free_explain1.png)
 
-![Explain2](assets/trust-free_explain2.png)
+![PieChart](assets/Pie_chart_Synthetic.png)
 
 
 
