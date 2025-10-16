@@ -213,8 +213,8 @@ RLT_Diabetes.varImpPerm(Diabetes_X, Diabetes_y, filename="Diabetes") #Permutatio
 ![varImp3](assets/varImpPermScores_plot_Diabetes.png)
 
 ```python
-# Obtain prediction explanation for first observation
-RLT_Diabetes.explain(Diabetes_X.iloc[1,:], y_pred_TRUST[1], actual=Diabetes_y.to_list()[1],filename="Diabetes")
+# Obtain prediction explanation for second observation
+RLT_Diabetes.explain(Diabetes_X.iloc[1,:], aim="decrease", actual=Diabetes_y[1], filename="Diabetes")
 ```
 ![Explain3](assets/trust-free_explain3.png)
 
