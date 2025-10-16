@@ -254,4 +254,4 @@ Further details about the TRUST™ algorithm can be found in our preprint on arX
 
 https://www.arxiv.org/abs/2506.15791
 
-Copyright (c) 2025 Albert Dorador Chalar. All rights reserved. TRUST™ is a trademark of Albert Dorador Chalar.
+Copyright © 2025 Albert Dorador Chalar. All rights reserved. TRUST™ is a trademark of Albert Dorador Chalar.
