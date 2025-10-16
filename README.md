@@ -155,17 +155,21 @@ print("test R\u00B2:", r2_score(y_test, y_pred))
 ```
 
 ```python
-# Obtain (conditional) variable importance by Ghost method (Delicado and Pena, 2023)
+# Obtain (conditional) variable importance by Ghost method (based on Delicado and Pena, 2023)
 model.varImp(X_test, y_test, corAnalysis=True, filename="Synthetic")
 ```
 ![varImp](assets/varImpScores_plot_Synthetic.png)
 
+```python
+# Unconditional variable importance by permutation (with added debiasing and uncertainty quantification steps)
+model.varImpPerm(X_test, y_test, R=20, B=20, U=10, filename="Synthetic")
+```
 ![varImpPerm](assets/varImpPermScores_plot_Synthetic.png)
 
 
 ```python
 # Obtain prediction explanation for first observation
-model.explain(X_test[0,:], y_pred[0], actual=y_test[0], filename="Synthetic") 
+model.explain(X_test[0,:], mode="detailed", actual=y_test[0], filename="Synthetic") 
 ```
 ![Explain1](assets/trust-free_explain1.png)
 
