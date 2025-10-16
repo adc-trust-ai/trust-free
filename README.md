@@ -160,6 +160,9 @@ model.varImp(X_test, y_test, corAnalysis=True, filename="Synthetic")
 ```
 ![varImp](assets/varImpScores_plot_Synthetic.png)
 
+![varImpPerm](assets/varImpPermScores_plot_Synthetic.png)
+
+
 ```python
 # Obtain prediction explanation for first observation
 model.explain(X_test[0,:], y_pred[0], actual=y_test[0], filename="Synthetic") 
