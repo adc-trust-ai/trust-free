@@ -224,9 +224,13 @@ RLT_Diabetes.explain(Diabetes_X.iloc[1,:], aim="decrease", actual=Diabetes_y[1],
 
 ```python
 # Compare the second and third observations head-to-head
-RLT_Diabetes.compare(Diabetes_X.iloc[1,:], Diabetes_X.iloc[3,:])
+RLT_Diabetes.compare(Diabetes_X.iloc[1,:], Diabetes_X.iloc[3,:], filename="Diabetes")
 ```
 ![Compare1](assets/trust-free_compare1.png)
+
+![Radar](assets/Radar_chart_Diabetes.png)
+
+![Pies](assets/Pie_charts_Diabetes.png)
 
 ![Compare2](assets/trust-free_compare2.png)
 
