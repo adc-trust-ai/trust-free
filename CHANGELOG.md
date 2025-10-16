@@ -20,7 +20,7 @@
   10. Formatting improvements (e.g. progress bar in cross-validation step).
 - Removed:
   1. Redundant attributes (dataset_noNAs, dataset, df_X_train_original, df_Y_train_original, df_train_original).
-  2. Redundant LT parameter in importance scoring functions.
+  2. Redundant LT parameter in importance scoring functions. This **breaks backward compatibility**, so it may require **adapting existing pipelines** accordingly for some users.
 
 ## 1.1.2 (2025-08-25)
 - Added:
