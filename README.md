@@ -181,12 +181,16 @@ model.explain(X_test[0,:], mode="detailed", actual=y_test[0], filename="Syntheti
 ```python
 import pandas as pd
 from sklearn import datasets
+from sklearn.preprocessing import LabelEncoder
 
 Diabetes = pd.DataFrame(datasets.load_diabetes().data)
 Diabetes.columns = datasets.load_diabetes().feature_names
 diab_target = datasets.load_diabetes().target
 Diabetes.insert(len(Diabetes.columns), "Disease_marker", diab_target)
 Diabetes_X = Diabetes.iloc[:,:-1]
+# Binary encoding (0/1) for 'sex'
+le = LabelEncoder()
+Diabetes_X.loc[:, 'sex'] = le.fit_transform(Diabetes_X['sex']).astype(str)
 Diabetes_y = Diabetes.iloc[:,-1]
 RLT_Diabetes = TRUST(max_depth=1)
 RLT_Diabetes.fit(Diabetes_X,Diabetes_y)
