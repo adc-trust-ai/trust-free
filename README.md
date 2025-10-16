@@ -39,7 +39,10 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 
 * **Upcoming Talks & Workshops:**
   * [PRICAI 2025](https://www.pricai.org/2025/index.php) (Nov 2025)
-  * [BarcelonaTech](https://eio.upc.edu/en/seminar) (Dec 2025)
+  * [BarcelonaTech, Statistics Department](https://eio.upc.edu/en/seminar) (Dec 2025)
+
+* **Past Talks & Workshops:**
+  * [University of Seville, Minerva AI Lab](https://grupo.us.es/minerva/) (Oct 2025) 
     
 
 ## Summary of Key Advantages
@@ -74,7 +77,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 
 
 ## What's new in version 2.0.0?
-### TL;DR: Faster training and predictions, enhanced robustness, and reduced memory usage.
+### TL;DR: Next-level explanation tools, faster training and predictions, enhanced robustness, and reduced memory usage.
 
 - Added:
   1. Automatic reporting and removal of duplicate columns.
