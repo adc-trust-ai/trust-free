@@ -80,19 +80,24 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 ### TL;DR: Next-level explanation tools, faster training and predictions, enhanced robustness, and reduced memory usage.
 
 - Added:
-  1. Automatic reporting and removal of duplicate columns.
-  2. Fallback to (TRUST™-flavored) standard Lasso in leaf if all Relaxed Lasso coefficients are zero due to excessive penalty.
+  1. **New compare() method** to allow head-to-head comparisons of data points.
+  2. Automatic reporting and removal of duplicate columns.
   3. Automatic check for missing target values and corresponding removal of rows in training dataset.
-  4. Method show_leaf_coefficients(leaves = "all", rnd = 2) to print coefficient summary tables for the selected leaves.
-  5. Explicit node id, also in tree plot (leaves only).
+  4. Automatic check for highly imbalanced categorical variables and switch from robust to standard scaling in those cases.
+  5. Fallback to (TRUST-flavored) standard Lasso in leaf if all Relaxed Lasso coefficients are zero due to excessive regularization.
+  6. Method show_leaf_coefficients(leaves = "all", enc_table = True, rnd = 2) to print coefficient summary tables for the selected leaves.
+  7. Explicit node id, also in tree plot (leaves only).
 - Changed:
-  1. Fixed bug in print_model() in absence of significant features.
-  2. Revamped the explain() method to be even more user friendly.
-  3. Threshold for 'large' lowered from 0.6 to 0.55, and threshold for 'intermediate' increased from 0.4 to 0.45.
-  4. More efficient retrieval of encoded values: before it was O(n) now it's O(1). Should speedup prediction (and even fitting) noticeably.
-  5. Internal method _fill_NAs now takes the feature matrix X instead of the complete dataset as input.
-  6. df_X_train_original_withID for the all-complete df_Leaf_X_train_original_Y_Yhat.
-  7. Slightly faster prediction for depth-0 trees.
+  1. **Revamped explain() method** to be even more powerful *and* user friendly.
+  2. Improved handling of categorical variables in Shap's waterfall plot
+  3. Fixed bug in print_model() in absence of significant features.
+  4. Threshold for 'large' lowered from 0.6 to 0.55, and threshold for 'intermediate' increased from 0.4 to 0.45.
+  5. More efficient retrieval of encoded values: before it was O(n) now it's O(1). Should speedup prediction (and even fitting) noticeably.
+  6. Internal method _fill_NAs now takes the feature matrix X instead of the complete dataset as input.
+  7. df_X_train_original_withID for the all-complete df_Leaf_X_train_original_Y_Yhat.
+  8. Faster prediction for depth-0 trees, and in general (iterative vs recursive approach).
+  9. Faster variable importance calculation (both permutation and Ghost method).
+  10. Formatting improvements (e.g. progress bar in cross-validation step).
 - Removed:
   1. Redundant attributes (dataset_noNAs, dataset, df_X_train_original, df_Y_train_original, df_train_original).
   2. Redundant LT parameter in importance scoring functions. This **breaks backward compatibility**, so it may require **adapting existing pipelines** accordingly for some users.
