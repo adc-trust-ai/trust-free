@@ -222,6 +222,15 @@ RLT_Diabetes.explain(Diabetes_X.iloc[1,:], aim="decrease", actual=Diabetes_y[1],
 
 ![Explain4](assets/trust-free_explain4.png)
 
+```python
+# Compare the second and third observations head-to-head
+RLT_Diabetes.compare(Diabetes_X.iloc[1,:], Diabetes_X.iloc[3,:])
+```
+![Compare1](assets/trust-free_compare1.png)
+
+![Compare2](assets/trust-free_compare2.png)
+
+
 ### More Examples on Kaggle Datasets
 - [Medical Insurance Charges (1.8M views, 353K downloads)](https://www.kaggle.com/code/albertdorador/get-0-89-test-r2-with-an-interpretable-trust-tree)
 - [Life Satisfaction in the EU (own contribution)](https://www.kaggle.com/code/albertdorador/interpretable-ml-on-life-satisfaction-in-the-eu)
