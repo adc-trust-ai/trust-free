@@ -60,7 +60,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - Multiple variable importance methods (Ghost, Permutation, ALE plots, SHAP values)
 - Automatic missing value handling that learns from missingness itself
 - Ability to efficiently use continuous and categorical predictor variables
-- Prediction confidence intervals *[planned]*
+- Prediction confidence intervals *[coming in next release]*
   
 
 ## Additional Features in Pro Version
