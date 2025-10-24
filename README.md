@@ -175,6 +175,9 @@ model.explain(X_test[0,:], mode="detailed", actual=y_test[0], filename="Syntheti
 
 ![PieChart](assets/Pie_chart_Synthetic.png)
 
+Check out a 40-second interactive demo of the explain() and compare() methods:
+
+![ExplainCompareGif](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain_compare_wm.gif)
 
 
 ### 🩺 Example 2: Diabetes Dataset (n=442, p=10)
