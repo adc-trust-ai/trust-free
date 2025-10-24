@@ -164,16 +164,16 @@ model.varImp(X_test, y_test, corAnalysis=True, filename="Synthetic")
 # Unconditional variable importance by permutation (with added debiasing and uncertainty quantification steps)
 model.varImpPerm(X_test, y_test, R=20, B=20, U=10, filename="Synthetic")
 ```
-![varImpPerm](assets/varImpPermScores_plot_Synthetic.png)
+![varImpPerm](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpPermScores_plot_Synthetic.png)
 
 
 ```python
 # Obtain prediction explanation for first observation
 model.explain(X_test[0,:], mode="detailed", actual=y_test[0], filename="Synthetic") 
 ```
-![Explain1](assets/trust-free_explain1.png)
+![Explain1](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain1.png)
 
-![PieChart](assets/Pie_chart_Synthetic.png)
+![PieChart](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Pie_chart_Synthetic.png)
 
 
 ### 🩺 Example 2: Diabetes Dataset (n=442, p=10)
@@ -200,45 +200,45 @@ y_pred_TRUST = RLT_Diabetes.predict(Diabetes_X)
 # You can use e.g. Homebrew: brew install graphviz or Conda: conda install -c conda-forge graphviz
 RLT_Diabetes.plot_tree("Diabetes") #will save "tree_plot_Diabetes.png" in your working directory
 ```
-![tree](assets/tree_plot_Diabetes.png)
+![tree](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/tree_plot_Diabetes.png)
 
 ```python
 # Obtain variable importance with 2 different methods: Ghost and permutation
 RLT_Diabetes.varImp(Diabetes_X, Diabetes_y, corAnalysis=True, filename="Diabetes") #Ghost method
 RLT_Diabetes.varImpPerm(Diabetes_X, Diabetes_y, filename="Diabetes") #Permutation method
 ```
-![varImp2](assets/varImpScores_plot_Diabetes.png)
+![varImp2](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpScores_plot_Diabetes.png)
 
-![varImp3](assets/varImpPermScores_plot_Diabetes.png)
+![varImp3](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpPermScores_plot_Diabetes.png)
 
 ```python
 # Obtain prediction explanation for second observation
 RLT_Diabetes.explain(Diabetes_X.iloc[1,:], aim="decrease", actual=Diabetes_y[1], filename="Diabetes")
 ```
-![Explain2](assets/trust-free_explain2.png)
+![Explain2](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain2.png)
 
-![Explain3](assets/trust-free_explain3.png)
+![Explain3](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain3.png)
 
-![Explain4](assets/trust-free_explain4.png)
+![Explain4](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain4.png)
 
 ```python
 # Compare the second and third observations head-to-head
 RLT_Diabetes.compare(Diabetes_X.iloc[1,:], Diabetes_X.iloc[3,:], filename="Diabetes")
 ```
-![Compare1](assets/trust-free_compare1.png)
+![Compare1](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_compare1.png)
 
-![Radar](assets/Radar_chart_Diabetes.png)
+![Radar](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Radar_chart_Diabetes.png)
 
-![Pies](assets/Pie_charts_Diabetes.png)
+![Pies](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Pie_charts_Diabetes.png)
 
-![Compare2](assets/trust-free_compare2.png)
+![Compare2](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_compare2.png)
 
 
 ### More Examples on Kaggle Datasets
 - [Medical Insurance Charges (1.8M views, 353K downloads)](https://www.kaggle.com/code/albertdorador/get-0-89-test-r2-with-an-interpretable-trust-tree)
 - [Life Satisfaction in the EU (own contribution)](https://www.kaggle.com/code/albertdorador/interpretable-ml-on-life-satisfaction-in-the-eu)
 
-Check out a 40-second interactive demo of the explain() and compare() methods applied to the famous Medical Insurance Charges dataset from Kaggle:
+Explore a 40-second interactive demo showcasing the explain() and compare() methods, which generate automated explanation reports for the famous Medical Insurance Charges dataset from Kaggle:
 
 ![ExplainCompareGif](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain_compare_wm.gif)
 
