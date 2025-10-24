@@ -158,7 +158,7 @@ print("test R\u00B2:", r2_score(y_test, y_pred))
 # Obtain (conditional) variable importance by Ghost method (based on Delicado and Pena, 2023)
 model.varImp(X_test, y_test, corAnalysis=True, filename="Synthetic")
 ```
-![varImp](assets/varImpScores_plot_Synthetic.png)
+![varImp](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpScores_plot_Synthetic.png)
 
 ```python
 # Unconditional variable importance by permutation (with added debiasing and uncertainty quantification steps)
@@ -174,10 +174,6 @@ model.explain(X_test[0,:], mode="detailed", actual=y_test[0], filename="Syntheti
 ![Explain1](assets/trust-free_explain1.png)
 
 ![PieChart](assets/Pie_chart_Synthetic.png)
-
-Check out a 40-second interactive demo of the explain() and compare() methods:
-
-![ExplainCompareGif](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain_compare_wm.gif)
 
 
 ### 🩺 Example 2: Diabetes Dataset (n=442, p=10)
@@ -242,6 +238,9 @@ RLT_Diabetes.compare(Diabetes_X.iloc[1,:], Diabetes_X.iloc[3,:], filename="Diabe
 - [Medical Insurance Charges (1.8M views, 353K downloads)](https://www.kaggle.com/code/albertdorador/get-0-89-test-r2-with-an-interpretable-trust-tree)
 - [Life Satisfaction in the EU (own contribution)](https://www.kaggle.com/code/albertdorador/interpretable-ml-on-life-satisfaction-in-the-eu)
 
+Check out a 40-second interactive demo of the explain() and compare() methods applied to the famous Medical Insurance Charges dataset from Kaggle:
+
+![ExplainCompareGif](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain_compare_wm.gif)
 
 ## License
 
