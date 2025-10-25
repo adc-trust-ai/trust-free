@@ -17,14 +17,14 @@
 
 - `stoppingR2: float, default=0.95`
   
-  Stopping condition 3. This is a less arbitrary criterion than the usual 'minimum impurity decrease', as it has a more intuitive scale.
+  Stopping condition 3. This is a more intuitive and less arbitrary criterion than the usual 'minimum impurity decrease', as it offers the same scale regardless of dataset.
   If the current training R^2 in a given node attains or exceeds the stoppingR2 threshold the node will not split further. This should speed up training and reduce overfitting.
   Lower values imply (potentially) faster training, less overfitting but more underfitting. Higher values imply (potentially) slower training, more overfitting but less underfitting.
   A value of 1 (or higher) disables this stopping condition. A value of 0 (or lower) skips training altogether (hence must not be chosen).
 
 - `scaling: {'RobS', 'StdS', 'MinMaxS', 'none'}, default='robs'`
   
-  Scaling method desired (not case-sensitive). "RobS" stands for robust scaling, which is more robust to outliers than StdS (standard scaling), but also slightly slower.
+  Scaling method desired (not case-sensitive). "RobS" stands for robust scaling, which is more robust to outliers than StdS (standard scaling), but also slightly slower (and it can be problematic for highly unbalanced categorical features).
   The string (!) "none" signifies that no scaling should be performed (generally discouraged).
 
 - `random_state: int, default=123`
@@ -120,7 +120,7 @@ The above default values are sensible and hence usually enough.
   - `CV: {'Pro', 'standard', 'none'}, default="Pro"`
     
     Cross-validation (CV) method desired to tune tree depth.
-    "Pro" stands for progressive cross-validation, which means that bad candidate depths are progressively dropped, which speeds up CV (quadratically).
+    "Pro" stands for progressive cross-validation, which means that less promissing candidate depths are progressively dropped, which speeds up CV (quadratically).
   - `n_folds: int, default="auto"`
     
     Number of CV folds in standard CV. The default option sets either 5 or 10 if a smaller sample size relative to dimensionality.
@@ -131,7 +131,7 @@ The above default values are sensible and hence usually enough.
     Unless the training set is very small, this default yields [0,1,2,3,4], where 0 means just a relaxed Lasso model is fitted.
   - `seCV: int or float, default=0.1`
     
-    Number of standard errors away from the CV best to consider when choosing the best depth by CV.
+    Number of standard errors away from the CV-best to consider when choosing the best depth by CV.
     Larger values favor the selection of smaller depths, while smaller values (in the limit, 0) may favor the selection of larger depths (if they appear better by CV).
   - `seEN: int or float, default=0.5`
     
@@ -186,13 +186,25 @@ The above default values are sensible and hence usually enough.
 
     Whether or not predictions should be truncated with the chosen truncation constant.
 
-- `explain(x_original,pred=None,actual=None,enc_table=True,plot=True,filename=None,rnd=2)`
+- `explain(x_original,aim="auto",mode="report",prop_explained=0.9,pred=None,actual=None,filename=None,rnd=2)`
 
   Provides a comprehensive explanation of the prediction of a requested instance.
   ### Parameters:
   - `x_original: array-like of shape (1, p)`
 
     Instance (in original form, i.e. without any encoding or scaling) for which a prediction explanation is requested.
+  - `aim: str, one of {'auto', 'increase', 'decrease'}. Default: 'auto'.`
+
+    The overall aim of the explanation, which informs color coding and phrasing of text summaries.
+    The 'auto' default sets the aim to 'increase' if the prediction in question is not above the median in-training prediction, and to 'decrease' otherwise.
+  - `mode: str, one of {'summary', 'report', 'detailed'}. Default: 'report'.`
+
+    The level of detail desired. By default, a 'report' is generated with a sensible balance of detail and brevity.
+
+   - `prop_explained: float, default=0.9`
+
+    The proportion of prediction explained by a subset of features that is deemed acceptable.
+    By default, no more features are added in a given part of the report once 90% of the prediction is explained by the features already included.
   - `pred: int or float, default=None`
 
     The prediction for which you request an explanation.
@@ -204,9 +216,6 @@ The above default values are sensible and hence usually enough.
     
     Whether or not an encoding table for categorical variables should be printed.
     This is useful to interpret the estimated linear model coefficients corresponding to categorical variables.
-  - `plot: bool, default=True`
-
-    Whether a root-to-leaf plot should be included in the report too.
   - `filename: str, default=None`
 
     The file name (without any extension) that you wish to use to save the root-to-leaf and waterfall plots.
