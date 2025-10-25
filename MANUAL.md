@@ -203,7 +203,7 @@ The above default values are sensible and hence usually enough.
 
    - `prop_explained: float, default=0.9`
 
-    The proportion of prediction explained by a subset of features that is deemed acceptable.
+    The proportion of prediction explained by a subset of features that is deemed enough.
     By default, no more features are added in a given part of the report once 90% of the prediction is explained by the features already included.
   - `pred: int or float, default=None`
 
@@ -212,10 +212,32 @@ The above default values are sensible and hence usually enough.
   - `actual: int or float, default=None`
 
     The actual target value that corresponds to the requested instance, if known.
-  - `enc_table: bool, default=True`
-    
-    Whether or not an encoding table for categorical variables should be printed.
-    This is useful to interpret the estimated linear model coefficients corresponding to categorical variables.
+  - `filename: str, default=None`
+
+    The file name (without any extension) that you wish to use to save the root-to-leaf and waterfall plots.
+    If none is provided (default), suitable names with today's date will be used.
+    Plots are always saved in the user's current working directory.
+  - `rnd: int, default=2`
+
+    Number of decimal places to round the printed results to.
+
+- `compare(x1, x2, mode = "report", prop_explained=0.9, filename=None, rnd=2)`
+
+  In-depth comparison of user-supplied instances x1 and x2.
+  ### Parameters:
+  - `x1: Pandas Series or list of length p`
+
+    1st profile (in original form, i.e. without any encoding or scaling) to be compared.
+  - `x2: Pandas Series or list of length p`
+
+    2nd profile (in original form, i.e. without any encoding or scaling) to be compared.
+  - `mode: str, one of {'summary', 'report', 'detailed'}. Default: 'report'.`
+
+    The level of detail desired. By default, a 'report' is generated with a sensible balance of detail and brevity.
+   - `prop_explained: float, default=0.9`
+
+    The proportion of prediction explained by a subset of features that is deemed enough.
+    By default, no more features are added in a given part of the report once 90% of the prediction is explained by the features already included.
   - `filename: str, default=None`
 
     The file name (without any extension) that you wish to use to save the root-to-leaf and waterfall plots.
