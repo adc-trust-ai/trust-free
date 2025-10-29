@@ -34,6 +34,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 ### Recognition
 
 * **Featured:**
+  * [Data Elixir (Issue 546)](https://dataelixir.com/) (over 60,000 subscribers)
   * [Data Science Weekly (Issue 616)](https://datascienceweekly.substack.com/p/data-science-weekly-issue-616) (over 68,500 subscribers)
   * [University of Wisconsin - Madison Department of Statistics website](https://stat.wisc.edu/2025/05/08/department-of-statistics-celebrates-spring-2025-graduates/) (May 2025)
 
