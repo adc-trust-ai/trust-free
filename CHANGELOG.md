@@ -2,6 +2,7 @@
 - Added:
   1. Axis values in radar chart (compare method).
   2. Pie and radar charts and saved to device in explain and compare method retain feature names when run in Jupyter too.
+  3. Visual cues to convey training performance more easily and to spot overfitting (rare) faster.
 - Changed:
   1. Changed prediction logic from recursive to iterative (more efficient).
   2. Reversed color scheme for bar chart in detailed mode for the compare method.
