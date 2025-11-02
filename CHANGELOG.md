@@ -1,7 +1,7 @@
 ## 2.1.0 (2025-11-??)
 - Added:
   1. Axis values in radar chart (compare method).
-  2. Prettier plots saved to device in compare method when run in Jupyter.
+  2. Pie and radar charts and saved to device in explain and compare method retain feature names when run in Jupyter too.
 - Changed:
   1. Changed prediction logic from recursive to iterative (more efficient).
   2. Reversed color scheme for bar chart in detailed mode for the compare method.
