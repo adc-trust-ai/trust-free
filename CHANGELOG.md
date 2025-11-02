@@ -1,10 +1,11 @@
 ## 2.1.0 (2025-11-??)
 - Added:
-  1. Axis values in radar chart (compare method)
+  1. Axis values in radar chart (compare method).
+  2. Prettier plots saved to device in compare method when run in Jupyter.
 - Changed:
-  1. Changed prediction logic from recursive to iterative (more efficient)
-  2. Reversed color scheme for bar chart in detailed mode for the compare method
-  3. Sorted dumbell plot from largest to smallest feature difference in compare method
+  1. Changed prediction logic from recursive to iterative (more efficient).
+  2. Reversed color scheme for bar chart in detailed mode for the compare method.
+  3. Sorted dumbell plot from largest to smallest feature difference in compare method.
 
 ## 2.0.0 (2025-10-16)
 - Added:
