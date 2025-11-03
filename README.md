@@ -61,6 +61,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - Automatically-generated head-to-head comparisons of profiles of interest
 - Multiple variable importance methods (Ghost, Permutation, ALE plots, SHAP values)
 - Automatic missing value handling that learns from missingness itself
+- Automatic detection of potential overfitting.
 - Ability to efficiently use continuous and categorical predictor variables
 - Prediction confidence intervals *[coming in next release]*
   
