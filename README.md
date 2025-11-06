@@ -225,7 +225,7 @@ RLT_Diabetes.explain(Diabetes_X.iloc[1,:], aim="decrease", actual=Diabetes_y[1],
 ![Explain4](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain4.png)
 
 ```python
-# Compare the second and third observations head-to-head
+# Compare the second and fourth observations head-to-head
 RLT_Diabetes.compare(Diabetes_X.iloc[1,:], Diabetes_X.iloc[3,:], filename="Diabetes")
 ```
 ![Compare1](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_compare1.png)
