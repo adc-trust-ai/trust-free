@@ -9,7 +9,7 @@
   2. Reversed color scheme for bar chart in detailed mode for the compare method.
   3. Sorted dumbell plot from largest to smallest feature difference in compare method.
   4. Fixed bug in explain method for (rare) cases where no feature was statistically relevant.
-  5. More precise expected time to training completion after cross-validation.
+  5. More accurate expected time to training completion after cross-validation.
 
 ## 2.0.0 (2025-10-16)
 - Added:
