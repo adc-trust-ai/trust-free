@@ -10,6 +10,10 @@
 
 **trust-free** is a Python package for fitting interpretable regression models using Transparent, Robust, and Ultra-Sparse Trees (TRUST™) — a new generation of Linear Model Trees (LMTs) with state-of-the-art accuracy and intuitive explanations. It is based on my peer-reviewed paper [1], **accepted at the 22nd Pacific Rim International Conference on Artificial Intelligence (PRICAI 2025)**.
 
+Here's a 40-second demo showcasing the explain() and compare() methods, which generate automated explanation reports for the famous Medical Insurance Charges dataset from Kaggle:
+
+![ExplainCompareGif](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain_compare_wm.gif)
+
 The package currently supports standard regression and experimental time-series regression tasks. Future releases will also tackle other tasks such as classification.
 
 Note: trust-free is, as its name suggests, a free version, limited to datasets of at most 5,000 rows (instances) and 20 columns (features) — a 'pro' version is under development. 
@@ -241,9 +245,6 @@ RLT_Diabetes.compare(Diabetes_X.iloc[1,:], Diabetes_X.iloc[3,:], filename="Diabe
 - [Medical Insurance Charges (1.8M views, 353K downloads)](https://www.kaggle.com/code/albertdorador/get-0-89-test-r2-with-an-interpretable-trust-tree)
 - [Life Satisfaction in the EU (own contribution)](https://www.kaggle.com/code/albertdorador/interpretable-ml-on-life-satisfaction-in-the-eu)
 
-Explore a 40-second interactive demo showcasing the explain() and compare() methods, which generate automated explanation reports for the famous Medical Insurance Charges dataset from Kaggle:
-
-![ExplainCompareGif](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain_compare_wm.gif)
 
 ## License
 
