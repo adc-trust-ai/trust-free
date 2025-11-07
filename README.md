@@ -10,7 +10,7 @@
 
 **trust-free** is a Python package for fitting interpretable regression models using Transparent, Robust, and Ultra-Sparse Trees (TRUST™) — a new generation of Linear Model Trees (LMTs) with state-of-the-art accuracy and intuitive explanations. It is based on my peer-reviewed paper [1], **accepted at the 22nd Pacific Rim International Conference on Artificial Intelligence (PRICAI 2025)**.
 
-Here's a 40-second demo showcasing the explain() and compare() methods, which generate automated explanation reports for the famous Medical Insurance Charges dataset from Kaggle:
+Here's a 40-second demo showcasing the explain() and compare() methods, which generate automated explanation reports for the famous [Medical Insurance Charges](https://www.kaggle.com/datasets/mirichoi0218/insurance) dataset from Kaggle:
 
 ![ExplainCompareGif](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain_compare_wm.gif)
 
@@ -242,8 +242,8 @@ RLT_Diabetes.compare(Diabetes_X.iloc[1,:], Diabetes_X.iloc[3,:], filename="Diabe
 
 
 ### More Examples on Kaggle Datasets
-- [Medical Insurance Charges (1.8M views, 353K downloads)](https://www.kaggle.com/code/albertdorador/get-0-89-test-r2-with-an-interpretable-trust-tree)
-- [Life Satisfaction in the EU (own contribution)](https://www.kaggle.com/code/albertdorador/interpretable-ml-on-life-satisfaction-in-the-eu)
+- [Medical Insurance Charges (1.8M views, 353K downloads)](https://www.kaggle.com/datasets/mirichoi0218/insurance)
+- [Life Satisfaction in the EU (own contribution)](https://www.kaggle.com/datasets/albertdorador/eu-life-satisfaction-eurostat-un-oecd)
 
 
 ## License
