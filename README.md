@@ -16,16 +16,16 @@ Here's a 40-second demo showcasing the explain() and compare() methods, which ge
 
 ### Proven Performance: Accuracy + Full Interpretability (60 Datasets)
 
-| Model                | **R² ↑** | **Interpretable?** |
-|----------------------|----------|---------------------|
-| **TRUST™**           | **0.67** | Yes              |
-| Random Forest        | 0.62     | No               |
-| Lasso                | 0.57     | Yes              |
-| CART                 | 0.49     | Partial          |
-| Neural Net (NH)      | 0.47     | No               |
-| M5' (Model Tree)     | 0.36     | Partial*         |
+| Model                   | **Test R² ↑** | **Interpretable?** |
+|-------------------------|---------------|--------------------|
+| **TRUST™**              | **0.67**      | Yes                |
+| Random Forest           | 0.62          | No                 |
+| Lasso                   | 0.57          | Yes                |
+| CART                    | 0.49          | Yes                |
+| Node Harvest (NH)       | 0.47          | Yes                |
+| M5' (Linear Model Tree) | 0.36          | Partial*           |
 
-> **TRUST™ is the only fully interpretable model above 0.6 R²** — and **6× sparser** than M5' (*17 vs 109 coefficients*).  
+> **TRUST™ is the only fully interpretable model above 0.6 R²** across varied benchmark datasets — and **6× sparser** than M5' (*17 vs 109 coefficients*).  
 > *Source: PRICAI 2025*
 
 ---
