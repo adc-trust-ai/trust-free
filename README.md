@@ -28,6 +28,9 @@ Here's a 40-second demo showcasing the explain() and compare() methods, which ge
 > **TRUST™ is the only fully interpretable model above 0.6 R²** across varied benchmark datasets — and **6× sparser** than M5' (*17 vs 109 coefficients*).  
 > *Source: PRICAI 2025*
 
+Try it now on macOS: `pip install trust-free`  
+See full benchmarks in the [PRICAI 2025 paper](https://arxiv.org/abs/2506.15791)
+
 ---
 
 The package currently supports standard regression and experimental time-series regression tasks. Future releases will also tackle other tasks such as classification.
