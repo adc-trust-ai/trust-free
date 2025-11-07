@@ -8,11 +8,27 @@
 
 ### Model. Explain. TRUST. All in one Python package, for free.
 
-**trust-free** is a Python package for fitting interpretable regression models using Transparent, Robust, and Ultra-Sparse Trees (TRUST™) — a new generation of Linear Model Trees (LMTs) with state-of-the-art accuracy and intuitive explanations. It is based on my peer-reviewed paper [1], **presented at the 22nd Pacific Rim International Conference on Artificial Intelligence (PRICAI 2025) and to appear in Springer Nature (Lecture Notes in Artificial Intelligence)**.
+**trust-free** is a Python package for fitting interpretable regression models using Transparent, Robust, and Ultra-Sparse Trees (TRUST™) — a new generation of Linear Model Trees (LMTs) with Random-Forest accuracy and intuitive explanations. It is based on my peer-reviewed paper [1], **presented at the 22nd Pacific Rim International Conference on Artificial Intelligence (PRICAI 2025) and to appear in Springer Nature (Lecture Notes in Artificial Intelligence)**.
 
 Here's a 40-second demo showcasing the explain() and compare() methods, which generate automated explanation reports for the famous [Medical Insurance Charges](https://www.kaggle.com/datasets/mirichoi0218/insurance) dataset from Kaggle:
 
 ![ExplainCompareGif](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain_compare_wm.gif)
+
+### Proven Performance: Accuracy + Full Interpretability (60 Datasets)
+
+| Model                | **R² ↑** | **Interpretable?** |
+|----------------------|----------|---------------------|
+| **TRUST™**           | **0.67** | Yes              |
+| Random Forest        | 0.62     | No               |
+| Lasso                | 0.57     | Yes              |
+| CART                 | 0.49     | Partial          |
+| Neural Net (NH)      | 0.47     | No               |
+| M5' (Model Tree)     | 0.36     | Partial*         |
+
+> **TRUST™ is the only fully interpretable model above 0.6 R²** — and **6× sparser** than M5' (*17 vs 109 coefficients*).  
+> *Source: PRICAI 2025*
+
+---
 
 The package currently supports standard regression and experimental time-series regression tasks. Future releases will also tackle other tasks such as classification.
 
