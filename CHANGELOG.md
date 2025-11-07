@@ -10,6 +10,8 @@
   3. Sorted dumbell plot from largest to smallest feature difference in compare method.
   4. Fixed bug in explain method for (rare) cases where no feature was statistically relevant.
   5. More accurate expected time to training completion after cross-validation.
+  6. Swapped cosine similarity for angular similarity in compare() for more intuitive scaling.
+  7. Other minor enhancements in explain() and compare() methods.
 
 ## 2.0.0 (2025-10-16)
 - Added:
