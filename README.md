@@ -87,6 +87,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - Automatic detection of potential overfitting.
 - Ability to efficiently use continuous and categorical predictor variables
 - Prediction confidence intervals *[coming in next release]*
+- Novel method to warn about risky predictions on the fly *[planned]*
 - Novel in-leaf regression model delivering even further sparsity *[planned]*
   
 
@@ -96,9 +97,12 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - Large Language Model (LLM) integration for enhanced explanations *[ready]*
 - Signed (+/-) variable importance plots *[ready]*
 - Out-Of-Distribution detection *[ready]*
+- P-values for tree splits *[planned]*
+- Pdfs for the automatically-generated reports *[planned]*
 - Interaction ALE plots *[planned]*
 - Automatic model mismatch detection *[planned]*
 - Smart feature selection and engineering *[planned]*
+- Leaf-based (more precise) prediction confidence intervals *[planned]*
 - Faster training *[planned]*
 
 
