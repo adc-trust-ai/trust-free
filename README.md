@@ -184,14 +184,13 @@ print("test R\u00B2:", r2_score(y_test, y_pred))
 # Obtain (conditional) variable importance by Ghost method (based on Delicado and Pena, 2023)
 model.varImp(X_test, y_test, corAnalysis=True, filename="Synthetic")
 ```
-<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpScores_plot_Synthetic.png" alt="varImp" width="80%" style="display: block; margin: auto;" />
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpScores_plot_Synthetic.png" alt="varImp" width="50%" style="display: block; margin: auto;" />
 
 ```python
 # Unconditional variable importance by permutation (with added debiasing and uncertainty quantification steps)
 model.varImpPerm(X_test, y_test, R=20, B=20, U=10, filename="Synthetic")
 ```
-![varImpPerm](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpPermScores_plot_Synthetic.png)
-
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpPermScores_plot_Synthetic.png" alt="varImpPerm" width="50%" style="display: block; margin: auto;" />
 
 ```python
 # Obtain prediction explanation for first observation
