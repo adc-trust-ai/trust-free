@@ -187,7 +187,7 @@ model.varImp(X_test, y_test, corAnalysis=True, filename="Synthetic")
 model.varImpPerm(X_test, y_test, R=20, B=20, U=10, filename="Synthetic")
 ```
 <div style="display: flex; justify-content: space-around;">
-    <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpScores_plot_Synthetic.png" alt="varImp" width="49%" />
+    <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpScores_plot_Synthetic.png" alt="varImp" width="49.5%" />
     <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpPermScores_plot_Synthetic.png" alt="varImpPerm" width="47%" />
 </div>
 
