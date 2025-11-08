@@ -241,24 +241,24 @@ RLT_Diabetes.varImpPerm(Diabetes_X, Diabetes_y, filename="Diabetes") #Permutatio
 # Obtain prediction explanation for second observation
 RLT_Diabetes.explain(Diabetes_X.iloc[1,:], aim="decrease", actual=Diabetes_y[1], filename="Diabetes")
 ```
-<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain2.png" alt="Explain2" width="50%" style="display: block; margin: auto;" />
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain2.png" alt="Explain2" width="97%" style="display: block; margin: auto;" />
 
-<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain3.png" alt="Explain3" width="50%" style="display: block; margin: auto;" />
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain3.png" alt="Explain3" width="97%" style="display: block; margin: auto;" />
 
-<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain4.png" alt="Explain4" width="50%" style="display: block; margin: auto;" />
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain4.png" alt="Explain4" width="97%" style="display: block; margin: auto;" />
 
 
 ```python
 # Compare the second and fourth observations head-to-head
 RLT_Diabetes.compare(Diabetes_X.iloc[1,:], Diabetes_X.iloc[3,:], filename="Diabetes")
 ```
-<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_compare1.png" alt="Compare1" width="50%" style="display: block; margin: auto;" />
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_compare1.png" alt="Compare1" width="97%" style="display: block; margin: auto;" />
 
 <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Radar_chart_Diabetes.png" alt="Radar" width="50%" style="display: block; margin: auto;" />
 
-<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Pie_charts_Diabetes.png" alt="Pies" width="50%" style="display: block; margin: auto;" />
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_compare2.png" alt="Compare2" width="97%" style="display: block; margin: auto;" />
 
-<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_compare2.png" alt="Compare2" width="50%" style="display: block; margin: auto;" />
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Pie_charts_Diabetes.png" alt="Pies" width="50%" style="display: block; margin: auto;" />
 
 
 ### More Examples on Kaggle Datasets
