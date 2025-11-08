@@ -102,7 +102,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - Interaction ALE plots *[planned]*
 - Automatic model mismatch detection *[planned]*
 - Smart feature selection and engineering *[planned]*
-- Leaf-based (more precise) prediction confidence intervals *[planned]*
+- Leaf-conditional (more precise) prediction confidence intervals *[planned]*
 - Faster training *[planned]*
 
 
