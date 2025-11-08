@@ -196,9 +196,9 @@ model.varImpPerm(X_test, y_test, R=20, B=20, U=10, filename="Synthetic")
 # Obtain prediction explanation for first observation
 model.explain(X_test[0,:], mode="detailed", actual=y_test[0], filename="Synthetic") 
 ```
-![Explain1](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain1.png)
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain1.png" alt="Explain1" width="50%" style="display: block; margin: auto;" />
 
-![PieChart](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Pie_chart_Synthetic.png)
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Pie_chart_Synthetic.png" alt="PieChart" width="50%" style="display: block; margin: auto;" />
 
 
 ### 🩺 Example 2: Diabetes Dataset (n=442, p=10)
@@ -225,38 +225,40 @@ y_pred_TRUST = RLT_Diabetes.predict(Diabetes_X)
 # You can use e.g. Homebrew: brew install graphviz or Conda: conda install -c conda-forge graphviz
 RLT_Diabetes.plot_tree("Diabetes") #will save "tree_plot_Diabetes.png" in your working directory
 ```
-![tree](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/tree_plot_Diabetes.png)
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/tree_plot_Diabetes.png" alt="tree" width="50%" style="display: block; margin: auto;" />
 
 ```python
 # Obtain variable importance with 2 different methods: Ghost and permutation
 RLT_Diabetes.varImp(Diabetes_X, Diabetes_y, corAnalysis=True, filename="Diabetes") #Ghost method
 RLT_Diabetes.varImpPerm(Diabetes_X, Diabetes_y, filename="Diabetes") #Permutation method
 ```
-![varImp2](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpScores_plot_Diabetes.png)
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpScores_plot_Diabetes.png" alt="varImp2" width="50%" style="display: block; margin: auto;" />
 
-![varImp3](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpPermScores_plot_Diabetes.png)
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpPermScores_plot_Diabetes.png" alt="varImp3" width="50%" style="display: block; margin: auto;" />
+
 
 ```python
 # Obtain prediction explanation for second observation
 RLT_Diabetes.explain(Diabetes_X.iloc[1,:], aim="decrease", actual=Diabetes_y[1], filename="Diabetes")
 ```
-![Explain2](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain2.png)
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain2.png" alt="Explain2" width="50%" style="display: block; margin: auto;" />
 
-![Explain3](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain3.png)
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain3.png" alt="Explain3" width="50%" style="display: block; margin: auto;" />
 
-![Explain4](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain4.png)
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain4.png" alt="Explain4" width="50%" style="display: block; margin: auto;" />
+
 
 ```python
 # Compare the second and fourth observations head-to-head
 RLT_Diabetes.compare(Diabetes_X.iloc[1,:], Diabetes_X.iloc[3,:], filename="Diabetes")
 ```
-![Compare1](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_compare1.png)
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_compare1.png" alt="Compare1" width="50%" style="display: block; margin: auto;" />
 
-![Radar](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Radar_chart_Diabetes.png)
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Radar_chart_Diabetes.png" alt="Radar" width="50%" style="display: block; margin: auto;" />
 
-![Pies](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Pie_charts_Diabetes.png)
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Pie_charts_Diabetes.png" alt="Pies" width="50%" style="display: block; margin: auto;" />
 
-![Compare2](https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_compare2.png)
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_compare2.png" alt="Compare2" width="50%" style="display: block; margin: auto;" />
 
 
 ### More Examples on Kaggle Datasets
