@@ -87,6 +87,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - Automatic detection of potential overfitting.
 - Ability to efficiently use continuous and categorical predictor variables
 - Prediction confidence intervals *[coming in next release]*
+- Novel in-leaf regression model delivering even further sparsity *[planned]*
   
 
 ## Additional Features in Pro Version
@@ -98,7 +99,6 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - Interaction ALE plots *[planned]*
 - Automatic model mismatch detection *[planned]*
 - Smart feature selection and engineering *[planned]*
-- Further sparsity *[planned]*
 - Faster training *[planned]*
 
 
