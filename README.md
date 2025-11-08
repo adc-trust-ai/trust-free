@@ -23,7 +23,7 @@ Here's a 30-second demo showcasing the explain() and compare() methods, which ge
 | Lasso                   | 0.57          | Yes                |
 | CART                    | 0.49          | Yes                |
 | Node Harvest (NH)       | 0.47          | Yes                |
-| M5' (Linear Model Tree) | 0.36          | Partial*           |
+| M5' (Linear Model Tree) | 0.36          | Partially*         |
 
 > **TRUST™ is the only fully interpretable model above 0.6 R²** across varied benchmark datasets — and **6× sparser** than M5' (*17 vs 109 coefficients* on average).  
 > *Source: PRICAI 2025 (Springer LNAI)*
