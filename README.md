@@ -12,7 +12,7 @@
 
 Here's a 30-second demo showcasing the explain() and compare() methods, which generate automated explanation reports for the famous [Medical Insurance Charges](https://www.kaggle.com/datasets/mirichoi0218/insurance) dataset from Kaggle:
 
-<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain_compare_wm.gif" alt="ExplainCompareGif" width="80%" style="display: block; margin: auto;" />
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain_compare_wm.gif" alt="ExplainCompareGif" width="95%" style="display: block; margin: auto;" />
 
 ### Proven Performance: Accuracy + Full Interpretability (60 Datasets)
 
