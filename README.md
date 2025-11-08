@@ -97,7 +97,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - Large Language Model (LLM) integration for enhanced explanations *[ready]*
 - Signed (+/-) variable importance plots *[ready]*
 - Out-Of-Distribution detection *[ready]*
-- P-values for tree splits *[planned]*
+- Uncertainty quantification for tree splits *[planned]*
 - Pdfs for the automatically-generated reports *[planned]*
 - Interaction ALE plots *[planned]*
 - Automatic model mismatch detection *[planned]*
