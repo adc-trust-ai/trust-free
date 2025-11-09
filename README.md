@@ -98,7 +98,8 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - Signed (+/-) variable importance plots *[ready]*
 - Out-Of-Distribution detection *[ready]*
 - Uncertainty quantification for tree splits *[planned]*
-- Pdfs for the automatically-generated reports *[planned]*
+- Convenient method to save the trained model *[planned]*
+- Automatic document (e.g. pdf) generation for the automatically-generated reports *[planned]*
 - Interaction ALE plots *[planned]*
 - Automatic model mismatch detection *[planned]*
 - Smart feature selection and engineering *[planned]*
