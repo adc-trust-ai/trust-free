@@ -1,9 +1,11 @@
 ## 2.1.0 (2025-11-??)
 - Added:
-  1. Axis values in radar chart (compare method).
-  2. Pie and radar charts and saved to device in explain and compare method retain feature names when run in Jupyter too.
-  3. Visual cues to convey training performance more easily.
-  4. Automatic detection of potential overfitting.
+  1. **Windows and Linux compatibility**
+  2. Axis values in radar chart (compare method).
+  3. Greedy feature order optimization (instead of exhaustive) in radar charts with more than 9 features.
+  4. Pie and radar charts and saved to device in explain and compare method retain feature names when run in Jupyter too.
+  5. Visual cues to convey training performance more easily.
+  6. Automatic detection of potential overfitting.
 - Changed:
   1. Changed prediction logic from recursive to iterative (more efficient).
   2. Reversed color scheme for bar chart in detailed mode for the compare method.
