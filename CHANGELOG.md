@@ -1,6 +1,6 @@
-## 2.1.0 (2025-11-??)
+## 2.1.0 (2025-11-12)
 - Added:
-  1. **Windows and Linux compatibility**
+  1. **Expanded compatibility (new platforms will be sequentially added)**
   2. Axis values in radar chart (compare method).
   3. Greedy feature order optimization (instead of exhaustive) in radar charts with more than 9 features.
   4. Pie and radar charts and saved to device in explain and compare method retain feature names when run in Jupyter too.
