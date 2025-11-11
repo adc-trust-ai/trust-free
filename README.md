@@ -4,6 +4,7 @@
 [![Downloads](https://static.pepy.tech/badge/trust-free)](https://pepy.tech/project/trust-free)
 [![License](https://img.shields.io/badge/license-Proprietary-lightgrey.svg)](LICENSE.txt)
 [![Python](https://img.shields.io/pypi/pyversions/trust-free.svg)](https://pypi.org/project/trust-free/)
+[![User Manual](https://img.shields.io/badge/docs-User_Manual-blue)](https://github.com/adc-trust-ai/trust-free/blob/main/MANUAL.md)
 ![OS](https://img.shields.io/badge/OS-macOS%20ARM64-blue)
 
 ### Model. Explain. TRUST. All in one Python package, for free.
