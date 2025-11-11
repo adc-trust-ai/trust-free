@@ -1,4 +1,4 @@
-# Usage manual describing the TRUST class and its attributes & methods
+# User manual describing the TRUST class and its attributes & methods
 
 ## The essential methods:
 - ⚙️ fit
