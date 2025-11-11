@@ -267,7 +267,7 @@ RLT_Diabetes.compare(Diabetes_X.iloc[1,:], Diabetes_X.iloc[3,:], filename="Diabe
 
 
 ### More Examples on Kaggle Datasets
-- [Medical Insurance Charges (1.8M views, 353K downloads)](https://www.kaggle.com/datasets/mirichoi0218/insurance)
+- [Medical Insurance Charges (1.82M views, 360K downloads)](https://www.kaggle.com/datasets/mirichoi0218/insurance)
 - [Life Satisfaction in the EU (own contribution)](https://www.kaggle.com/datasets/albertdorador/eu-life-satisfaction-eurostat-un-oecd)
 
 
