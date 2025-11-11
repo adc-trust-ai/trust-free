@@ -1,4 +1,4 @@
-## 2.1.0 (2025-11-12)
+## 2.1.0 (2025-11-17)
 - Added:
   1. **Expanded compatibility (new platforms will be sequentially added)**
   2. Axis values in radar chart (compare method).
