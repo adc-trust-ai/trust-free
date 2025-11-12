@@ -26,7 +26,7 @@ Here's a 30-second demo showcasing the explain() and compare() methods, which ge
 | Node Harvest (NH)       | 0.47          | Yes                |
 | M5' (Linear Model Tree) | 0.36          | Partially*         |
 
-> **TRUST™ is the only fully interpretable model above 0.6 R²** across varied benchmark datasets — and **6× sparser** than M5' (*17 vs 109 coefficients* on average).  
+> In the table above, **TRUST™ is the only fully interpretable model above 0.6 R²** across varied benchmark datasets — and **6× sparser** than M5' (*17 vs 109 coefficients* on average).  
 > *Source: PRICAI 2025 (Springer LNAI)*
 
 Try it now on macOS: `pip install trust-free`  
