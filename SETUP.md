@@ -13,15 +13,10 @@ conda activate environ
 ```
 You may replace 3.11 by 3.12 above.
 
-## 2. Install core dependencies via Conda -- but it may take a while... otherwise switch to pip (for specific pkg versions, use "==")
+## 2. Install core dependencies via Conda -- but it may take a while... otherwise switch to pip (skip to step 3-pip)
 
 ```bash
 conda install -c conda-forge --strict-channel-priority numpy=1.26.4 "joblib>=1.5.1" "matplotlib>=3.10.5" "pandas>=2.3.2" "scikit-learn>=1.7.1" "scipy>=1.16.1" "shap>=0.48.0" "statsmodels>=0.14.5" jupyter ipykernel "ipython>=9.4.0"
-```
-or download requirements_pip.txt and do:
-
-```bash
-pip install -r requirements_pip.txt
 ```
 
 ## 3. Install additional packages via pip
@@ -30,6 +25,14 @@ Some packages (or some of their latest versions) may not be available on Conda-f
 
 ```bash
 pip install "PyALE>=1.2.0" "pydot>=4.0.1"
+```
+
+## 3-pip. Install all dependencies via pip
+
+Download requirements_pip.txt and do:
+
+```bash
+pip install -r requirements_pip.txt
 ```
 
 ## 4. Install trust-free itself
