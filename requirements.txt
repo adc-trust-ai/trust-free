@@ -1,10 +1,10 @@
-IPython>=9.4.0
+ipython>=9.4.0
 joblib>=1.5.1
 matplotlib>=3.10.5
 numpy>=1.26.4,<2.0.0
 pandas>=2.3.2
 plotly>=6.3.1
-pyale>=1.2.0
+PyALE>=1.2.0
 pydot>=4.0.1
 scikit-learn>=1.7.1
 scipy>=1.16.1
