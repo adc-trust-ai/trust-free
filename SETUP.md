@@ -47,7 +47,7 @@ pip install trust-free
 conda install -c conda-forge graphviz
 ```
 
-## 6. Optional: install additional packages used in tutorial
+## 6. Optional: install additional packages used in EU life satisfaction tutorial
 
 The life satisfaction tutorial requires a few extra packages:
 
