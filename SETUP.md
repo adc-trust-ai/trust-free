@@ -13,10 +13,10 @@ conda activate environ
 ```
 You may replace 3.11 by 3.12 above.
 
-## 2. Install core dependencies via Conda
+## 2. Install core dependencies via Conda (but it may take a while... otherwise switch to pip)
 
 ```bash
-conda install -c conda-forge --strict-channel-priority "numpy>=1.26.4" "joblib>=1.5.1" "matplotlib>=3.10.5" "pandas>=2.3.2" "scikit-learn>=1.7.1" "scipy>=1.16.1" "shap>=0.48.0" "statsmodels>=0.14.5" jupyter ipykernel "ipython>=9.4.0"
+conda install -c conda-forge --strict-channel-priority numpy=1.26.4 "joblib>=1.5.1" "matplotlib>=3.10.5" "pandas>=2.3.2" "scikit-learn>=1.7.1" "scipy>=1.16.1" "shap>=0.48.0" "statsmodels>=0.14.5" jupyter ipykernel "ipython>=9.4.0"
 ```
 
 ## 3. Install additional packages via pip
