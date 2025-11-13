@@ -2,6 +2,8 @@
 
 Follow these steps to create a reproducible Python environment that can download, install and run the `trust-free` package.
 
+## 0. If needed, download and install either Python 3.11 (e.g. 3.11.13) or Python 3.12 (e.g. 3.12.10)
+
 ## 1. Create and activate a new environment
 You can replace `environ` with any name you like. In your bash/terminal, run:
 
@@ -9,20 +11,20 @@ You can replace `environ` with any name you like. In your bash/terminal, run:
 conda create -n environ python=3.11
 conda activate environ
 ```
-The above should install python 3.11.13 (the latest python 3.11 version available).
+You may replace 3.11 by 3.12 above.
 
 ## 2. Install core dependencies via Conda
 
 ```bash
-conda install numpy=1.26.4 "joblib>=1.4.2" "matplotlib>=3.9.2" "pandas>=2.3.1" "scikit-learn>=1.7.0" "scipy>=1.16.0" "shap>=0.47.2" "statsmodels>=0.14.4" jupyter ipykernel
+conda install -c conda-forge --strict-channel-priority "numpy>=1.26.4" "joblib>=1.5.1" "matplotlib>=3.10.5" "pandas>=2.3.2" "scikit-learn>=1.7.1" "scipy>=1.16.1" "shap>=0.48.0" "statsmodels>=0.14.5" jupyter ipykernel "ipython>=9.4.0"
 ```
 
 ## 3. Install additional packages via pip
 
-Some packages (or some of their latest versions) are not available on Conda-forge, so you need to pip-install them separately:
+Some packages (or some of their latest versions) may not be available on Conda-forge, so you need to pip-install them separately:
 
 ```bash
-pip install "category-encoders>=2.8.1" "pyale>=1.2.0" "pydot>=4.0.1"
+pip install "PyALE>=1.2.0" "pydot>=4.0.1"
 ```
 
 ## 4. Install trust-free itself
