@@ -231,14 +231,16 @@ y_pred_TRUST = RLT_Diabetes.predict(Diabetes_X)
 # You can use e.g. Homebrew: brew install graphviz or Conda: conda install -c conda-forge graphviz
 RLT_Diabetes.plot_tree("Diabetes") #will save "tree_plot_Diabetes.png" in your working directory
 ```
+<div align="center">
 <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/tree_plot_Diabetes.png" alt="tree" width="50%" style="display: block; margin: auto;" />
+</div>
 
 ```python
 # Obtain variable importance with 2 different methods: Ghost and permutation
 RLT_Diabetes.varImp(Diabetes_X, Diabetes_y, corAnalysis=True, filename="Diabetes") #Ghost method
 RLT_Diabetes.varImpPerm(Diabetes_X, Diabetes_y, filename="Diabetes") #Permutation method
 ```
-<div style="display: flex; justify-content: space-around;">
+<div align="center">
     <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpScores_plot_Diabetes.png" alt="varImp2" width="49%" />
     <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpPermScores_plot_Diabetes.png" alt="varImp3" width="48.25%" />
 </div>
@@ -248,17 +250,19 @@ RLT_Diabetes.varImpPerm(Diabetes_X, Diabetes_y, filename="Diabetes") #Permutatio
 # Obtain prediction explanation for second observation
 RLT_Diabetes.explain(Diabetes_X.iloc[1,:], aim="decrease", actual=Diabetes_y[1], filename="Diabetes")
 ```
+<div align="center">
 <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain2.png" alt="Explain2" width="97%" style="display: block; margin: auto;" />
 
 <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain3.png" alt="Explain3" width="97%" style="display: block; margin: auto;" />
 
 <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain4.png" alt="Explain4" width="97%" style="display: block; margin: auto;" />
-
+</div>
 
 ```python
 # Compare the second and fourth observations head-to-head
 RLT_Diabetes.compare(Diabetes_X.iloc[1,:], Diabetes_X.iloc[3,:], filename="Diabetes")
 ```
+<div align="center">
 <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_compare1.png" alt="Compare1" width="97%" style="display: block; margin: auto;" />
 
 <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Radar_chart_Diabetes.png" alt="Radar" width="50%" style="display: block; margin: auto;" />
@@ -266,7 +270,7 @@ RLT_Diabetes.compare(Diabetes_X.iloc[1,:], Diabetes_X.iloc[3,:], filename="Diabe
 <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_compare2.png" alt="Compare2" width="97%" style="display: block; margin: auto;" />
 
 <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Pie_charts_Diabetes.png" alt="Pies" width="97%" style="display: block; margin: auto;" />
-
+</div>
 
 ### More Examples on Kaggle Datasets
 - [Medical Insurance Charges (1.82M views, 360K downloads)](https://www.kaggle.com/datasets/mirichoi0218/insurance)
