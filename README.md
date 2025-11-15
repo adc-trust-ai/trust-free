@@ -139,21 +139,17 @@ pip install trust-free
 ```
 > 📦 **Note:** The package name on PyPI is `trust-free`, but the module you import in Python is `trust`: `from trust import TRUST`.
 
-> ℹ️ Currently, `trust-free` includes a precompiled binary and is only tested and supported for (in tentative order of deployment):
+ℹ️ Currently, `trust-free` includes a precompiled binary and is only tested and supported for (in tentative order of deployment):
+✅ macOS11+ ARM64 
+✅ macOS11+ Intel
+✅ Both **Python 3.11** and **3.12** are currently supported. Support for Python 3.13 will be added as soon as all trust-free dependencies support it.
 
-> ✅ macOS11+ ARM64 
+Compatibility for Linux and Windows is **coming soon** for this release:
+⏳ Linux Intel (e.g. Google Colab)
+⏳ Linux ARM64
+⏳ Windows Intel
 
-> ✅ macOS11+ Intel
-
-> ⏳ Linux Intel (e.g. Google Colab)
-
-> ⏳ Linux ARM64
-
-> ⏳ Windows Intel
-
-> Compatibility for Linux and Windows is **coming soon** for this release. Stay tuned!
-
-> ✅ Both **Python 3.11** and **3.12** are currently supported. Support for Python 3.13 will be added as soon as all trust-free dependencies support it.
+🚀 Stay tuned!
 
 For a fully reproducible development environment with all dependencies, see SETUP.md.
 
