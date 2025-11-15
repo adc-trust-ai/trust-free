@@ -144,8 +144,8 @@ pip install trust-free
 - ✅ macOS11+ Intel
 - ✅ Both **Python 3.11** and **3.12** are supported. Support for Python 3.13+ will be added as soon as all trust-free dependencies support it.
 
-Compatibility for Linux and Windows is **coming soon** for this release:
-- ⏳ Linux Intel (e.g. Google Colab)
+Compatibility for Linux and Windows is **coming soon** for this release, projected for late November 2025:
+- ⏳ Linux Intel (e.g. for Google Colab compatibility)
 - ⏳ Linux ARM64
 - ⏳ Windows Intel
 
