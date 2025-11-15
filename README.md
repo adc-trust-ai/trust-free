@@ -192,7 +192,7 @@ model.varImp(X_test, y_test, corAnalysis=True, filename="Synthetic")
 # Unconditional variable importance by permutation (with added debiasing and uncertainty quantification steps)
 model.varImpPerm(X_test, y_test, R=20, B=20, U=10, filename="Synthetic")
 ```
-<div style="display: flex; justify-content: space-around;">
+<div style="display: flex; justify-content: center; gap: 1%;">
     <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpScores_plot_Synthetic.png" alt="varImp" width="49.88%" />
     <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpPermScores_plot_Synthetic.png" alt="varImpPerm" width="47%" />
 </div>
@@ -201,8 +201,9 @@ model.varImpPerm(X_test, y_test, R=20, B=20, U=10, filename="Synthetic")
 # Obtain prediction explanation for first observation
 model.explain(X_test[0,:], mode="detailed", actual=y_test[0], filename="Synthetic") 
 ```
-<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain1.png" alt="Explain1" width="97%" style="display: block; margin: auto;" />
 <div align="center">
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain1.png" alt="Explain1" width="97%" style="display: block; margin: auto;" />
+
 <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Pie_chart_Synthetic.png" alt="PieChart" width="50%" style="display: block; margin: auto;" />
 </div>
 
