@@ -111,7 +111,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 ## What's new in version 2.1.3?
 ### TL;DR: First version with **expanded platform compatibility**, plus minor improvements in many areas.
 
-## 2.1.3 (2025-11-15)
+## 2.1.4 (2025-11-16)
 - Added:
   1. **Expanded compatibility (new platforms will be sequentially added)**
   2. Axis values in radar chart (compare method).
