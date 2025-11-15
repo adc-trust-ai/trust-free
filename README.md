@@ -108,31 +108,25 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - Ultra-fast training mode *[planned for 3rd Generation]*
 
 
-## What's new in version 2.0.0?
-### TL;DR: Next-level explanation tools, faster training and predictions, enhanced robustness, and reduced memory usage.
+## What's new in version 2.1.2?
+### TL;DR: First version with **expanded platform compatibility**, plus minor improvements in many areas.
 
+## 2.1.2 (2025-11-21)
 - Added:
-  1. **New compare() method** to allow head-to-head comparisons of data points.
-  2. Automatic reporting and removal of duplicate columns.
-  3. Automatic check for missing target values and corresponding removal of rows in training dataset.
-  4. Automatic check for highly imbalanced categorical variables and switch from robust to standard scaling in those cases.
-  5. Fallback to (TRUST-flavored) standard Lasso in leaf if all Relaxed Lasso coefficients are zero due to excessive regularization.
-  6. Method show_leaf_coefficients(leaves = "all", enc_table = True, rnd = 2) to print coefficient summary tables for the selected leaves.
-  7. Explicit node id, also in tree plot (leaves only).
+  1. **Expanded compatibility (new platforms will be sequentially added)**
+  2. Axis values in radar chart (compare method).
+  3. Greedy feature order optimization (instead of exhaustive) in radar charts with more than 9 features.
+  4. Pie and radar charts and saved to device in explain and compare method retain feature names when run in Jupyter too.
+  5. Visual cues to convey training performance more easily.
+  6. Automatic detection of potential overfitting.
 - Changed:
-  1. **Revamped explain() method** to be even more powerful *and* user friendly.
-  2. Improved handling of categorical variables in Shap's waterfall plot
-  3. Fixed bug in print_model() in absence of significant features.
-  4. Threshold for 'large' lowered from 0.6 to 0.55, and threshold for 'intermediate' increased from 0.4 to 0.45.
-  5. More efficient retrieval of encoded values: before it was O(n) now it's O(1). Should speedup prediction (and even fitting) noticeably.
-  6. Internal method _fill_NAs now takes the feature matrix X instead of the complete dataset as input.
-  7. df_X_train_original_withID for the all-complete df_Leaf_X_train_original_Y_Yhat.
-  8. Faster prediction for depth-0 trees, and in general (iterative vs recursive approach).
-  9. Faster variable importance calculation (both permutation and Ghost method).
-  10. Formatting improvements (e.g. progress bar in cross-validation step).
-- Removed:
-  1. Redundant attributes (dataset_noNAs, dataset, df_X_train_original, df_Y_train_original, df_train_original).
-  2. Redundant LT parameter in importance scoring functions. This **breaks backward compatibility**, so it may require **adapting existing pipelines** accordingly for some users.
+  1. Changed prediction logic from recursive to iterative (more efficient).
+  2. Reversed color scheme for bar chart in detailed mode for the compare method.
+  3. Sorted dumbell plot from largest to smallest feature difference in compare method.
+  4. Fixed bug in explain method for rare cases where no feature was statistically relevant.
+  5. More accurate expected time to training completion after cross-validation.
+  6. Swapped cosine similarity for angular similarity in compare() for more intuitive scaling.
+  7. Other minor enhancements in explain() and compare() methods.
 
 Check CHANGELOG.md to see all past release notes.
 
@@ -143,9 +137,9 @@ You can install this package using pip:
 ```bash
 pip install trust-free
 ```
-> 📦 **Note:** The package name on PyPI is `trust-free`, but the module you import in Python is `trust`.
+> 📦 **Note:** The package name on PyPI is `trust-free`, but the module you import in Python is `trust`: `from trust import TRUST`.
 
-> ⚠️ Currently, `trust-free` includes a precompiled binary and is only tested and supported for Python 3.11 on macOS 11+ with ARM64 architecture (e.g. M1/M2/M3/M4 chips). Compatibility for other platforms (Intel macOS, Linux, Windows) is planned for future releases.
+> ⚠️ Currently, `trust-free` includes a precompiled binary and is only tested and supported for Python 3.11 & 3.12 on macOS 11+ ARM64 & Intel. Compatibility for Linux and Windows is coming soon for this release. Stay tuned!
 
 For a fully reproducible development environment with all dependencies, see SETUP.md.
 
