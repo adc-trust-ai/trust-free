@@ -108,10 +108,10 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - Ultra-fast training mode *[planned for 3rd Generation]*
 
 
-## What's new in version 2.1.2?
+## What's new in version 2.1.3?
 ### TL;DR: First version with **expanded platform compatibility**, plus minor improvements in many areas.
 
-## 2.1.2 (2025-11-21)
+## 2.1.3 (2025-11-21)
 - Added:
   1. **Expanded compatibility (new platforms will be sequentially added)**
   2. Axis values in radar chart (compare method).
@@ -139,7 +139,7 @@ pip install trust-free
 ```
 > 📦 **Note:** The package name on PyPI is `trust-free`, but the module you import in Python is `trust`: `from trust import TRUST`.
 
-ℹ️ Currently, `trust-free` includes a precompiled binary and is only tested and supported for (in tentative order of deployment):
+ℹ️ Currently, `trust-free` includes a precompiled binary for:
 - ✅ macOS11+ ARM64 
 - ✅ macOS11+ Intel
 - ✅ Both **Python 3.11** and **3.12** are supported. Support for Python 3.13+ will be added as soon as all trust-free dependencies support it.
