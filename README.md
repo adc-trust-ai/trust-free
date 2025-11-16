@@ -9,9 +9,9 @@
 
 ### Model. Explain. TRUST. All in one package.
 
-**trust-free** is a Python package for fitting interpretable regression models using Transparent, Robust, and Ultra-Sparse Trees (TRUST™) — a new generation of Linear Model Trees (LMTs) with Random-Forest accuracy and intuitive explanations. It is based on my peer-reviewed paper [1], **presented at the 22nd Pacific Rim International Conference on Artificial Intelligence (PRICAI 2025) and to appear in Springer Nature (Lecture Notes in Artificial Intelligence)**.
+**trust-free** is a Python package for fitting interpretable regression models using Transparent, Robust, and Ultra-Sparse Trees (TRUST™) — a new generation of Linear Model Trees (LMTs) with Random-Forest accuracy and intuitive explanations. It is based on my peer-reviewed paper [1], **accepted at the 22nd Pacific Rim International Conference on Artificial Intelligence (PRICAI 2025) and to appear in Springer Nature (Lecture Notes in Artificial Intelligence)**.
 
-It includes a **state-of-the-art explanation suite**. Here's a 30-second demo showcasing the explain() and compare() methods, which generate automated explanation reports for the famous [Medical Insurance Charges](https://www.kaggle.com/datasets/mirichoi0218/insurance) dataset from Kaggle:
+It includes a **state-of-the-art explainability suite**, providing comprehensive, automatically-generated explanation reports. To see it in action, here's a 30-second demo showcasing the explain() and compare() methods applied to the famous [Medical Insurance Charges](https://www.kaggle.com/datasets/mirichoi0218/insurance) dataset from Kaggle:
 
 <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain_compare_wm.gif" alt="ExplainCompareGif" width="100%" style="display: block; margin: auto;" />
 
@@ -19,12 +19,12 @@ It includes a **state-of-the-art explanation suite**. Here's a 30-second demo sh
 
 | Model                   | **Test R² ↑** | **Interpretable?** |
 |-------------------------|---------------|--------------------|
-| **TRUST™**              | **0.67**      | Yes                |
-| Random Forest           | 0.62          | No                 |
-| Lasso                   | 0.57          | Yes                |
-| CART                    | 0.49          | Yes                |
-| Node Harvest (NH)       | 0.47          | Yes                |
-| M5' (Linear Model Tree) | 0.36          | Partially          |
+| **TRUST™**              | **0.67**      | ✅ Yes             |
+| Random Forest (RF)      | 0.62          | ❌ No              |
+| Lasso                   | 0.57          | ✅ Yes             |
+| CART                    | 0.49          | ✅ Yes             |
+| Node Harvest (NH)       | 0.47          | ✅ Yes             |
+| M5' (Linear Model Tree) | 0.36          | ⚠️ Partially       |
 
 > In the table above, **TRUST™ is the only fully interpretable model statistically above 0.6 test R²** across varied benchmark datasets — and **6× sparser** than M5' (*17 vs 109 coefficients* on average).  
 > *Source: PRICAI 2025 (Springer LNAI)*
@@ -35,8 +35,6 @@ See full benchmarks in the [PRICAI 2025 paper](https://arxiv.org/abs/2506.15791)
 ---
 
 The package currently supports standard regression and experimental time-series regression tasks. Future releases will also tackle other tasks such as classification.
-
-Note: trust-free is, as its name suggests, a free version, limited to datasets of at most 5,000 rows (instances) and 20 columns (features) — a 'pro' version is under development. 
 
 ## Overview
 TRUST™ [1] is a next-generation algorithm based on (sparse) **Linear Model Trees** (LMTs), which I developed as part of my Ph.D. in Statistics at the [University of Wisconsin-Madison](https://www.wisc.edu/). **trust-free** is the official Python implementation of the algorithm.
@@ -70,14 +68,24 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
   * [University of Seville, Minerva AI Lab](https://grupo.us.es/minerva/) (Oct 2025) 
     
 
-## Summary of Key Advantages
+## Key Advantages: RF Accuracy ⟡ Tree Transparency ⟡ Linear Interpretability
 
-- 🧠 Combines the flexibility of trees and the power of linear models
-- ⚡ Outperforms existing LMTs in accuracy, sparsity and overall interpretability
-- 🔍 Full explanation of each prediction
-- 🪶 Compact models that are easy to understand and visualize
+- **Hybrid power**: Trees to capture non-linearity & interactions + sparse linear (Relaxed Lasso) models in leaves
+- **Superior accuracy**: RF-level accuracy, proven on 60 benchmark datasets
+- **Full transparency**: Every prediction is auditable via tree path + leaf equation
+- **Inclusive**: Explanation reports written in natural language accessible to all audiences
+- **Compliant by design**: 100% Compliant with the EU AI Act and the OECD AI Principles — ideal for high-stakes domains like finance and healthcare
 
-## Features in Free Version
+### About this edition
+- ℹ️ Free-tier dataset limits: ≤ 5,000 rows and ≤ 20 columns (intended for proof-of-concept, R&D and teaching)
+- ✅ All core features are fully functional within these bounds
+- ✅ Unlimited scale and [additional features](https://github.com/adc-trust-ai/trust-free/blob/main/trust-pro.md) in the forthcoming **trust-pro** edition
+
+**Want early access to trust-pro?**  
+- Join the [waitlist](https://forms.gle/Gsti4kZ7yG5ZTNqu7) (completely anonymous & GDPR-compliant)
+- Star ⭐ this repo to stay updated!
+
+### Features in this edition
 
 - Solves regression tasks (including a currently experimental 'time series mode')
 - Interpretable models with accuracy comparable to Random Forests
@@ -91,24 +99,9 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - Novel method to warn about risky predictions on the fly *[coming in next release]*
 - Novel in-leaf regression model delivering even further sparsity *[coming in next release]*
 - Lightning fast training *[coming in next release]*
-  
-## Additional Features in Pro Version
-
-- No dataset size limits *[available in 1st Generation]*
-- Large Language Model (LLM) integration for enhanced explanations *[available in 1st Generation]*
-- Signed (+/-) variable importance plots *[available in 1st Generation]*
-- Out-Of-Distribution detection *[available in 1st Generation]*
-- Uncertainty quantification for tree splits *[planned for 2nd Generation]*
-- Convenient method to save the trained model *[planned for 2nd Generation]*
-- Automatic document (e.g. pdf) generation for the automatically-generated reports *[planned for 2nd Generation]*
-- Interaction ALE plots *[planned for 2nd Generation]*
-- Automatic model mismatch detection *[planned for 2nd Generation]*
-- Smart feature selection and engineering *[planned for 3rd Generation]*
-- Leaf-conditional (more precise) prediction confidence intervals *[planned for 3rd Generation]*
-- Ultra-fast training mode *[planned for 3rd Generation]*
 
 
-## What's new in version 2.1.3?
+## What's new in version 2.1.4?
 ### TL;DR: First version with **expanded platform compatibility**, plus minor improvements in many areas.
 
 ## 2.1.4 (2025-11-16)
