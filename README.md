@@ -24,7 +24,7 @@ It includes a **state-of-the-art explanation suite**. Here's a 30-second demo sh
 | Lasso                   | 0.57          | Yes                |
 | CART                    | 0.49          | Yes                |
 | Node Harvest (NH)       | 0.47          | Yes                |
-| M5' (Linear Model Tree) | 0.36          | Partially*         |
+| M5' (Linear Model Tree) | 0.36          | Partially          |
 
 > In the table above, **TRUST™ is the only fully interpretable model statistically above 0.6 test R²** across varied benchmark datasets — and **6× sparser** than M5' (*17 vs 109 coefficients* on average).  
 > *Source: PRICAI 2025 (Springer LNAI)*
