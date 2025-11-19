@@ -7,6 +7,8 @@
 [![User Manual](https://img.shields.io/badge/docs-User_Manual-blue)](https://github.com/adc-trust-ai/trust-free/blob/main/MANUAL.md)
 ![OS](https://img.shields.io/badge/OS-macOS%20-blue)
 ![OS](https://img.shields.io/badge/OS-Linux%20-blue)
+![Kaggle Compatible](https://img.shields.io/badge/Kaggle-Compatible-blue?logo=kaggle&logoColor=white)
+![Colab Compatible](https://img.shields.io/badge/Google%20Colab-Compatible-orange?logo=googlecolab&logoColor=white)
 
 ### Model. Explain. TRUST. All in one package.
 
