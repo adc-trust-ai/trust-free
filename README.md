@@ -135,17 +135,19 @@ pip install trust-free
 ```
 > 📦 **Note:** The package name on PyPI is `trust-free`, but the module you import in Python is `trust`: `from trust import TRUST`.
 
-ℹ️ Currently, `trust-free` includes a precompiled binary for:
-- ✅ macOS11+ ARM64 
-- ✅ macOS11+ Intel
-- ✅ Both **Python 3.11** and **3.12** are supported. Support for Python 3.13+ will be added as soon as all trust-free dependencies support it.
+### Platform Compatibility
 
-Compatibility for Linux and Windows is **coming soon** for this release, projected for late November 2025:
-- ⏳ Linux Intel (e.g. for Google Colab compatibility)
-- ⏳ Linux ARM64
-- ⏳ Windows Intel
+| Platform / Environment   | OS & Arch         | Python    | Status      |
+|--------------------------|-------------------|-----------|-------------|
+| **macOS ARM64** (M1–M4)  | macOS 11+ ARM64   | 3.11–3.12 | ✅ Working  |
+| **macOS Intel** (x86_64) | macOS 11+ Intel   | 3.11–3.12 | ✅ Working  |
+| **Linux x86_64**         | manylinux x86_64  | 3.11–3.12 | ✅ Working  |
+| **Google Colab**         | Linux x86_64      | 3.12      | ✅ Working  |
+| **Kaggle Notebooks**     | Linux x86_64      | 3.11      | ✅ Working* |
+| **Linux ARM64**          | manylinux ARM64   | 3.11–3.12 | 🚧 Coming late November |
+| **Windows x86_64**       | Windows 11 x86_64 | 3.11–3.12 | 🚧 Coming early December |
 
-🚀 Stay tuned!
+*If Kaggle shows a dependency-compatibility issue message upon installation via %pip install trust-free you may safely ignore it and hit "Restart and run up to selected cell" (assuming your selected cell is the one installing trust-free).
 
 For a fully reproducible development environment with all dependencies, see SETUP.md.
 
