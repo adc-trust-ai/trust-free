@@ -144,7 +144,7 @@ pip install trust-free
 | **Linux x86_64**         | manylinux x86_64  | 3.11–3.12 | ✅ Working  |
 | **Google Colab**         | Linux x86_64      | 3.12      | ✅ Working  |
 | **Kaggle Notebooks**     | Linux x86_64      | 3.11      | ✅ Working* |
-| **Linux ARM64**          | manylinux ARM64   | 3.11–3.12 | 🚧 Coming late November |
+| **Linux ARM64**          | manylinux ARM64   | 3.11–3.12 | ✅ Working  |
 | **Windows x86_64**       | Windows 11 x86_64 | 3.11–3.12 | 🚧 Coming early December |
 
 *If Kaggle shows a dependency-compatibility issue message upon installation via %pip install trust-free you may safely ignore it and hit "Restart and run up to selected cell" (assuming your selected cell is the one installing trust-free).
