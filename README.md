@@ -12,7 +12,7 @@
 
 ### Model. Explain. TRUST. All in one package.
 
-**trust-free** is a Python package for fitting interpretable regression models using Transparent, Robust, and Ultra-Sparse Trees (TRUST™) — a new generation of Linear Model Trees (LMTs) with Random-Forest accuracy and intuitive explanations. It is based on my peer-reviewed paper [1], **accepted at the 22nd Pacific Rim International Conference on Artificial Intelligence (PRICAI 2025) and to appear in Springer Nature (Lecture Notes in Artificial Intelligence)**.
+**trust-free** is a Python package for fitting interpretable regression models using Transparent, Robust, and Ultra-Sparse Trees (TRUST™) — a new generation of Linear Model Trees (LMTs) with Random-Forest accuracy and intuitive explanations. It is based on my peer-reviewed paper [1], **presented at the 22nd Pacific Rim International Conference on Artificial Intelligence (PRICAI 2025) and to appear in Springer Nature (Lecture Notes in Artificial Intelligence)**.
 
 It includes a **state-of-the-art explainability suite**, providing comprehensive, automatically-generated explanation reports. To see it in action, here's a 30-second demo showcasing the explain() and compare() methods applied to the famous [Medical Insurance Charges](https://www.kaggle.com/datasets/mirichoi0218/insurance) dataset from Kaggle:
 
@@ -64,10 +64,10 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
   * [University of Wisconsin - Madison Department of Statistics website](https://stat.wisc.edu/2025/05/08/department-of-statistics-celebrates-spring-2025-graduates/) (May 2025)
 
 * **Upcoming Talks & Workshops:**
-  * [PRICAI 2025](https://www.pricai.org/2025/index.php) (Nov 2025) 
   * [BarcelonaTech, Statistics Department](https://eio.upc.edu/en/seminar) (Dec 2025)
 
 * **Past Talks & Workshops:**
+  * [PRICAI 2025](https://www.pricai.org/2025/index.php) (Nov 2025) 
   * [University of Seville, Minerva AI Lab](https://grupo.us.es/minerva/) (Oct 2025) 
     
 
