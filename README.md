@@ -32,7 +32,7 @@ It includes a **state-of-the-art explainability suite**, providing comprehensive
 > In the table above, **TRUST™ is the only fully interpretable model statistically above 0.6 test R²** across varied benchmark datasets — and **6× sparser** than M5' (*17 vs 109 coefficients* on average).  
 > *Source: PRICAI 2025 (Springer LNAI)*
 
-Try it now on **macOS** or **Linux Intel**: `pip install trust-free`. In **Google Colab**: `%pip install trust-free`.
+Try it now on **macOS** or **Linux**: `pip install trust-free`. In **Google Colab**: `%pip install trust-free`.
 See full benchmarks in the [PRICAI 2025 paper](https://arxiv.org/abs/2506.15791)
 
 ---
