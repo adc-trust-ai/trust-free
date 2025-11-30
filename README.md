@@ -5,6 +5,7 @@
 [![Downloads](https://static.pepy.tech/badge/trust-free)](https://pepy.tech/project/trust-free)
 [![License](https://img.shields.io/badge/license-Proprietary-lightgrey.svg)](LICENSE.txt)
 [![User Manual](https://img.shields.io/badge/docs-User_Manual-blue)](https://github.com/adc-trust-ai/trust-free/blob/main/MANUAL.md)
+![OS](https://img.shields.io/badge/OS-Windows%20-blue)
 ![OS](https://img.shields.io/badge/OS-macOS%20-blue)
 ![OS](https://img.shields.io/badge/OS-Linux%20-blue)
 ![Kaggle Compatible](https://img.shields.io/badge/Kaggle-Compatible-blue?logo=kaggle&logoColor=white)
