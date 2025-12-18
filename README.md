@@ -133,7 +133,7 @@ The following benchmarks compare **TurboSolve** against `sklearn.linear_model.Li
 Tests were conducted across 100 repetitions with a range of dataset geometries. 
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/TurboSolve_benchmarks.png" alt="TurboSolve_vs_Sklearn" width="50%" style="display: block; margin: auto;" />
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/TurboSolve_benchmarks.png" alt="TurboSolve_vs_Sklearn" width="75%" style="display: block; margin: auto;" />
 </div>
 
 **TurboSolve** is designed for efficiency across all data geometries. As shown above, the performance gap widens significantly as dataset size increases, reaching nearly 10x faster execution than standard implementations for large-scale problems.
