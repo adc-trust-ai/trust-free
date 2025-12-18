@@ -126,7 +126,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 Check CHANGELOG.md to see all past release notes.
 
 Coming up in the next release: **TurboSolve**, a smart OLS solver that is always at least as fast as your favorite OLS solver but often times 3x to 10x faster.
-TurboSolve will serve as the high-performance engine for the TRUST algorithm in `trust-free`. Additionally, it will be available as a standalone, free utility for OLS problems of any scale, without constraints on dataset size.
+TurboSolve will serve as the high-performance engine for the TRUST algorithm in `trust-free`. Additionally, it will be available as a *standalone, free utility* for OLS problems of any scale, without any constraints on dataset size.
 ### 🚀 Performance Benchmarks: TurboSolve vs. Scikit-Learn
 
 The following benchmarks compare **TurboSolve** against `sklearn.linear_model.LinearRegression`. 
@@ -138,7 +138,7 @@ Tests were conducted across 100 repetitions with a range of dataset geometries.
 | **Big Data** ($100k \times 100$) | 27.86 ± 0.62 | 273.96 ± 1.34 | **9.83x** | $9.54 \times 10^{-13}$ | $2.04 \times 10^{-11}$ |
 | **Underdetermined** ($50 \times 200$)* | 0.20 ± 0.01 | 0.76 ± 0.03 | **3.80x** | $3.43 \times 10^{-4}$ | $0.0129$ |
 
-*\*Note: In the $n < p$ case, TurboSolve utilizes a data-driven micro-ridge penalty to maintain stability and speed, accounting for the slight increase in relative error.*
+*\*Note: In the n << p case, TurboSolve utilizes a data-driven micro-ridge penalty to maintain stability and speed, accounting for the slight increase in relative error.*
 
 ## Installation
 
