@@ -132,6 +132,12 @@ TurboSolve will serve as the high-performance engine for the TRUST algorithm in 
 The following benchmarks compare **TurboSolve** against `sklearn.linear_model.LinearRegression`. 
 Tests were conducted across 100 repetitions with a range of dataset geometries. 
 
+<div align="center">
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/tree_plot_Diabetes.png" alt="tree" width="50%" style="display: block; margin: auto;" />
+</div>
+
+**TurboSolve** is designed for efficiency across all data geometries. As shown above, the performance gap widens significantly as dataset size increases, reaching nearly 10x faster execution than standard implementations for large-scale problems.
+
 | Scenario ($n \times p$) | TurboSolve (ms) | Sklearn (ms) | Speedup | Mean Rel. Error (%) | Global Max Error (%) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Tall & Lean** ($5k \times 20$) | 0.54 ± 0.10 | 1.54 ± 0.04 | **2.85x** | $2.41 \times 10^{-12}$ | $4.45 \times 10^{-11}$ |
