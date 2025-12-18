@@ -140,9 +140,9 @@ Tests were conducted across 100 repetitions with a range of dataset geometries.
 
 | Scenario ($n \times p$) | TurboSolve (ms) | Sklearn (ms) | Speedup | Mean Rel. Error (%) | Global Max Error (%) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Tall & Lean** ($5k \times 20$) | 0.54 ± 0.10 | 1.54 ± 0.04 | **2.85x** | $2.41 \times 10^{-12}$ | $4.45 \times 10^{-11}$ |
-| **Big Data** ($100k \times 100$) | 27.86 ± 0.62 | 273.96 ± 1.34 | **9.83x** | $9.54 \times 10^{-13}$ | $2.04 \times 10^{-11}$ |
-| **Underdetermined** ($50 \times 200$)* | 0.20 ± 0.01 | 0.76 ± 0.03 | **3.80x** | $3.43 \times 10^{-4}$ | $0.0129$ |
+| **Tall & Lean** ($5k \times 20$) | 0.54 ± 0.20 | 1.54 ± 0.08 | **2.85x** | $2.41 \times 10^{-12}$ | $4.45 \times 10^{-11}$ |
+| **Big Data** ($100k \times 100$) | 27.86 ± 1.24 | 273.96 ± 2.68 | **9.83x** | $9.54 \times 10^{-13}$ | $2.04 \times 10^{-11}$ |
+| **Underdetermined** ($50 \times 200$)* | 0.20 ± 0.02 | 0.76 ± 0.06 | **3.80x** | $3.43 \times 10^{-4}$ | $0.0129$ |
 
 *\*Note: In the n << p case, TurboSolve utilizes a data-driven micro-ridge penalty to maintain stability and speed, accounting for the slight increase in relative error.*
 
