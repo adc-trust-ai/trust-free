@@ -33,7 +33,7 @@ It includes a **state-of-the-art explainability suite**, providing comprehensive
 > In the table above, **TRUST™ is the only fully interpretable model statistically above 0.6 test R²** across varied benchmark datasets — and **6× sparser** than M5' (*17 vs 109 coefficients* on average).  
 > *Source: PRICAI 2025 (Springer LNAI)*
 
-Try it now on **macOS** or **Linux**: `pip install trust-free`. In **Google Colab**: `%pip install trust-free`.
+Try it now: `pip install trust-free`. In **Google Colab**: `%pip install trust-free`.
 See full benchmarks in the [PRICAI 2025 paper](https://arxiv.org/abs/2506.15791)
 
 ---
@@ -64,10 +64,8 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
   * [Data Science Weekly (Issue 616)](https://datascienceweekly.substack.com/p/data-science-weekly-issue-616) (over 68,500 subscribers)
   * [University of Wisconsin - Madison Department of Statistics website](https://stat.wisc.edu/2025/05/08/department-of-statistics-celebrates-spring-2025-graduates/) (May 2025)
 
-* **Upcoming Talks & Workshops:**
-  * [BarcelonaTech, Statistics Department](https://eio.upc.edu/en/seminar) (Dec 2025)
-
 * **Past Talks & Workshops:**
+  * [BarcelonaTech, Statistics Department](https://eio.upc.edu/en/seminar) (Dec 2025)
   * [PRICAI 2025](https://www.pricai.org/2025/index.php) (Nov 2025) 
   * [University of Seville, Minerva AI Lab](https://grupo.us.es/minerva/) (Oct 2025) 
     
@@ -126,6 +124,21 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
   7. Other minor enhancements in explain() and compare() methods.
 
 Check CHANGELOG.md to see all past release notes.
+
+Coming up in the next release: **TurboSolve**, a smart OLS solver that is always at least as fast as your favorite OLS solver but often times 3x to 10x faster.
+TurboSolve will serve as the high-performance engine for the TRUST algorithm in `trust-free`. Additionally, it will be available as a standalone, free utility for OLS problems of any scale, without constraints on dataset size.
+### 🚀 Performance Benchmarks: TurboSolve vs. Scikit-Learn
+
+The following benchmarks compare **TurboSolve** against `sklearn.linear_model.LinearRegression`. 
+Tests were conducted across 100 repetitions with a range of dataset geometries. 
+
+| Scenario ($n \times p$) | TurboSolve (ms) | Sklearn (ms) | Speedup | Mean Rel. Error (%) | Global Max Error (%) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Tall & Lean** ($5k \times 20$) | 0.54 ± 0.10 | 1.54 ± 0.04 | **2.85x** | $2.41 \times 10^{-12}$ | $4.45 \times 10^{-11}$ |
+| **Big Data** ($100k \times 100$) | 27.86 ± 0.62 | 273.96 ± 1.34 | **9.83x** | $9.54 \times 10^{-13}$ | $2.04 \times 10^{-11}$ |
+| **Underdetermined** ($50 \times 200$)* | 0.20 ± 0.01 | 0.76 ± 0.03 | **3.80x** | $3.43 \times 10^{-4}$ | $0.0129$ |
+
+*\*Note: In the $n < p$ case, TurboSolve utilizes a data-driven micro-ridge penalty to maintain stability and speed, accounting for the slight increase in relative error.*
 
 ## Installation
 
