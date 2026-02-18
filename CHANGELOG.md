@@ -1,3 +1,16 @@
+## 3.0.0 (2026-02-XX)
+- Added:
+  1. **New models in leaves:** Renet (SOTA Relaxed Elastic Net) and a custom implementation of Adaptive Elastic Net 
+  2. **New Direct and Systemic Variable Importance** estimation: an upgrade to the traditional permutation feature importance
+  3. **New Minimum Description Length** mode for leaves: simplest plausible leaf model when Renet gives OLS estimates.
+- Changed:
+  1. Much **faster training** (5-20x)
+  2. Small enhancements to Ghost Variable Importance estimation
+  3. __init__ and fit method signatures changed to accomodate new capabilities and to align closer with scikit-learn conventions. This **breaks backward compatibility**, so it may require adapting existing pipelines accordingly for some users.
+  4. Minor bug fixes
+- Removed:
+  1. Traditional Permutation Feature Importance option (superseded by faster, more robust and 100% deterministic alternative, see 2. above)
+
 ## 2.1.4 (2025-11-16)
 - Added:
   1. **Expanded compatibility (new platforms will be sequentially added)**
