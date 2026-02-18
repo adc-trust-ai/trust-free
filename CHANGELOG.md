@@ -1,6 +1,6 @@
 ## 3.0.0 (2026-02-XX)
 - Added:
-  1. **New models in leaves:** Renet (SOTA Relaxed Elastic Net) and a custom implementation of Adaptive Elastic Net 
+  1. **New models in leaves:** Renet (SOTA Relaxed Elastic Net) and a custom implementation of Adaptive Elastic Net, offering slightly different accuracy-sparsity profiles
   2. **New Direct and Systemic Variable Importance** estimation: an upgrade to the traditional permutation feature importance
   3. **New Minimum Description Length** mode for leaves: simplest plausible leaf model when Renet gives OLS estimates.
 - Changed:
