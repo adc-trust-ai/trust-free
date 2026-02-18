@@ -3,11 +3,13 @@
   1. **New models in leaves:** Renet (SOTA Relaxed Elastic Net) and a custom implementation of Adaptive Elastic Net, offering slightly different accuracy-sparsity profiles
   2. **New Direct and Systemic Variable Importance** estimation: an upgrade to the traditional permutation feature importance
   3. **New Minimum Description Length** mode for leaves: simplest plausible leaf model when Renet gives OLS estimates.
+  4. More public classes and methods (can be used as **standalone tools**): Renet, AdaptiveNetCV, FeatureImportance, turbosolve (method).
 - Changed:
   1. Much **faster training** (5-20x)
   2. Small enhancements to Ghost Variable Importance estimation
   3. __init__ and fit method signatures changed to accomodate new capabilities and to align closer with scikit-learn conventions. This **breaks backward compatibility**, so it may require adapting existing pipelines accordingly for some users.
-  4. Minor bug fixes
+  4. Renamed the TRUST class as TRUSTRegressor (TRUSTClassifier is coming soon...). The TRUST class will still be around until version 4.0.0 to help transition.
+  5. Minor bug fixes
 - Removed:
   1. Traditional Permutation Feature Importance option (superseded by faster, more robust and 100% deterministic alternative, see 2. above)
 
