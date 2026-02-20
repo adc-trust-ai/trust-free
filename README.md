@@ -118,7 +118,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - Changed:
   1. Much **faster training** (5-20x)
   2. Small enhancements to explain() and Ghost Variable Importance estimation
-  3. __init__ and fit method signatures changed to accomodate new capabilities and to align closer with scikit-learn conventions. This **breaks backward compatibility**, so it may require adapting existing pipelines accordingly for some users.
+  3. \_\_init\_\_ and fit method signatures changed to accomodate new capabilities and to align closer with scikit-learn conventions. This **breaks backward compatibility**, so it may require adapting existing pipelines accordingly for some users.
   4. Renamed the TRUST class as TRUSTRegressor (TRUSTClassifier is coming soon...). The TRUST class will still be around until version 4.0.0 to help transition.
   5. Minor bug fixes
 - Removed:
