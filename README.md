@@ -126,8 +126,13 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 
 Check CHANGELOG.md to see all past release notes.
 
-Coming up in the next release: **TurboSolve**, a smart OLS solver that is always at least as fast as your favorite OLS solver but usually 2x to 10x faster.
-TurboSolve will serve as the high-performance engine for the TRUST algorithm in `trust-free`. Additionally, it will be available as a *standalone, free utility* for OLS problems of any scale, without any constraints on dataset size.
+All of our tools are grounded in science. Besides the core TRUST architecture (PRICAI 2025),
+- Renet (and our Adaptive Net implementation): https://arxiv.org/abs/2602.11107
+- Direct and Systemic Variable Importance: https://arxiv.org/abs/2512.13892
+- TurboSolve: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5811842, https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5884203
+
+More on **TurboSolve**, a smart OLS solver that is always at least as fast as your favorite OLS solver but usually 2x to 10x faster.
+TurboSolve serves as the high-performance engine for the TRUST algorithm in `trust-free`. Additionally, it is available as a **standalone, free utility** for OLS problems of any scale, without any constraints on dataset size.
 ### 🚀 Performance Benchmarks: TurboSolve vs. Scikit-Learn
 
 The following benchmarks compare **TurboSolve** against `sklearn.linear_model.LinearRegression`. 
