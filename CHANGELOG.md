@@ -12,7 +12,7 @@
   4. Renamed the TRUST class as TRUSTRegressor (TRUSTClassifier is coming soon...). The TRUST class will still be around until version 4.0.0 to help transition.
   5. Minor bug fixes
 - Removed:
-  1. Traditional Permutation Feature Importance option (superseded by faster, more robust and 100% deterministic alternative, see 2. above)
+  1. Traditional Permutation Feature Importance option (superseded by faster, more robust and 100% deterministic alternative, see second "Added" item)
 
 ## 2.1.4 (2025-11-16)
 - Added:
