@@ -269,7 +269,7 @@ RLT_Diabetes.varImpPerm(Diabetes_X, Diabetes_y, filename="Diabetes") #Permutatio
 </div>
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/ALE_plot_Diabetes.png" alt="ALEplot" width="90%" style="display: block; margin: auto;" />
+<img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/ALE_plot_Diabetes.png" alt="ALEplot" width="99%" style="display: block; margin: auto;" />
 </div>
 
 ```python
