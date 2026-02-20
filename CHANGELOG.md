@@ -1,4 +1,4 @@
-## 3.0.0 (2026-02-20)
+## 3.0.0 (2026-02-21)
 - Added:
   1. **New models in leaves:** Renet (SOTA Relaxed Elastic Net) and a custom implementation of Adaptive Elastic Net, offering slightly different accuracy-sparsity profiles
   2. **New Direct and Systemic Variable Importance** estimation: an upgrade to the traditional permutation feature importance
