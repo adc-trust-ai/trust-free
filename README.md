@@ -83,7 +83,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - ✅ Full Functionality: All core features are fully functional within these bounds
 - ✅ Standalone Tools: Relaxed Net (Renet™), Adaptive Net, TurboSolve™ (fast OLS/ridge solver), Direct & Systemic Feature Importance
 - ⭐ No-Limit Utilities: TurboSolve™, Feature Importance methods, and our open-source Synthetic Dataset Generators (Toeplitz, Block-Correlated) can be used **without restriction** as standalone tools
-- 🚀 Ready to Level Up? Unlimited scale and [additional features](https://github.com/adc-trust-ai/trust-free/blob/main/trust-pro.md) in the forthcoming **trust-pro** edition
+- 🚀 Need even more? We got you covered: Unlimited scale and [additional features](https://github.com/adc-trust-ai/trust-free/blob/main/trust-pro.md) in the forthcoming **trust-pro** edition
 
 **Want early access to trust-pro?**  
 - Join the [waitlist](https://forms.gle/Gsti4kZ7yG5ZTNqu7) (completely anonymous & GDPR-compliant)
@@ -181,7 +181,7 @@ For a fully reproducible development environment with all dependencies, see SETU
 Here are two simple examples showing how to use the trust-free package:
 
 ```python
-from trust import TRUST # note the import name is trust, not trust-free
+from trust import TRUSTRegressor # note the import name is trust, not trust-free
 from sklearn.datasets import make_regression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_squared_error
@@ -246,12 +246,12 @@ le = LabelEncoder()
 Diabetes_X.loc[:, 'sex'] = le.fit_transform(Diabetes_X['sex']).astype(str)
 Diabetes_y = Diabetes.iloc[:,-1]
 model_Diabetes = TRUSTRegressor(max_depth=1).fit(Diabetes_X,Diabetes_y)
-y_pred_TRUST = RLT_Diabetes.predict(Diabetes_X)
+y_pred_TRUST = model_Diabetes.predict(Diabetes_X)
 ```
 ```python
 # Tree plotting requires Graphviz to be installed in your system path
 # You can use e.g. Homebrew: brew install graphviz or Conda: conda install -c conda-forge graphviz
-RLT_Diabetes.plot_tree("Diabetes") #will save "tree_plot_Diabetes.png" in your working directory
+model_Diabetes.plot_tree("Diabetes") #will save "tree_plot_Diabetes.png" in your working directory
 ```
 <div align="center">
 <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/tree_plot_Diabetes.png" alt="tree" width="50%" style="display: block; margin: auto;" />
