@@ -258,7 +258,7 @@ RLT_Diabetes.plot_tree("Diabetes") #will save "tree_plot_Diabetes.png" in your w
 </div>
 
 ```python
-# Obtain direct and systemic variable importance along with impact propagation heatmap
+# Obtain direct and systemic variable importance (with impact propagation heatmap) as well as ALE plots for each feature
 RLT_Diabetes.varImp(Diabetes_X, Diabetes_y, corAnalysis=True, filename="Diabetes") #Ghost method
 RLT_Diabetes.varImpPerm(Diabetes_X, Diabetes_y, filename="Diabetes") #Permutation method
 ```
