@@ -81,8 +81,8 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 ### About this edition
 - ℹ️ Free-tier Dataset Limits: ≤ 5,000 rows and ≤ 20 columns (intended for proof-of-concept, R&D and teaching)
 - ✅ Full Functionality: All core features are fully functional within these bounds
-- ✅ Standalone Tools: Relaxed Net (Renet™), Adaptive Net, TurboSolve (fastest OLS/ridge solver), Direct & Systemic Feature Importance
-- ⭐ No-Limit Utilities: TurboSolve, Feature Importance methods, and our open-source Synthetic Dataset Generators (Toeplitz, Block-Correlated) can be used **without restriction** as standalone tools
+- ✅ Standalone Tools: Relaxed Net (Renet™), Adaptive Net, TurboSolve™ (fastest OLS/ridge solver), Direct & Systemic Feature Importance
+- ⭐ No-Limit Utilities: TurboSolve™, Feature Importance methods, and our open-source Synthetic Dataset Generators (Toeplitz, Block-Correlated) can be used **without restriction** as standalone tools
 - 🚀 Ready to Level Up? Unlimited scale and [additional features](https://github.com/adc-trust-ai/trust-free/blob/main/trust-pro.md) in the forthcoming **trust-pro** edition
 
 **Want early access to trust-pro?**  
@@ -109,9 +109,9 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 
 ## 3.0.0 (2026-02-21)
 - Added:
-  1. **New models in leaves:** Renet (SOTA Relaxed Elastic Net) and a custom implementation of Adaptive Elastic Net, offering slightly different accuracy-sparsity profiles
+  1. **New models in leaves:** Renet™ (SOTA Relaxed Elastic Net) and a custom implementation of Adaptive Elastic Net, offering slightly different accuracy-sparsity profiles
   2. **New Direct and Systemic Variable Importance** estimation: an upgrade to the traditional permutation feature importance
-  3. **New Minimum Description Length** mode for leaves: simplest plausible leaf model when Renet gives OLS estimates.
+  3. **New Minimum Description Length** mode for leaves: simplest plausible leaf model when Renet™ gives OLS estimates.
   4. **New open-source datasets module**: make regression datasets with different correlation structures (plain, block, or Toeplitz)
   5. More public classes and methods (can be used as **standalone tools**): Renet, AdaptiveNetCV, FeatureImportance, turbosolve, and the datasets module.
   6. Optional display of leaf model equation in tree plot
@@ -127,30 +127,29 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 Check CHANGELOG.md to see all past release notes.
 
 All of our tools are grounded in science. Besides the core TRUST architecture (PRICAI 2025),
-- Renet (and our Adaptive Net implementation): https://arxiv.org/abs/2602.11107
+- Renet™ (and our Adaptive Net implementation): https://arxiv.org/abs/2602.11107
 - Direct and Systemic Variable Importance: https://arxiv.org/abs/2512.13892
-- TurboSolve: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5811842, https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5884203
+- TurboSolve™: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5811842, https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5884203
 
-More on **TurboSolve**, a smart OLS solver that is always at least as fast as your favorite OLS solver but usually 2x to 10x faster.
-TurboSolve serves as the high-performance engine for the TRUST algorithm in `trust-free`. Additionally, it is available as a **standalone, free utility** for OLS problems of any scale, without any constraints on dataset size.
-### 🚀 Performance Benchmarks: TurboSolve vs. Scikit-Learn
+More on **TurboSolve™**, a smart OLS solver that is always at least as fast as your favorite OLS solver but usually 2x to 10x faster: TurboSolve™ serves as the high-performance engine for the TRUST algorithm in `trust-free`. Additionally, it is available as a **standalone, free utility** for OLS problems of any scale, without any constraints on dataset size.
+### 🚀 Performance Benchmarks: TurboSolve™ vs. Scikit-Learn
 
-The following benchmarks compare **TurboSolve** against `sklearn.linear_model.LinearRegression`. 
+The following benchmarks compare **TurboSolve™** against `sklearn.linear_model.LinearRegression`. 
 Tests were conducted across 100 repetitions with a range of dataset geometries. 
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/TurboSolve_benchmarks.png" alt="TurboSolve_vs_Sklearn" width="90%" style="display: block; margin: auto;" />
 </div>
 
-**TurboSolve** is designed for efficiency across all data geometries. As shown above, the performance gap widens significantly as dataset size increases, reaching nearly 10x faster execution than standard implementations for large-scale problems.
+**TurboSolve™** is designed for efficiency across all data geometries. As shown above, the performance gap widens significantly as dataset size increases, reaching nearly 10x faster execution than standard implementations for large-scale problems.
 
-| Scenario ($n \times p$) | TurboSolve (ms) | Sklearn (ms) | Speedup | Mean Rel. Error (%) | Global Max Error (%) |
+| Scenario ($n \times p$) | TurboSolve™ (ms) | Sklearn (ms) | Speedup | Mean Rel. Error (%) | Global Max Error (%) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Tall & Lean** ($5k \times 20$) | 0.54 ± 0.20 | 1.54 ± 0.08 | **2.85x** | $2.41 \times 10^{-12}$ | $4.45 \times 10^{-11}$ |
 | **Underdetermined** ($50 \times 200$)* | 0.20 ± 0.02 | 0.76 ± 0.06 | **3.80x** | $3.43 \times 10^{-4}$ | $0.0129$ |
 | **Big Data** ($100k \times 100$) | 27.86 ± 1.24 | 273.96 ± 2.68 | **9.83x** | $9.54 \times 10^{-13}$ | $2.04 \times 10^{-11}$ |
 
-*\*Note: In the n << p case, **TurboSolve** utilizes a data-driven micro-ridge penalty to maintain stability and speed, accounting for the slight increase in relative error.*
+*\*Note: In the n << p case, **TurboSolve™** utilizes a data-driven micro-ridge penalty to maintain stability and speed, accounting for the slight increase in relative error.*
 
 ## Installation
 
@@ -179,7 +178,7 @@ For a fully reproducible development environment with all dependencies, see SETU
 
 ## Usage
 
-Here are two basic examples of how to use the TRUST™ algorithm:
+Here are two simple examples showing how to use the trust-free package:
 
 ```python
 from trust import TRUST # note the import name is trust, not trust-free
@@ -205,8 +204,7 @@ print(coefs)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123)
 # Instantiate and fit your model
-model = TRUST()
-model.fit(X_train, y_train)
+model = TRUSTRegressor().fit(X_train, y_train)
 # Predict and print results
 y_pred = model.predict(X_test)
 print("Predictions:", y_pred[:5])
@@ -215,17 +213,15 @@ print("test R\u00B2:", r2_score(y_test, y_pred))
 ```
 
 ```python
-# Obtain (conditional) variable importance by Ghost method (based on Delicado and Pena, 2023)
-model.varImp(X_test, y_test, corAnalysis=True, filename="Synthetic")
-# Unconditional variable importance by permutation (with added debiasing and uncertainty quantification steps)
-model.varImpPerm(X_test, y_test, R=20, B=20, U=10, filename="Synthetic")
+# Estimate direct variable importance for your fitted model
+model.importance("direct", filename="Synthetic")
 ```
 <div align="center">
 <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Direct_Importance_plot_Synthetic.png" alt="varImp" width="50%" style="display: block; margin: auto;" />
 </div>
 
 ```python
-# Obtain prediction explanation for first observation
+# Obtain a comprehensive prediction explanation for the first test observation
 model.explain(X_test[0,:], mode="detailed", actual=y_test[0], filename="Synthetic") 
 ```
 <div align="center">
@@ -249,8 +245,7 @@ Diabetes_X = Diabetes.iloc[:,:-1]
 le = LabelEncoder()
 Diabetes_X.loc[:, 'sex'] = le.fit_transform(Diabetes_X['sex']).astype(str)
 Diabetes_y = Diabetes.iloc[:,-1]
-RLT_Diabetes = TRUST(max_depth=1)
-RLT_Diabetes.fit(Diabetes_X,Diabetes_y)
+model_Diabetes = TRUSTRegressor(max_depth=1).fit(Diabetes_X,Diabetes_y)
 y_pred_TRUST = RLT_Diabetes.predict(Diabetes_X)
 ```
 ```python
@@ -264,13 +259,13 @@ RLT_Diabetes.plot_tree("Diabetes") #will save "tree_plot_Diabetes.png" in your w
 
 ```python
 # Obtain direct and systemic variable importance (with impact propagation heatmap) as well as ALE plots for each feature
-RLT_Diabetes.varImp(Diabetes_X, Diabetes_y, corAnalysis=True, filename="Diabetes") #Ghost method
-RLT_Diabetes.varImpPerm(Diabetes_X, Diabetes_y, filename="Diabetes") #Permutation method
+model_Diabetes.importance("direct", filename="Diabetes")
+model_Diabetes.importance("systemic", filename="Diabetes")
 ```
 <div align="center">
     <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Direct_Importance_plot_Diabetes.png" alt="varImp2" width="33.75%" />
     <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Systemic_Importance_plot_Diabetes.png" alt="varImp3" width="33.75%" />
-     <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Impact_Propagation_Heatmap_Diabetes.png" alt="varImp3b" width="30.5%" />
+    <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Impact_Propagation_Heatmap_Diabetes.png" alt="varImp3b" width="30.5%" />
 </div>
 
 <div align="center">
@@ -278,8 +273,8 @@ RLT_Diabetes.varImpPerm(Diabetes_X, Diabetes_y, filename="Diabetes") #Permutatio
 </div>
 
 ```python
-# Obtain prediction explanation for second observation
-RLT_Diabetes.explain(Diabetes_X.iloc[1,:], aim="decrease", actual=Diabetes_y[1], filename="Diabetes")
+# Obtain a prediction explanation for the second observation
+model_Diabetes.explain(Diabetes_X.iloc[1,:], aim="decrease", actual=Diabetes_y[1], filename="Diabetes")
 ```
 <div align="center">
 <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain2.png" alt="Explain2" width="97%" style="display: block; margin: auto;" />
@@ -293,7 +288,7 @@ RLT_Diabetes.explain(Diabetes_X.iloc[1,:], aim="decrease", actual=Diabetes_y[1],
 
 ```python
 # Compare the second and fourth observations head-to-head
-RLT_Diabetes.compare(Diabetes_X.iloc[1,:], Diabetes_X.iloc[3,:], filename="Diabetes")
+model_Diabetes.compare(Diabetes_X.iloc[1,:], Diabetes_X.iloc[3,:], filename="Diabetes")
 ```
 <div align="center">
 <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_compare1.png" alt="Compare1" width="97%" style="display: block; margin: auto;" />
@@ -306,7 +301,7 @@ RLT_Diabetes.compare(Diabetes_X.iloc[1,:], Diabetes_X.iloc[3,:], filename="Diabe
 </div>
 
 ### More Examples on Kaggle Datasets
-- [Medical Insurance Charges (1.82M views, 360K downloads)](https://www.kaggle.com/datasets/mirichoi0218/insurance)
+- [Medical Insurance Charges (1.9M views, 383K downloads)](https://www.kaggle.com/datasets/mirichoi0218/insurance)
 - [Life Satisfaction in the EU (own contribution)](https://www.kaggle.com/datasets/albertdorador/eu-life-satisfaction-eurostat-un-oecd)
 
 
@@ -320,8 +315,12 @@ For more details, documentation, and information about the full upcoming 'pro' v
 
 https://adc-trust-ai.github.io/trust/
 
-Further details about the TRUST™ algorithm can be found in our preprint on arXiv:
+Further details about the TRUST™, Renet™ and our novel variable importance algorithms can be found in our preprints on arXiv:
 
 https://www.arxiv.org/abs/2506.15791
 
-Copyright © 2025 Albert Dorador Chalar. All rights reserved. TRUST™ is a trademark of Albert Dorador Chalar.
+https://arxiv.org/abs/2602.11107
+
+https://arxiv.org/abs/2512.13892
+
+Copyright © 2025-2026 Albert Dorador Chalar. All rights reserved. TRUST™, Renet™ and TurboSolve™ are trademarks of Albert Dorador Chalar.
