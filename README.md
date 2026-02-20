@@ -258,13 +258,14 @@ RLT_Diabetes.plot_tree("Diabetes") #will save "tree_plot_Diabetes.png" in your w
 </div>
 
 ```python
-# Obtain variable importance with 2 different methods: Ghost and permutation
+# Obtain direct and systemic variable importance along with impact propagation heatmap
 RLT_Diabetes.varImp(Diabetes_X, Diabetes_y, corAnalysis=True, filename="Diabetes") #Ghost method
 RLT_Diabetes.varImpPerm(Diabetes_X, Diabetes_y, filename="Diabetes") #Permutation method
 ```
 <div align="center">
-    <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpScores_plot_Diabetes.png" alt="varImp2" width="49%" />
-    <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/varImpPermScores_plot_Diabetes.png" alt="varImp3" width="48.25%" />
+    <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Direct_Importance_plot_Diabetes.png" alt="varImp2" width="32%" />
+    <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Systemic_Importance_plot_Diabetes.png" alt="varImp3" width="32%" />
+     <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Impact_Propagation_Heatmap_Diabetes.png" alt="varImp3b" width="32%" />
 </div>
 
 
