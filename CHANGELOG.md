@@ -3,8 +3,9 @@
   1. **New models in leaves:** Renet (SOTA Relaxed Elastic Net) and a custom implementation of Adaptive Elastic Net, offering slightly different accuracy-sparsity profiles
   2. **New Direct and Systemic Variable Importance** estimation: an upgrade to the traditional permutation feature importance
   3. **New Minimum Description Length** mode for leaves: simplest plausible leaf model when Renet gives OLS estimates.
-  4. More public classes and methods (can be used as **standalone tools**): Renet, AdaptiveNetCV, FeatureImportance, turbosolve (method).
-  5. Optional display of leaf model equation in tree plot
+  4. **New open-source datasets module**: make regression datasets with different correlation structures (plain, block, or Toeplitz)
+  5. More public classes and methods (can be used as **standalone tools**): Renet, AdaptiveNetCV, FeatureImportance, turbosolve, and the datasets module.
+  6. Optional display of leaf model equation in tree plot
 - Changed:
   1. Much **faster training** (5-20x)
   2. Small enhancements to explain() and Ghost Variable Importance estimation
