@@ -72,16 +72,18 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 
 ## Key Advantages: RF Accuracy ⟡ Tree Transparency ⟡ Linear Interpretability
 
-- **Hybrid power**: Trees to capture non-linearity & interactions + sparse linear (Relaxed Lasso) models in leaves
+- **Hybrid power**: Trees to capture non-linearity & interactions + sparse linear (Adaptive or Relaxed Elastic Net) models in leaves
 - **Superior accuracy**: RF-level accuracy, proven on 60 benchmark datasets
 - **Full transparency**: Every prediction is auditable via tree path + leaf equation
 - **Inclusive**: Explanation reports written in natural language accessible to all audiences
 - **Compliant by design**: 100% Compliant with the EU AI Act and the OECD AI Principles — ideal for high-stakes domains like finance and healthcare
 
 ### About this edition
-- ℹ️ Free-tier dataset limits: ≤ 5,000 rows and ≤ 20 columns (intended for proof-of-concept, R&D and teaching)
-- ✅ All core features are fully functional within these bounds
-- ✅ Unlimited scale and [additional features](https://github.com/adc-trust-ai/trust-free/blob/main/trust-pro.md) in the forthcoming **trust-pro** edition
+- ℹ️ Free-tier Dataset Limits: ≤ 5,000 rows and ≤ 20 columns (intended for proof-of-concept, R&D and teaching)
+- ✅ Full Functionality: All core features are fully functional within these bounds
+- ✅ Standalone Tools: Relaxed Net (Renet™), Adaptive Net, TurboSolve (fastest OLS/ridge solver), Direct & Systemic Feature Importance
+- ⭐ No-Limit Utilities: TurboSolve and Feature Importance methods can be used **without restriction** as standalone tools
+- 🚀 Ready to Level Up? Unlimited scale and [additional features](https://github.com/adc-trust-ai/trust-free/blob/main/trust-pro.md) in the forthcoming **trust-pro** edition
 
 **Want early access to trust-pro?**  
 - Join the [waitlist](https://forms.gle/Gsti4kZ7yG5ZTNqu7) (completely anonymous & GDPR-compliant)
@@ -93,14 +95,13 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - Interpretable models with accuracy comparable to Random Forests
 - Visual tree structure and comprehensive, automatically-generated explanations on demand
 - Automatically-generated head-to-head comparisons of profiles of interest
-- Multiple variable importance methods (Ghost, Permutation, ALE plots, SHAP values)
+- Multiple variable importance methods (SOTA Permutation, Ghost Variables, ALE plots, SHAP values)
 - Automatic missing value handling that learns from missingness itself
 - Automatic detection of potential overfitting.
 - Ability to efficiently use continuous and categorical predictor variables
 - Prediction confidence intervals *[coming in next release]*
 - Novel method to warn about risky predictions on the fly *[coming in next release]*
-- Novel in-leaf regression model delivering even further sparsity *[coming in next release]*
-- Lightning fast training *[coming in next release]*
+- Even faster training *[coming in next release]*
 
 
 ## What's new in version 2.1.4?
