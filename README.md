@@ -104,8 +104,8 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - Even faster training *[coming in next release]*
 
 
-## What's new in version 2.1.4?
-### TL;DR: First version with **expanded platform compatibility**, plus minor improvements in many areas.
+## What's new in version 3.0.0?
+### TL;DR: 5-20x faster training, new models in leaves (Adaptive or Relaxed Elastic Net), new Direct and Systemic Feature Importance, and more!
 
 ## 2.1.4 (2025-11-16)
 - Added:
