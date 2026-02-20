@@ -82,7 +82,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - ℹ️ Free-tier Dataset Limits: ≤ 5,000 rows and ≤ 20 columns (intended for proof-of-concept, R&D and teaching)
 - ✅ Full Functionality: All core features are fully functional within these bounds
 - ✅ Standalone Tools: Relaxed Net (Renet™), Adaptive Net, TurboSolve (fastest OLS/ridge solver), Direct & Systemic Feature Importance
-- ⭐ No-Limit Utilities: TurboSolve and Feature Importance methods can be used **without restriction** as standalone tools
+- ⭐ No-Limit Utilities: TurboSolve and Feature Importance methods and Synthetic Dataset Generators (Toeplitz, Block-Correlated) can be used **without restriction** as standalone tools
 - 🚀 Ready to Level Up? Unlimited scale and [additional features](https://github.com/adc-trust-ai/trust-free/blob/main/trust-pro.md) in the forthcoming **trust-pro** edition
 
 **Want early access to trust-pro?**  
