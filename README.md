@@ -263,9 +263,9 @@ RLT_Diabetes.varImp(Diabetes_X, Diabetes_y, corAnalysis=True, filename="Diabetes
 RLT_Diabetes.varImpPerm(Diabetes_X, Diabetes_y, filename="Diabetes") #Permutation method
 ```
 <div align="center">
-    <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Direct_Importance_plot_Diabetes.png" alt="varImp2" width="34%" />
-    <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Systemic_Importance_plot_Diabetes.png" alt="varImp3" width="34%" />
-     <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Impact_Propagation_Heatmap_Diabetes.png" alt="varImp3b" width="30%" />
+    <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Direct_Importance_plot_Diabetes.png" alt="varImp2" width="33.5%" />
+    <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Systemic_Importance_plot_Diabetes.png" alt="varImp3" width="33.5%" />
+     <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Impact_Propagation_Heatmap_Diabetes.png" alt="varImp3b" width="31%" />
 </div>
 
 
