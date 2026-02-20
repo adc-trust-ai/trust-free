@@ -107,7 +107,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 ## What's new in version 3.0.0?
 ### TL;DR: 5-20x faster training, new models in leaves (Adaptive or Relaxed Elastic Net), new Direct and Systemic Feature Importance, and more!
 
-## 3.0.0 (2026-02-20)
+## 3.0.0 (2026-02-21)
 - Added:
   1. **New models in leaves:** Renet (SOTA Relaxed Elastic Net) and a custom implementation of Adaptive Elastic Net, offering slightly different accuracy-sparsity profiles
   2. **New Direct and Systemic Variable Importance** estimation: an upgrade to the traditional permutation feature importance
