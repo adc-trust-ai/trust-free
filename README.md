@@ -315,7 +315,7 @@ For more details, documentation, and information about the full upcoming 'pro' v
 
 https://adc-trust-ai.github.io/trust/
 
-Further details about TRUST™, Renet™ and our novel variable importance algorithms can be found in our preprints on arXiv:
+Further technical details about TRUST™, Renet™ and our novel variable importance algorithms can be found in our preprints on arXiv:
 
 https://www.arxiv.org/abs/2506.15791
 
