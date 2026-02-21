@@ -258,7 +258,7 @@ model_Diabetes.plot_tree("Diabetes") #will save "tree_plot_Diabetes.png" in your
 </div>
 
 ```python
-# Obtain direct and systemic variable importance (with impact propagation heatmap) as well as ALE plots for each feature
+# Obtain direct and systemic variable importance (with impact propagation heatmap) as well as ALE plots for all features
 model_Diabetes.importance("direct", filename="Diabetes")
 model_Diabetes.importance("systemic", filename="Diabetes")
 ```
