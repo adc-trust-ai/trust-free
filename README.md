@@ -72,7 +72,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 
 ## Key Advantages: RF Accuracy ⟡ Tree Transparency ⟡ Linear Interpretability
 
-- **Hybrid power**: Trees to capture non-linearity & interactions + sparse linear (Adaptive or Relaxed Elastic Net) models in leaves
+- **Hybrid power**: Trees to capture non-linearity & interactions + sparse linear models (Adaptive or Relaxed Elastic Net) in leaves
 - **Superior accuracy**: RF-level accuracy, proven on 60 benchmark datasets
 - **Full transparency**: Every prediction is auditable via tree path + leaf equation
 - **Inclusive**: Explanation reports written in natural language accessible to all audiences
