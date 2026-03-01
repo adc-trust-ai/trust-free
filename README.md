@@ -1,4 +1,4 @@
-# trust-free <a href="https://adc-trust-ai.github.io/trust"><img src="assets/TRUST_logo_500x500.png" align="right" height="128" alt="TRUST logo"/></a>
+# trust-free <a href="https://adc-trust-ai.github.io/trust"><img src="assets/TRUST_FREE_new_logo_500x500.png" align="right" height="128" alt="TRUST logo"/></a>
 
 [![PyPI version](https://img.shields.io/pypi/v/trust-free.svg)](https://pypi.org/project/trust-free/)
 [![Python](https://img.shields.io/pypi/pyversions/trust-free.svg)](https://pypi.org/project/trust-free/)
