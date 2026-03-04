@@ -85,20 +85,29 @@ with tab2:
             x2 = st.session_state.audit_sample.loc[[compare_ids[1]]].drop(columns=['charges'])
             
             # 0. Prime backend
-            import plotly.graph_objects as go
+            #import plotly.graph_objects as go
             import matplotlib as mpl            
             mpl.use("module://matplotlib_inline.backend_inline")
             # 1. Capture the print output from the TRUSTRegressor class
             compare_report = capture_output(model.compare, x1, x2, filename="Comp_demo")
             
             # 2. Show it
-            st.subheader("TRUST™ Profile Comparison Report")
-            st.code(compare_report, language="text")
+            col_text, col_plots = st.columns([1, 1])
+            with col_text:
+                st.subheader("TRUST™ Profile Comparison Report")
+                st.code(compare_report, language="text")
             
             # 3. Grab and show plots
             from plotly.io import renderers
-            import os
-            if os.path.exists("Radar_chart_Comp_demo.png"):
-                st.image("Radar_chart_Comp_demo.png")
+            import os            
+            with col_plots:
+                st.subheader("Supporting Charts")
+                plot_files = [f for f in os.listdir(".") if f.endswith("Comp_demo.png")]
+            
+            if plot_files:
+                for plot in sorted(plot_files):
+                    st.image(plot, use_container_width=True)
+            else:
+                st.info("No charts available to display.")
     else:
         st.warning(f"You have selected {count} rows. Please remove {count - 2} to proceed.")
