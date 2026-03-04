@@ -60,7 +60,7 @@ tab1, tab2 = st.tabs(["🔍 Single-Profile Explanation", "⚖️ Multi-Profile C
 
 with tab1:
     row_id = st.selectbox("Select Row ID to Audit", st.session_state.audit_sample.index)
-    if st.button("Generate Report"):
+    if st.button("Generate Report", key="explain_btn"):
         x_df = st.session_state.audit_sample.loc[[row_id]].drop(columns=['charges'])
         x_orig = x_df.iloc[0]
         
@@ -75,7 +75,7 @@ with tab2:
                                  st.session_state.audit_sample.index, 
                                  max_selections=2)
     
-    if st.button("Generate Report") and len(compare_ids) == 2:
+    if st.button("Generate Report", key="compare_btn") and len(compare_ids) == 2:
         x1 = st.session_state.audit_sample.loc[[compare_ids[0]]].drop(columns=['charges'])
         x2 = st.session_state.audit_sample.loc[[compare_ids[1]]].drop(columns=['charges'])
         
