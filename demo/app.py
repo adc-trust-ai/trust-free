@@ -85,6 +85,8 @@ with tab2:
             x2 = st.session_state.audit_sample.loc[[compare_ids[1]]].drop(columns=['charges'])
             
             # 0. Prime backend
+            import plotly.graph_objects as go
+            import matplotlib as mpl            
             mpl.use("module://matplotlib_inline.backend_inline")
             # 1. Capture the print output from the TRUSTRegressor class
             compare_report = capture_output(model.compare, x1, x2, filename="Comp_demo")
@@ -94,8 +96,6 @@ with tab2:
             st.code(compare_report, language="text")
             
             # 3. Grab and show plots
-            import plotly.graph_objects as go
-            import matplotlib as mpl
             from plotly.io import renderers
             import os
             if os.path.exists("Radar_Chart_Comp_demo.png"):
