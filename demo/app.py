@@ -74,13 +74,20 @@ with tab2:
     compare_ids = st.multiselect("Select 2 Row IDs to Compare", 
                                  st.session_state.audit_sample.index, 
                                  max_selections=2)
+    if len(compare_ids) < 2:
+        st.info("Please select exactly 2 rows from the table above to enable the comparison.")
+    else:
+        st.success("Comparison ready.")
     
-    if st.button("Generate Report", key="compare_btn") and len(compare_ids) == 2:
-        x1 = st.session_state.audit_sample.loc[[compare_ids[0]]].drop(columns=['charges'])
-        x2 = st.session_state.audit_sample.loc[[compare_ids[1]]].drop(columns=['charges'])
-        
-        # Capture the print output from the TRUSTRegressor class
-        compare_report = capture_output(model.compare, x1, x2, mode="report")
-        
-        st.subheader("TRUST™ Profile Comparison Report")
-        st.code(compare_report, language="text")
+    if st.button("Generate Report", key="compare_btn"):
+        if len(compare_ids) == 2:
+            x1 = st.session_state.audit_sample.loc[[compare_ids[0]]].drop(columns=['charges'])
+            x2 = st.session_state.audit_sample.loc[[compare_ids[1]]].drop(columns=['charges'])
+            
+            # Capture the print output from the TRUSTRegressor class
+            compare_report = capture_output(model.compare, x1, x2, mode="report")
+            
+            st.subheader("TRUST™ Profile Comparison Report")
+            st.code(compare_report, language="text")
+        else:
+            st.warning("You must select two different rows to compare.")
