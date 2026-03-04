@@ -61,7 +61,8 @@ tab1, tab2 = st.tabs(["🔍 Single-Profile Explanation", "⚖️ Multi-Profile C
 with tab1:
     row_id = st.selectbox("Select Row ID to Audit", st.session_state.audit_sample.index)
     if st.button("Generate Report"):
-        x_orig = st.session_state.audit_sample.loc[[row_id]].drop(columns=['charges'])
+        x_df = st.session_state.audit_sample.loc[[row_id]].drop(columns=['charges'])
+        x_orig = x_df.iloc[0]
         
         # Capture the print output from the TRUSTRegressor class
         explain_report = capture_output(model.explain, x_orig, mode="report")
