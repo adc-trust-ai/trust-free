@@ -60,8 +60,8 @@ tab1, tab2 = st.tabs(["🔍 Single-Profile Explanation", "⚖️ Multi-Profile C
 
 with tab1:
     row_id = st.selectbox("Select Row ID to Audit", st.session_state.audit_sample.index)
-    if st.button("Generate .explain() Report"):
-        x_orig = st.session_state.audit_sample.loc[[row_id]]
+    if st.button("Generate Report"):
+        x_orig = st.session_state.audit_sample.loc[[row_id]].drop(columns=['charges'])
         
         # Capture the print output from the TRUSTRegressor class
         explain_report = capture_output(model.explain, x_orig, mode="report")
@@ -74,9 +74,9 @@ with tab2:
                                  st.session_state.audit_sample.index, 
                                  max_selections=2)
     
-    if st.button("Generate .compare() Report") and len(compare_ids) == 2:
-        x1 = st.session_state.audit_sample.loc[[compare_ids[0]]]
-        x2 = st.session_state.audit_sample.loc[[compare_ids[1]]]
+    if st.button("Generate Report") and len(compare_ids) == 2:
+        x1 = st.session_state.audit_sample.loc[[compare_ids[0]]].drop(columns=['charges'])
+        x2 = st.session_state.audit_sample.loc[[compare_ids[1]]].drop(columns=['charges'])
         
         # Capture the print output from the TRUSTRegressor class
         compare_report = capture_output(model.compare, x1, x2, mode="report")
