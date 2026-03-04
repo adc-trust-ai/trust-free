@@ -84,18 +84,21 @@ with tab2:
             x1 = st.session_state.audit_sample.loc[[compare_ids[0]]].drop(columns=['charges'])
             x2 = st.session_state.audit_sample.loc[[compare_ids[1]]].drop(columns=['charges'])
             
+            # 0. Prime backend
+            mpl.use("module://matplotlib_inline.backend_inline")
             # 1. Capture the print output from the TRUSTRegressor class
-            compare_report = capture_output(model.compare, x1, x2, mode="report")
+            compare_report = capture_output(model.compare, x1, x2, filename="Comp_demo")
             
             # 2. Show it
             st.subheader("TRUST™ Profile Comparison Report")
             st.code(compare_report, language="text")
             
             # 3. Grab and show plots
-            import matplotlib.pyplot as plt
-            fig = plt.gcf() # Get Current Figure
-            if fig:
-                st.pyplot(fig, use_container_width=True)
-                plt.close(fig) # Clear memory for next run
+            import plotly.graph_objects as go
+            import matplotlib as mpl
+            from plotly.io import renderers
+            import os
+            if os.path.exists("Radar_Chart_Comp_demo.png"):
+                st.image("Radar_Chart_Comp_demo.png")
     else:
         st.warning(f"You have selected {count} rows. Please remove {count - 2} to proceed.")
