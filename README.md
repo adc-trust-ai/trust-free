@@ -19,9 +19,7 @@ It includes a **state-of-the-art explainability suite**, providing comprehensive
 
 <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/trust-free_explain_compare_wm.gif" alt="ExplainCompareGif" width="100%" style="display: block; margin: auto;" />
 
-<a href="https://colab.research.google.com/github/adc-trust-ai/trust-free/blob/main/notebooks/trust_free_tutorial_Kaggle_insurance_colab.ipynb" target="_blank">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adc-trust-ai/trust-free/blob/main/notebooks/trust_free_tutorial_Kaggle_insurance_colab.ipynb)
 
 ### Proven Performance: Accuracy + Full Interpretability (60 Datasets)
 
