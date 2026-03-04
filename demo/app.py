@@ -84,10 +84,18 @@ with tab2:
             x1 = st.session_state.audit_sample.loc[[compare_ids[0]]].drop(columns=['charges'])
             x2 = st.session_state.audit_sample.loc[[compare_ids[1]]].drop(columns=['charges'])
             
-            # Capture the print output from the TRUSTRegressor class
+            # 1. Capture the print output from the TRUSTRegressor class
             compare_report = capture_output(model.compare, x1, x2, mode="report")
             
+            # 2. Show it
             st.subheader("TRUST™ Profile Comparison Report")
             st.code(compare_report, language="text")
+            
+            # 3. Grab and show plots
+            import matplotlib.pyplot as plt
+            fig = plt.gcf() # Get Current Figure
+            if fig:
+                st.pyplot(fig, use_container_width=True)
+                plt.close(fig) # Clear memory for next run
     else:
         st.warning(f"You have selected {count} rows. Please remove {count - 2} to proceed.")
