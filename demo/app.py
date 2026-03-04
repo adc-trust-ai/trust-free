@@ -91,26 +91,24 @@ with tab2:
             compare_report = capture_output(model.compare, x1, x2, filename="Comp_demo")
             
             # 2. Show it
-            col_text, col_plots = st.columns([1, 1])
-            with col_text:
-                st.subheader("TRUST™ Profile Comparison Report")
-                st.code(compare_report, language="text")
+            st.subheader("TRUST™ Profile Comparison Report")
+            st.code(compare_report, language="text")
             
             # 3. Grab and show plots
             #import plotly.graph_objects as go
             #from plotly.io import renderers
             import os        
             from os.path import getmtime
-            with col_plots:
-                st.subheader("Supporting Charts")
-                plot_files = [f for f in os.listdir(".") if f.endswith("Comp_demo.png")]
-            
-                if plot_files:
-                    plot_files.sort(key=lambda x: getmtime(x))
-                    for plot in plot_files:
+            st.subheader("Supporting Charts")
+            plot_files = [f for f in os.listdir(".") if f.endswith("Comp_demo.png")]
+            if plot_files:
+                plot_files.sort(key=lambda x: getmtime(x))
+                cols = st.columns(2) # expects 2 plots will be generated
+                for idx, plot in enumerate(plot_files):
+                    with cols[idx % 2]:
                         st.image(plot, use_container_width=True)
                         os.remove(plot)
-                else:
-                    st.info("No charts available to display.")
+            else:
+                st.info("No charts available to display.")
     else:
         st.warning(f"You have selected {count} rows. Please remove {count - 2} to proceed.")
