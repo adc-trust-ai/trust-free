@@ -72,15 +72,15 @@ with tab1:
 
 with tab2:
     compare_ids = st.multiselect("Select 2 Row IDs to Compare", 
-                                 st.session_state.audit_sample.index, 
-                                 max_selections=2)
-    if len(compare_ids) < 2:
-        st.info("Please select exactly 2 rows from the table above to enable the comparison.")
-    else:
+                                 st.session_state.audit_sample.index)
+    count = len(compare_ids)
+    if count == 0:
+        st.info("Select two rows from the table above.")
+    elif count == 1:
+        st.info("Select one more row to enable the comparison.")
+    elif count == 2:
         st.success("Comparison ready.")
-    
-    if st.button("Generate Report", key="compare_btn"):
-        if len(compare_ids) == 2:
+        if st.button("Generate Report", key="compare_btn"):
             x1 = st.session_state.audit_sample.loc[[compare_ids[0]]].drop(columns=['charges'])
             x2 = st.session_state.audit_sample.loc[[compare_ids[1]]].drop(columns=['charges'])
             
@@ -89,5 +89,5 @@ with tab2:
             
             st.subheader("TRUST™ Profile Comparison Report")
             st.code(compare_report, language="text")
-        else:
-            st.warning("You must select two different rows to compare.")
+    else:
+        st.warning(f"You have selected {count} rows. Please remove {count - 2} to proceed.")
