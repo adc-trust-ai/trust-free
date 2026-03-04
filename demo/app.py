@@ -85,7 +85,6 @@ with tab2:
             x2 = st.session_state.audit_sample.loc[[compare_ids[1]]].drop(columns=['charges'])
             
             # 0. Prime backend
-            #import plotly.graph_objects as go
             import matplotlib as mpl            
             mpl.use("module://matplotlib_inline.backend_inline")
             # 1. Capture the print output from the TRUSTRegressor class
@@ -98,16 +97,20 @@ with tab2:
                 st.code(compare_report, language="text")
             
             # 3. Grab and show plots
-            from plotly.io import renderers
-            import os            
+            #import plotly.graph_objects as go
+            #from plotly.io import renderers
+            import os        
+            from os.path import getmtime
             with col_plots:
                 st.subheader("Supporting Charts")
                 plot_files = [f for f in os.listdir(".") if f.endswith("Comp_demo.png")]
             
-            if plot_files:
-                for plot in sorted(plot_files):
-                    st.image(plot, use_container_width=True)
-            else:
-                st.info("No charts available to display.")
+                if plot_files:
+                    plot_files.sort(key=lambda x: getmtime(x))
+                    for plot in plot_files:
+                        st.image(plot, use_container_width=True)
+                        os.remove(plot)
+                else:
+                    st.info("No charts available to display.")
     else:
         st.warning(f"You have selected {count} rows. Please remove {count - 2} to proceed.")
