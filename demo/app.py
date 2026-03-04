@@ -98,7 +98,7 @@ with tab2:
             # 3. Grab and show plots
             from plotly.io import renderers
             import os
-            if os.path.exists("Radar_Chart_Comp_demo.png"):
-                st.image("Radar_Chart_Comp_demo.png")
+            if os.path.exists("Radar_chart_Comp_demo.png"):
+                st.image("Radar_chart_Comp_demo.png")
     else:
         st.warning(f"You have selected {count} rows. Please remove {count - 2} to proceed.")
