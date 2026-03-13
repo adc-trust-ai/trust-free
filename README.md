@@ -70,7 +70,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 
 * **Past Talks & Workshops:**
   * [BarcelonaTech, Statistics Department](https://eio.upc.edu/en/seminar) (Dec 2025)
-  * [PRICAI 2025](https://www.pricai.org/2025/index.php) (Nov 2025) 
+  * [PRICAI 2025 / Springer Nature](https://link.springer.com/chapter/10.1007/978-981-95-7081-2_5) (Nov 2025) 
   * [University of Seville, Minerva AI Lab](https://grupo.us.es/minerva/) (Oct 2025) 
     
 
