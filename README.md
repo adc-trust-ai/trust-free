@@ -67,11 +67,16 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
   * [Data Elixir (Issue 546)](https://news.dataelixir.com/t/t-69C03215CCA6CFF02540EF23F30FEDED) (over 60,000 subscribers)
   * [Data Science Weekly (Issue 616)](https://datascienceweekly.substack.com/p/data-science-weekly-issue-616) (over 68,500 subscribers)
   * [University of Wisconsin - Madison Department of Statistics website](https://stat.wisc.edu/2025/05/08/department-of-statistics-celebrates-spring-2025-graduates/) (May 2025)
+ 
+* **Upcoming Talks & Workshops:**
+  * [PyCon Austria](https://2026.pycon.at/) (Apr 2026)
+  * [13th Bachelier World Congress](https://eventi.unibo.it/bachelier) (Jun 2026) 
+  * [EuroSciPy](https://euroscipy.org/) (Jul 2026) 
 
 * **Past Talks & Workshops:**
   * [BarcelonaTech, Statistics Department](https://eio.upc.edu/en/seminar) (Dec 2025)
   * [PRICAI 2025 / Springer Nature](https://link.springer.com/chapter/10.1007/978-981-95-7081-2_5) (Nov 2025) 
-  * [University of Seville, Minerva AI Lab](https://grupo.us.es/minerva/) (Oct 2025) 
+  * [University of Seville, Minerva AI Lab](https://grupo.us.es/minerva/) (Oct 2025)
     
 
 ## Key Advantages: RF Accuracy ⟡ Tree Transparency ⟡ Linear Interpretability
