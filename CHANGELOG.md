@@ -1,6 +1,6 @@
 ## 4.0.0 (2026-06-22)
 - Added:
-  1. **New multiclass classification support:** try AdaLogit™, our logistic regression classifier with Oracle properties.
+  1. **New multiclass classification support:** try AdaLogit™ (AdaLogitCV) as a new standalone tool, our logistic regression classifier with Oracle properties.
   2. Support for Direct and Systemic Variable Importance using predict_proba() as well
 
 ## 3.0.0 (2026-02-21)
