@@ -4,6 +4,7 @@
   2. Support for Direct and Systemic Variable Importance using predict_proba() as well
 - Changed:
   1. sklearn >= 1.8.0 introducing the `use_legacy_attributes` parameter (v3.1.1 fix).
+  2. Extended compatibility to numpy >= 1.23.0 (removing the cap at 2.0.0)
 
 ## 3.0.0 (2026-02-21)
 - Added:
