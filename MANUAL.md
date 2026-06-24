@@ -1,6 +1,19 @@
 # User manual describing the TRUST class and its attributes & methods
 
-## The essential methods:
+## The model stack
+🟩 TRUSTRegessor | **Regression tree** with a choice of sparse linear model in its leaves:
+  - Renet™
+  - AdaNet
+
+🟨 AdaLogit™ | Logistic regression **classifier** with Oracle properties
+
+🟦 TurboSolve™ | Fast **OLS & ridge solver**
+
+🟧 Direct & Systemic Feature Importance | Deterministic permutation **feature importance**
+
+
+
+## The essential methods
 - ⚙️ fit
 - 📈 predict
 - 🌲 plot_tree
@@ -8,6 +21,7 @@
 - 🔍 explain
 - ⚖️ compare
 
+  
 # TRUST class
 ## Parameters:
 - `min_samples_split: int, default=6`
@@ -190,19 +204,39 @@ The above default values are sensible and hence usually enough.
     Only for internal use.
 
 
-- 📊 `varImp(X_test,y_test,corAnalysis=False,plot=True,ALE_plot="auto",
-             filename=None,rnd=2,random_state=123)`
+- 📊 `importance(kind="direct", X=None, y=None, metric="mae", show_direction=False,
+                perm_optimal=True, prescreen=False, corr_quantile=0.95,
+                corAnalysis=False, plot=True, ALE_plot="auto", filename=None,rnd=2)`
 
-  Calculates the variable importance of each variable in the model using the Ghost variable method (Delicado and Pena, 2023).
+  Calculates the importance of each variable in the model using by default the One-Permutation framework (Dorador, 2025).
+  Compared to traditional permutation feature importance, our method is deterministic, more efficient and robust.
   This method, unlike Breiman's permutation scheme, accounts for feature correlation, and tends to be faster.
-  It does not need a debiasing or uncertainty quantification step, because by construction it is unbiased and reported scores are statistically significant.
+
   ### Parameters:
-  - `X_test: array-like of shape (n, p)`
+  - `kind: string, default="direct"`
+
+    The kind of feature importance desired. One of "direct", "systemic", "model_class". The latter implements Delicado and Pena (2023) method instead.
+  - `X: array-like of shape (n, p)`
     
-    Test feature samples.
-  - `y_test: array-like of shape (n, ) or (n, 1)`
+    Train and/or test feature samples. If not provided, the samples used during training will be used.
+  - `y: array-like of shape (n, ) or (n, 1)`
     
-    Test response values.
+    Train and/or test response values. If not provided, the samples used during training will be used.
+  - `metric: string, default="mae"`
+
+    The metric to be used to measure feature importance. One of "mae", "mse", "rmse".
+  - `show_direction: bool, default=False`
+
+    Whether the reported scores should include an overall direction (positive/negative) to signal whether, on average, increasing a feature tends to increase the target (positive) or decrease it (negative)
+  - `perm_optimal: bool, default=True`
+
+    Whether an optimal or a (faster) heuristic permutation should be used.
+  - `prescreen: bool, default=False`
+
+    Whether a prescreening of features should be performed. Worth it if only a reduced fraction of features is expected to be have nonzero importance (sparse support).
+  - `corr_quantile: float, default=0.95`
+
+    The quantile of null correlations used as tolerance threshold. 0.0 = ignore correlations smaller than smallest null correlation; 1.0 = only ignore correlations smaller than all null correlations
   - `corAnalysis: bool, default=True`
 
     Whether a complementary correlation analysis should be included.
@@ -221,15 +255,9 @@ The above default values are sensible and hence usually enough.
     The file name (without any extension) that you wish to use to save the variable importance and ALE plots.
     If none is provided (default), suitable names with today's date will be used.
     Plots are always saved in the user's current working directory.
-  - `alpha: int or float, default=0.05`
-
-    Significance level that should be used in the uncertainty quantification step.
   - `rnd: int, default=2`
 
     Number of decimal places to round the printed results to.
-  - `random_state: int, default=123`
-  
-    Ensures results are reproducible.
         
 
 - 🔍 `explain(x_original,aim="auto",mode="report",prop_explained=0.9,pred=None,actual=None,filename=None,rnd=2)`
