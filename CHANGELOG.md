@@ -1,7 +1,8 @@
 ## 3.1.0 / 3.1.1 (2026-06-23)
 - Added:
   1. **New multiclass classification support:** try AdaLogit™ (AdaLogitCV) as a new standalone tool, our logistic regression classifier with Oracle properties.
-  2. Support for Direct and Systemic Variable Importance using predict_proba() as well
+  2. **New importance direction estimation** for Direct and Systemic Variable Importance
+  3. Support for Direct and Systemic Variable Importance using predict_proba() as well
 - Changed:
   1. Upgraded to sklearn >= 1.8.0 introducing the `use_legacy_attributes` parameter (v3.1.1 fix).
   2. Extended compatibility to numpy >= 1.23.0 (removing the cap at 2.0.0)
