@@ -114,7 +114,9 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 
 
 ## What's new in version 3.0.0?
-### TL;DR: 5-20x faster training, new models in leaves (Adaptive or Relaxed Elastic Net), new Direct and Systemic Feature Importance, and more!
+### TL;DR: Extension to multiclass classification (AdaLogit™) and model-agnostic Importance Direction estimation!
+
+### What's new in this version? 
 
 ## 3.0.0 (2026-02-21)
 - Added:
@@ -309,27 +311,48 @@ model_Diabetes.compare(Diabetes_X.iloc[1,:], Diabetes_X.iloc[3,:], filename="Dia
 <img src="https://raw.githubusercontent.com/adc-trust-ai/trust-free/main/assets/Pie_charts_Diabetes.png" alt="Pies" width="97%" style="display: block; margin: auto;" />
 </div>
 
+### 🆎 Example 3: Sparse Synthetic Classification (n=1000, p=20)
+```python
+from trust.datasets import generate_block_corr_data_binY
+X, y, beta, nonzero_ix, zero_ix = generate_block_corr_data_binY(n=1000, p=20, signal_scale=2.0, pi=0.5, random_state=0)
+
+# Make Train-Test split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123)
+
+# Instantiate and fit your model
+ALR = AdaLogitCV(l1_ratios=(0.95,), class_weight="balanced", scoring="neg_log_loss").fit(X_train, y_train)
+print("Estimated coefficients:", np.round(ALR.coef_[0]))
+print("True coefficients:", beta)
+
+# Predict and print results
+ALR_predictions = ALR.predict_proba(X_test)[:, 1]
+print("Predictions:", np.round(ALR_predictions[:5],2))
+print("True y values:", y_test[:5])
+print("AdaLogit Test AUC =", round(roc_auc_score(y_test, ALR_predictions), 2))
+```
+
 ### More Examples on Kaggle Datasets
-- [Medical Insurance Charges (1.9M views, 383K downloads)](https://www.kaggle.com/datasets/mirichoi0218/insurance)
+- [Medical Insurance Charges (2.0M views, 414K downloads)](https://www.kaggle.com/datasets/mirichoi0218/insurance)
 - [Life Satisfaction in the EU (own contribution)](https://www.kaggle.com/datasets/albertdorador/eu-life-satisfaction-eurostat-un-oecd)
 
 
 ## License
 
-This software is provided under a Proprietary - Permissive Binary Only license. See LICENSE.txt for details.
+This software is provided under a Proprietary Binary-Only license.
+For detailed terms, please refer to the [LICENSE.txt](https://github.com/adc-trust-ai/trust-free/blob/main/LICENSE.txt) file, which is also included with the distribution.
 
 ## More Information
 
-For more details, documentation, and information about the full upcoming 'pro' version of the TRUST™ algorithm, please visit our official website:
+For more details, documentation, and information about the full upcoming 'pro' version of the TRUST™ algorithm, visit:
 
-https://adc-trust-ai.github.io/trust/
+https://github.com/adc-trust-ai/trust-free
 
 Further technical details about TRUST™, Renet™ and our novel variable importance algorithms can be found in our preprints on arXiv:
 
-https://arxiv.org/abs/2506.15791
+https://www.arxiv.org/abs/2506.15791
 
 https://arxiv.org/abs/2602.11107
 
 https://arxiv.org/abs/2512.13892
 
-Copyright © 2025-2026 Albert Dorador Chalar. All rights reserved. TRUST™, Renet™ and TurboSolve™ are trademarks of Albert Dorador Chalar.
+Built with ❤️ by ADC at [Whiteboxlab](https://whiteboxlab.ai/) - Copyright © 2025-2026 Albert Dorador Chalar. All rights reserved. TRUST™, Renet™, AdaLogit™, and TurboSolve™ are trademarks of Albert Dorador Chalar.
