@@ -118,22 +118,14 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 
 ### What's new in this version? 
 
-## 3.0.0 (2026-02-21)
+## 3.1.0 / 3.1.1 (2026-06-23)
 - Added:
-  1. **New models in leaves:** Renet™ (SOTA Relaxed Elastic Net) and a custom implementation of Adaptive Elastic Net, offering slightly different accuracy-sparsity profiles
-  2. **New Direct and Systemic Variable Importance** estimation: an upgrade to the traditional permutation feature importance
-  3. **New Minimum Description Length** mode for leaves: simplest plausible leaf model when Renet™ gives OLS estimates.
-  4. **New open-source datasets module**: make regression datasets with different correlation structures (plain, block, or Toeplitz)
-  5. More public classes and methods (can be used as **standalone tools**): Renet, AdaptiveNetCV, FeatureImportance, turbosolve, and the datasets module.
-  6. Optional display of leaf model equation in tree plot
+  1. **New multiclass classification support:** try AdaLogit™ (AdaLogitCV) as a new standalone tool, our logistic regression classifier with Oracle properties.
+  2. **New importance direction estimation** for Direct and Systemic Variable Importance
+  3. Support for Direct and Systemic Variable Importance using predict_proba() as well
 - Changed:
-  1. Much **faster training** (5-20x)
-  2. Small enhancements to explain() and Ghost Variable Importance estimation
-  3. \_\_init\_\_ and fit method signatures changed to accomodate new capabilities and to align closer with scikit-learn conventions. This **breaks backward compatibility**, so it may require adapting existing pipelines accordingly for some users.
-  4. Renamed the TRUST class as TRUSTRegressor (TRUSTClassifier is coming soon...). The TRUST class will still be around until version 4.0.0 to help transition.
-  5. Minor bug fixes
-- Removed:
-  1. Traditional Permutation Feature Importance option (superseded by faster, more robust and 100% deterministic alternative, see second "Added" item)
+  1. Upgraded to sklearn >= 1.8.0 introducing the `use_legacy_attributes` parameter (v3.1.1 fix).
+  2. Extended compatibility to numpy >= 1.23.0 (removing the cap at 2.0.0)
 
 Check CHANGELOG.md to see all past release notes.
 
