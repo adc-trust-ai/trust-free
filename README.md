@@ -325,7 +325,7 @@ print("AdaLogit Test AUC =", round(roc_auc_score(y_test, ALR_predictions), 2))
 
 ### 📊 Example 4: 1-Permutation Feature Importance (n=100, p=10)
 ```python
-pip install --quiet tabicl #only if tabicl is not installed yet
+pip install --quiet tabicl # Only if tabicl is not installed yet
 from tabicl import TabICLRegressor
 from trust import FeatureImportance, datasets
 
