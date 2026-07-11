@@ -173,7 +173,7 @@ pip install trust-free
 | **Kaggle Notebooks**     | Linux x86_64      | 3.11      | ✅ Working* |
 
 
-*If Kaggle shows a dependency-compatibility issue message upon installation via %pip install trust-free you may **safely ignore** it and simply restart your kernel: Run / Restart & clear cell outputs.
+*If Kaggle shows a dependency-compatibility error message upon installation via %pip install trust-free you may **safely ignore** it and simply restart your kernel: Run / Restart & clear cell outputs.
 
 For a fully reproducible development environment with all dependencies, see SETUP.md.
 
