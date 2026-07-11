@@ -323,8 +323,25 @@ print("True y values:", y_test[:5])
 print("AdaLogit Test AUC =", round(roc_auc_score(y_test, ALR_predictions), 2))
 ```
 
+### 📊 Example 4: 1-Permutation Feature Importance (n=100, p=10)
+```python
+pip install --quiet tabicl #only if tabicl is not installed yet
+from tabicl import TabICLRegressor
+from trust import FeatureImportance, datasets
+
+X, y, coefs = datasets.make_block_correlated_regression(n_samples=100, n_features=10, n_informative=5, noise=1.0, rho=0.5, random_state=123)
+model = TabICLRegressor().fit(X, y)
+fi = FeatureImportance().fit(model.predict, X, y)
+rel_importance = fi.direct_importance() # An order of magnitude faster than classical PFI
+linear_scores = np.abs(coefs) / np.sum(np.abs(coefs))
+print("Underlying linear model feature importance scores:", np.round(linear_scores, 2))
+print("TabICL feature importance scores:", np.round(rel_importance, 2))
+print("Underlying linear model feature importance directions:", np.sign(coefs))
+print("TabICL feature importance directions:", fi.directions)
+```
+
 ### More Examples on Kaggle Datasets
-- [Medical Insurance Charges (2.0M views, 414K downloads)](https://www.kaggle.com/datasets/mirichoi0218/insurance)
+- [Medical Insurance Charges (2.0M views, 417K downloads)](https://www.kaggle.com/datasets/mirichoi0218/insurance)
 - [Life Satisfaction in the EU (own contribution)](https://www.kaggle.com/datasets/albertdorador/eu-life-satisfaction-eurostat-un-oecd)
 
 
