@@ -69,11 +69,11 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
   * [University of Wisconsin - Madison Department of Statistics website](https://stat.wisc.edu/2025/05/08/department-of-statistics-celebrates-spring-2025-graduates/) (May 2025)
  
 * **Upcoming Talks & Workshops:**
-  * [PyCon Austria](https://2026.pycon.at/) (Apr 2026)
-  * [13th Bachelier World Congress](https://eventi.unibo.it/bachelier) (Jun 2026) 
   * [EuroSciPy](https://euroscipy.org/) (Jul 2026) 
 
 * **Past Talks & Workshops:**
+  * [13th Bachelier World Congress](https://eventi.unibo.it/bachelier) (Jun 2026)
+  * [PyCon Austria](https://2026.pycon.at/) (Apr 2026)
   * [BarcelonaTech, Statistics Department](https://eio.upc.edu/en/seminar) (Dec 2025)
   * [PRICAI 2025 / Springer Nature](https://link.springer.com/chapter/10.1007/978-981-95-7081-2_5) (Nov 2025) 
   * [University of Seville, Minerva AI Lab](https://grupo.us.es/minerva/) (Oct 2025)
