@@ -165,15 +165,15 @@ pip install trust-free
 
 | Platform / Environment   | OS & Arch         | Python    | Status      |
 |--------------------------|-------------------|-----------|-------------|
-| **macOS ARM64** (M1–M4)  | macOS 11+ ARM64   | 3.11–3.12 | ✅ Working  |
-| **macOS Intel** (x86_64) | macOS 11+ Intel   | 3.11–3.12 | ✅ Working  |
+| **Windows Intel/AMD**    | Windows 11 x86_64 | 3.11–3.12 | ✅ Working  |
+| **macOS ARM64** (M1–M5)  | macOS 11+ ARM64   | 3.11–3.12 | ✅ Working  |
 | **Linux Intel/AMD**      | manylinux x86_64  | 3.11–3.12 | ✅ Working  |
+| **Linux ARM64**          | manylinux ARM64   | 3.11–3.12 | ✅ Working  |
 | **Google Colab**         | Linux x86_64      | 3.12      | ✅ Working  |
 | **Kaggle Notebooks**     | Linux x86_64      | 3.11      | ✅ Working* |
-| **Linux ARM64**          | manylinux ARM64   | 3.11–3.12 | ✅ Working  |
-| **Windows Intel/AMD**    | Windows 11 x86_64 | 3.11–3.12 | ✅ Working  |
 
-*If Kaggle shows a dependency-compatibility issue message upon installation via %pip install trust-free you may safely ignore it and simply restart your kernel: Run / Restart & clear cell outputs.
+
+*If Kaggle shows a dependency-compatibility issue message upon installation via %pip install trust-free you may **safely ignore** it and simply restart your kernel: Run / Restart & clear cell outputs.
 
 For a fully reproducible development environment with all dependencies, see SETUP.md.
 
