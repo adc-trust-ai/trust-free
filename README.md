@@ -113,10 +113,8 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - Even faster training *[coming in next release]*
 
 
-## What's new in version 3.0.0?
+## What's new in this version? 
 ### TL;DR: Extension to multiclass classification (AdaLogit™) and model-agnostic Importance Direction estimation!
-
-### What's new in this version? 
 
 ## 3.1.0 / 3.1.1 (2026-06-23)
 - Added:
@@ -181,7 +179,7 @@ For a fully reproducible development environment with all dependencies, see SETU
 
 ## Usage
 
-Here are two simple examples showing how to use the trust-free package:
+Here are four simple examples showing how to use the trust-free package:
 
 ```python
 from trust import TRUSTRegressor # note the import name is trust, not trust-free
