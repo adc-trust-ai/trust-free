@@ -1,3 +1,8 @@
+## 3.1.2 (2026-07-11)
+- Changed:
+  1. AdaLogitCV class definition to ensure compatibility with scikit-learn pipelines
+  2. Other minor tweaks
+
 ## 3.1.0 / 3.1.1 (2026-06-23)
 - Added:
   1. **New multiclass classification support:** try AdaLogit™ (AdaLogitCV) as a new standalone tool, our logistic regression classifier with Oracle properties.
