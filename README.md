@@ -100,7 +100,7 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 
 ### Features in this edition
 
-- Solves regression tasks (including a currently experimental 'time series mode')
+- Solves classification and regression tasks (including a currently experimental 'time series mode')
 - Interpretable models with accuracy comparable to Random Forests
 - Visual tree structure and comprehensive, automatically-generated explanations on demand
 - Automatically-generated head-to-head comparisons of profiles of interest
@@ -108,9 +108,9 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - Automatic missing value handling that learns from missingness itself
 - Automatic detection of potential overfitting.
 - Ability to efficiently use continuous and categorical predictor variables
-- Prediction confidence intervals *[coming in next release]*
-- Novel method to warn about risky predictions on the fly *[coming in next release]*
-- Even faster training *[coming in next release]*
+- Prediction confidence intervals *[planned]*
+- Novel method to warn about risky predictions on the fly *[planned]*
+- Even faster training *[planned]*
 
 ## What's new in this version? 
 ### TL;DR: AdaLogit is now fully scikit-learn compatible
