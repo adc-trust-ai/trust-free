@@ -3,7 +3,6 @@
 [![PyPI version](https://img.shields.io/pypi/v/trust-free.svg)](https://pypi.org/project/trust-free/)
 [![Python](https://img.shields.io/pypi/pyversions/trust-free.svg)](https://pypi.org/project/trust-free/)
 [![Downloads](https://static.pepy.tech/badge/trust-free)](https://pepy.tech/project/trust-free)
-[![License](https://img.shields.io/badge/license-Proprietary-lightgrey.svg)](LICENSE.txt)
 [![User Manual](https://img.shields.io/badge/docs-User_Manual-blue)](https://github.com/adc-trust-ai/trust-free/blob/main/MANUAL.md)
 ![OS](https://img.shields.io/badge/OS-Windows%20-blue)
 ![OS](https://img.shields.io/badge/OS-macOS%20-blue)
@@ -86,15 +85,12 @@ Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched in
 - **Compliant by design**: 100% Compliant with the EU AI Act and the OECD AI Principles — ideal for high-stakes domains like finance and healthcare
 
 ### About this edition
-- ℹ️ Free-tier Dataset Limits: ≤ 5,000 rows and ≤ 20 columns (intended for proof-of-concept, R&D and teaching)
+- ℹ️ Dataset Limits: ≤ 5,000 rows and ≤ 20 columns (intended for proof-of-concept, R&D and teaching)
 - ✅ Full Functionality: All core features are fully functional within these bounds
 - ✅ Standalone Tools: Relaxed Net (Renet™), Adaptive Net (AdaEnet™), TurboSolve™ (fast OLS/ridge solver), Direct & Systemic Feature Importance
 - ⭐ No-Limit Utilities: TurboSolve™, Feature Importance methods, and our open-source Synthetic Dataset Generators (Toeplitz, Block-Correlated) can be used **without restriction** as standalone tools
-- 🚀 Need even more? We got you covered: Unlimited scale and [additional features](https://github.com/adc-trust-ai/trust-free/blob/main/trust-pro.md) in the forthcoming **trust-pro** edition
 
-**Want early access to trust-pro?**  
-- Join the [waitlist](https://forms.gle/Gsti4kZ7yG5ZTNqu7) (completely anonymous & GDPR-compliant)
-- Star ⭐ this repo to stay updated!
+Star ⭐ this repo to stay updated!
 
 ### Features in this edition
 
@@ -333,7 +329,6 @@ print("TabICL feature importance directions:", fi.directions)
 
 ## License
 
-This software is provided under a Proprietary Binary-Only license.
 For detailed terms, please refer to the [LICENSE.txt](https://github.com/adc-trust-ai/trust-free/blob/main/LICENSE.txt) file, which is also included with the distribution.
 
 ## More Information
