@@ -333,10 +333,6 @@ For detailed terms, please refer to the [LICENSE.txt](https://github.com/adc-tru
 
 ## More Information
 
-For more details, documentation, and information about the full upcoming 'pro' version of the TRUST™ algorithm, visit:
-
-https://github.com/adc-trust-ai/trust-free
-
 Further technical details about TRUST™, Renet™ and our novel variable importance algorithms can be found in our preprints on arXiv:
 
 https://www.arxiv.org/abs/2506.15791
