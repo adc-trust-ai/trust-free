@@ -1,7 +1,7 @@
 ## Additional Features Planned
 
 - No dataset size limits *[available in 1st Generation]*
-- Large Language Model (LLM) integration for enhanced explanations *[available in 1st Generation]*
+- Large Language Model (LLM) integration for tailored explanations *[available in 1st Generation]*
 - Signed (+/-) variable importance plots *[available in 1st Generation]*
 - Out-Of-Distribution detection *[available in 1st Generation]*
 - Uncertainty quantification for tree splits *[planned for 2nd Generation]*
