@@ -41,7 +41,7 @@ See full benchmarks in the [PRICAI 2025 paper](https://arxiv.org/abs/2506.15791)
 
 ---
 
-The package currently supports standard regression and experimental time-series regression tasks. Future releases will also tackle other tasks such as classification.
+The package currently supports multi-class classification, standard regression and experimental time-series regression tasks.
 
 ## Overview
 TRUST™ [1] is a next-generation algorithm based on (sparse) **Linear Model Trees** (LMTs), which I developed as part of my Ph.D. in Statistics at the [University of Wisconsin-Madison](https://www.wisc.edu/). **trust-free** is the official Python implementation of the algorithm.
