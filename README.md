@@ -12,7 +12,7 @@
 
 ### Model. Explain. TRUST. All in one package.
 
-**trust-free** is a Python package for fitting interpretable regression models using Transparent, Robust, and Ultra-Sparse Trees (TRUST™) — a new generation of Linear Model Trees (LMTs) with Random-Forest accuracy and intuitive explanations. It is based on my peer-reviewed paper [1], **presented at the 22nd Pacific Rim International Conference on Artificial Intelligence (PRICAI 2025) and to appear in Springer Nature (Lecture Notes in Artificial Intelligence)**.
+**trust-free** is a Python package for fitting interpretable regression models using Transparent, Robust, and Ultra-Sparse Trees (TRUST) — a new generation of Linear Model Trees (LMTs) with Random-Forest accuracy and intuitive explanations. It is based on my peer-reviewed paper [1], **presented at the 22nd Pacific Rim International Conference on Artificial Intelligence (PRICAI 2025) and to appear in Springer Nature (Lecture Notes in Artificial Intelligence)**.
 
 It includes a **state-of-the-art explainability suite**, providing comprehensive, automatically-generated explanation reports. To see it in action, here's a 30-second demo showcasing the explain() and compare() methods applied to the famous [Medical Insurance Charges](https://www.kaggle.com/datasets/mirichoi0218/insurance) dataset from Kaggle:
 
@@ -26,14 +26,14 @@ It includes a **state-of-the-art explainability suite**, providing comprehensive
 
 | Model                   | **Test R² ↑** | **Interpretable?** |
 |-------------------------|---------------|--------------------|
-| **TRUST™**              | **0.67**      | ✅ Yes             |
+| **TRUST**              | **0.67**      | ✅ Yes             |
 | Random Forest (RF)      | 0.62          | ❌ No              |
 | Lasso                   | 0.57          | ✅ Yes             |
 | CART                    | 0.49          | ✅ Yes             |
 | Node Harvest (NH)       | 0.47          | ✅ Yes             |
 | M5' (Linear Model Tree) | 0.36          | ⚠️ Partially       |
 
-> In the table above, **TRUST™ is the only fully interpretable model statistically above 0.6 test R²** across varied benchmark datasets — and **6× sparser** than M5' (*17 vs 109 coefficients* on average).  
+> In the table above, **TRUST is the only fully interpretable model statistically above 0.6 test R²** across varied benchmark datasets — and **6× sparser** than M5' (*17 vs 109 coefficients* on average).  
 > *Source: PRICAI 2025 (Springer LNAI)*
 
 Try it now: `pip install trust-free`. In **Google Colab**: `%pip install trust-free`.
@@ -44,13 +44,13 @@ See full benchmarks in the [PRICAI 2025 paper](https://arxiv.org/abs/2506.15791)
 The package currently supports multi-class classification, standard regression and experimental time-series regression tasks.
 
 ## Overview
-TRUST™ [1] is a next-generation algorithm based on (sparse) **Linear Model Trees** (LMTs), which I developed as part of my Ph.D. in Statistics at the [University of Wisconsin-Madison](https://www.wisc.edu/). **trust-free** is the official Python implementation of the algorithm.
+TRUST [1] is a next-generation algorithm based on (sparse) **Linear Model Trees** (LMTs), which I developed as part of my Ph.D. in Statistics at the [University of Wisconsin-Madison](https://www.wisc.edu/). **trust-free** is the official Python implementation of the algorithm.
 
 LMTs combine the strengths of two popular interpretable machine learning models: Decision Trees (non-parametric) and Linear Models (parametric). Like a standard Decision Tree, they partition data based on simple decision rules. However, the key difference lies in how they evaluate these splits and model the data. Instead of using a simple constant (like the average) to evaluate the goodness of a split, LMTs fit a Linear Model to the data within each node.
 
 This approach means that the final predictions in the leaves are made by a Linear Model rather than a simple constant approximation. This gives Linear Model Trees both the predictive and explicative power of a linear model, while also retaining the ability of a tree-based algorithm to handle complex, non-linear relationships in the data. This way, LMTs can approximate well any Lp function in Lp norm, i.e. can learn almost any function. Importantly, the resulting fitted model is usually compact, making it easier to interpret.
 
-Compared to existing LMT algorithms such as M5 [2], TRUST™ offers unmatched interpretability while approaching the accuracy of black-box models like Random Forests [3] — a combination that is rare in machine learning.
+Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched interpretability while approaching the accuracy of black-box models like Random Forests [3] — a combination that is rare in machine learning.
 
 ### References
 
