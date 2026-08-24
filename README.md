@@ -107,7 +107,7 @@ Star ⭐ this repo to stay updated!
 - Even faster training *[planned]*
 
 ## What's new in this version? 
-### TL;DR: AdaLogit is now fully scikit-learn compatible
+### TL;DR: Cross-platform Python 3.13 support.
 
 Check CHANGELOG.md to see all past release notes.
 
@@ -149,11 +149,11 @@ pip install trust-free
 
 | Platform / Environment   | OS & Arch         | Python    | Status      |
 |--------------------------|-------------------|-----------|-------------|
-| **Windows Intel/AMD**    | Windows 11 x86_64 | 3.11–3.12 | ✅ Working  |
-| **macOS ARM64** (M1–M5)  | macOS 11+ ARM64   | 3.11–3.12 | ✅ Working  |
-| **Linux Intel/AMD**      | manylinux x86_64  | 3.11–3.12 | ✅ Working  |
-| **Linux ARM64**          | manylinux ARM64   | 3.11–3.12 | ✅ Working  |
-| **Google Colab**         | Linux x86_64      | 3.12      | ✅ Working  |
+| **Windows Intel/AMD**    | Windows 11 x86_64 | 3.11–3.13 | ✅ Working  |
+| **macOS ARM64** (M1–M5)  | macOS 11+ ARM64   | 3.11–3.13 | ✅ Working  |
+| **Linux Intel/AMD**      | manylinux x86_64  | 3.11–3.13 | ✅ Working  |
+| **Linux ARM64**          | manylinux ARM64   | 3.11–3.13 | ✅ Working  |
+| **Google Colab**         | Linux x86_64      | 3.13      | ✅ Working  |
 | **Kaggle Notebooks**     | Linux x86_64      | 3.11      | ✅ Working* |
 
 
