@@ -1,3 +1,8 @@
+## 3.1.3 (2026-08-25)
+- Changed:
+  1. Cross-platform Python 3.13 support
+  2. Other minor improvements
+
 ## 3.1.2 (2026-07-11)
 - Changed:
   1. AdaLogitCV class definition to ensure compatibility with scikit-learn pipelines
