@@ -67,6 +67,9 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
   * [Data Science Weekly (Issue 616)](https://datascienceweekly.substack.com/p/data-science-weekly-issue-616) (over 68,500 subscribers)
   * [University of Wisconsin - Madison Department of Statistics website](https://stat.wisc.edu/2025/05/08/department-of-statistics-celebrates-spring-2025-graduates/) (May 2025)
 
+* **Upcoming Talks:**
+  * [MS Data Science & AI for Business, Guest Lecture, HEC Paris](https://www.hec.edu/en/master-s-programs/master-science-data-science-ai-business-x-hec) (Sep 2026) 
+
 * **Past Talks & Workshops:**
   * [EuroSciPy 2026, Kraków](https://euroscipy.org/) (Jul 2026) 
   * [13th Bachelier World Congress, University of Bologna](https://eventi.unibo.it/bachelier) (Jun 2026)
