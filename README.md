@@ -26,7 +26,7 @@ It includes a **state-of-the-art explainability suite**, providing comprehensive
 
 | Model                   | **Test R² ↑** | **Interpretable?** |
 |-------------------------|---------------|--------------------|
-| **TRUST**              | **0.67**      | ✅ Yes             |
+| **TRUST**               | **0.67**      | ✅ Yes             |
 | Random Forest (RF)      | 0.62          | ❌ No              |
 | Lasso                   | 0.57          | ✅ Yes             |
 | CART                    | 0.49          | ✅ Yes             |
@@ -68,10 +68,10 @@ Compared to existing LMT algorithms such as M5 [2], TRUST offers unmatched inter
   * [University of Wisconsin - Madison Department of Statistics website](https://stat.wisc.edu/2025/05/08/department-of-statistics-celebrates-spring-2025-graduates/) (May 2025)
 
 * **Upcoming Talks:**
-  * [MS Data Science & AI for Business, Guest Lecture, HEC Paris](https://www.hec.edu/en/master-s-programs/master-science-data-science-ai-business-x-hec) (Sep 2026)
   * [25e journée d'économétrie appliquée à la finance, Plenary Session, Paris Nanterre / CNRS](https://economix.fr/fr/colloques-et-workshops/25eme-journee-deconometrie-developpements-recents-de-leconometrie-appliquee-a-la-finance) (Nov 2026) 
 
 * **Past Talks & Workshops:**
+  * [MS Data Science & AI for Business, Guest Lecture, HEC Paris](https://www.hec.edu/en/master-s-programs/master-science-data-science-ai-business-x-hec) (Sep 2026)
   * [EuroSciPy 2026, Kraków](https://euroscipy.org/) (Jul 2026) 
   * [13th Bachelier World Congress, University of Bologna](https://eventi.unibo.it/bachelier) (Jun 2026)
   * [PyCon Austria](https://2026.pycon.at/) (Apr 2026)
